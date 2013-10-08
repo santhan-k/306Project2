@@ -64,6 +64,9 @@
     <Compile Include="WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WhatWeDoSubPage.xaml.cs">
+      <DependentUpon>WhatWeDoSubPage.xaml</DependentUpon>
+    </Compile>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -94,6 +97,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WhatWeDoSubPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -120,6 +127,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\WhatWeDoInfo.xml" />
     <Resource Include="back_button.png" />
     <Resource Include="Resources\CCF-logo.png" />
     <Resource Include="Resources\back_button.png" />

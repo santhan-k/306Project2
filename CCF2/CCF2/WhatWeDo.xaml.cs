@@ -25,14 +25,27 @@ namespace CCF2
         {
             sw1 = window;
             InitializeComponent();
-            sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
-            sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+            if (name == "whatwedo")
+            {
+                sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
+                sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+            }
+            else
+            {
+                sw1.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
+                sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
+            }
 
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
+        }
+
+        private void Ambassadors_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "OurAmbassadors"));
         }
     }
 }

@@ -88,3 +88,5 @@ C:\Users\Santhan\SkyDrive\SOFTENG 306\Project 2\Practice\CCF2\CCF2\bin\Debug\zh-
 \\engad.foe.auckland.ac.nz\engdfs\Home\skus887\Downloads\Project2_Repo\trunk\CCF2\CCF2\obj\Debug\CCF2.csproj.GenerateResource.Cache
 \\engad.foe.auckland.ac.nz\engdfs\Home\skus887\Downloads\Project2_Repo\trunk\CCF2\CCF2\obj\Debug\WhatWeDo.baml
 \\engad.foe.auckland.ac.nz\engdfs\Home\skus887\Downloads\Project2_Repo\trunk\CCF2\CCF2\obj\Debug\WhatWeDo.g.cs
+\\engad.foe.auckland.ac.nz\engdfs\Home\skus887\Downloads\Project2_Repo\trunk\CCF2\CCF2\obj\Debug\WhatWeDoSubPage.baml
+\\engad.foe.auckland.ac.nz\engdfs\Home\skus887\Downloads\Project2_Repo\trunk\CCF2\CCF2\obj\Debug\WhatWeDoSubPage.g.cs
