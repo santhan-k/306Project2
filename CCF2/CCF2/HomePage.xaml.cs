@@ -33,7 +33,7 @@ namespace CCF2
 
         private void WhatWeDo_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new SubMenuPage(sw1,"whatwedo"));
+            sw1.showPage(new WhatWeDo(sw1,"whatwedo"));
         }
 
         private void HowYouCanHelp_Click(object sender, RoutedEventArgs e)

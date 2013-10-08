@@ -4,13 +4,13 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
-      x:Class="CCF2.SubMenuPage" 
+      x:Class="CCF2.WhatWeDo" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Background="LightSkyBlue"
 
 	mc:Ignorable="d"
 
-	Title="SubMenuPage">
+	Title="WhatWeDoPage">
 
     <Grid>
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
@@ -25,7 +25,18 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
-                <Label Content="Sub Menu Page" HorizontalAlignment="Left" Margin="447.25,20.117,0,0" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic"/>
+                <Label Content="What We Do" HorizontalAlignment="Left" Margin="447.25,20.117,0,0" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic"/>
+                <Grid Margin="83.018,117.638,173.046,56.958">
+                	<s:SurfaceButton Content="Out Ambassadors" Height="74.072" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="371.597" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="How We Help" Margin="0,117.72,0,0" HorizontalAlignment="Left" Width="371.597" Height="74.072" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="Our History" Margin="0,0,0,116.398" HorizontalAlignment="Left" Width="371.597" Height="74.072" VerticalAlignment="Bottom" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="Health  Professionals" Margin="0" HorizontalAlignment="Left" Width="371.597" Height="74.072" VerticalAlignment="Bottom" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="About Us" Height="74.072" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="371.597" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="Our Stories" Margin="0,117.72,0,0" HorizontalAlignment="Right" Width="371.597" Height="74.072" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="Our People" Margin="0,0,0,116.398" Height="74.072" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="371.597" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+                	<s:SurfaceButton Content="Vacancies" Margin="0" Height="74.072" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="371.597" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="LightSkyBlue"/>
+
+                </Grid>
 
             </Grid>
         </Viewbox>
@@ -49,21 +60,21 @@
 
         </TextBlock>
         <Image Margin="283.493,22,0,0" Source="/Resources/CCF-logo.png" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="201.551" RenderTransformOrigin="0.762,0.818"/>
-        
-            <s:SurfaceButton
+
+        <s:SurfaceButton
                 Margin="195.693,59,0,0"
                 Width="76.333"
                 Height="72.6"
                 BorderThickness="0"
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" BorderBrush="#4D000000" Background="LightSkyBlue" FontSize="12" FontFamily="Segoe UI">
-                <Image Height="60"
+            <Image Height="60"
                     Stretch="Fill"
                     Width="60"
                     Source="back_button.png" >
-                	<Image.Effect>
-                		<ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
-                	</Image.Effect>
-                </Image>
-            </s:SurfaceButton>
+                <Image.Effect>
+                    <ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
+                </Image.Effect>
+            </Image>
+        </s:SurfaceButton>
     </Grid>
 </Page>
