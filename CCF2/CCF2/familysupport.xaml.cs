@@ -8,96 +8,39 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Surface;
-using Microsoft.Surface.Presentation;
-using Microsoft.Surface.Presentation.Controls;
-using Microsoft.Surface.Presentation.Input;
 
 namespace CCF2
 {
     /// <summary>
-    /// Interaction logic for SurfaceWindow2.xaml
+    /// Interaction logic for WhatWeDo.xaml
     /// </summary>
-    public partial class SurfaceWindow2 : SurfaceWindow
+    public partial class FamilySupport : Page
     {
-        /// <summary>
-        /// Default constructor.
-        /// </summary>
-        public SurfaceWindow2()
+        public SurfaceWindow1 sw1;
+        public FamilySupport(SurfaceWindow1 window, String name)
         {
+            sw1 = window;
             InitializeComponent();
+            if (name == "familysupport")
+            {
+                sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
+                sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+            }
+            else
+            {
+                sw1.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
+                sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
+            }
 
-            // Add handlers for window availability events
-            AddWindowAvailabilityHandlers();
         }
 
-        /// <summary>
-        /// Occurs when the window is about to close. 
-        /// </summary>
-        /// <param name="e"></param>
-        protected override void OnClosed(EventArgs e)
+        private void Back_Click(object sender, RoutedEventArgs e)
         {
-            base.OnClosed(e);
-
-            // Remove handlers for window availability events
-            RemoveWindowAvailabilityHandlers();
-        }
-
-        /// <summary>
-        /// Adds handlers for window availability events.
-        /// </summary>
-        private void AddWindowAvailabilityHandlers()
-        {
-            // Subscribe to surface window availability events
-            ApplicationServices.WindowInteractive += OnWindowInteractive;
-            ApplicationServices.WindowNoninteractive += OnWindowNoninteractive;
-            ApplicationServices.WindowUnavailable += OnWindowUnavailable;
-        }
-
-        /// <summary>
-        /// Removes handlers for window availability events.
-        /// </summary>
-        private void RemoveWindowAvailabilityHandlers()
-        {
-            // Unsubscribe from surface window availability events
-            ApplicationServices.WindowInteractive -= OnWindowInteractive;
-            ApplicationServices.WindowNoninteractive -= OnWindowNoninteractive;
-            ApplicationServices.WindowUnavailable -= OnWindowUnavailable;
-        }
-
-        /// <summary>
-        /// This is called when the user can interact with the application's window.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnWindowInteractive(object sender, EventArgs e)
-        {
-            //TODO: enable audio, animations here
-        }
-
-        /// <summary>
-        /// This is called when the user can see but not interact with the application's window.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnWindowNoninteractive(object sender, EventArgs e)
-        {
-            //TODO: Disable audio here if it is enabled
-
-            //TODO: optionally enable animations here
-        }
-
-        /// <summary>
-        /// This is called when the application's window is not visible or interactive.
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void OnWindowUnavailable(object sender, EventArgs e)
-        {
-            //TODO: disable audio, animations here
+            sw1.showPage(new HomePage(sw1));
         }
     }
 }

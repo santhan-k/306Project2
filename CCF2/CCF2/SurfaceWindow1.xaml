@@ -3,15 +3,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:s="http://schemas.microsoft.com/surface/2008"
     Title="CCF2"
-    Background="LightSkyBlue"
     Width="1920"
     Height="1080"
     WindowStyle="None"
     ResizeMode="NoResize"
     WindowState="Maximized"
     WindowStartupLocation="CenterScreen"
-                
     >
+    <Window.Background>
+        <ImageBrush ImageSource="Resources/background.png" />
+    </Window.Background>
     <Window.Resources>
         <Style TargetType="{x:Type Frame}">
             <Setter Property="LayoutTransform">

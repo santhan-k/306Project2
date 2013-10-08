@@ -61,11 +61,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="familysupport.xaml.cs">
-      <DependentUpon>familysupport.xaml</DependentUpon>
+    <Compile Include="FamilySupport.xaml.cs">
+      <DependentUpon>FamilySupport.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FamilySupportSubpage.xaml.cs">
-      <DependentUpon>FamilySupportSubpage.xaml</DependentUpon>
+    <Compile Include="FamilySupportSubPage.xaml.cs">
+      <DependentUpon>FamilySupportSubPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
@@ -73,11 +73,11 @@
     <Compile Include="WhatWeDoSubPage.xaml.cs">
       <DependentUpon>WhatWeDoSubPage.xaml</DependentUpon>
     </Compile>
-    <Page Include="familysupport.xaml">
+    <Page Include="FamilySupport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="FamilySupportSubpage.xaml">
+    <Page Include="FamilySupportSubPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -142,13 +142,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\WhatWeDoInfo.xml" />
-    <Resource Include="back_button.png" />
     <Resource Include="Resources\CCF-logo.png" />
+    <Resource Include="Resources\back_button_256.png" />
+    <Resource Include="Resources\background.png" />
+    <Resource Include="Resources\CCF-logo2.png" />
+    <Resource Include="Resources\CCF-logo2_200.png" />
     <Resource Include="Resources\back_button.png" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="CCF2.xml">
+    <Content Include="Resources\CCF2.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

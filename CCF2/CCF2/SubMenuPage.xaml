@@ -6,12 +6,13 @@
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
       x:Class="CCF2.SubMenuPage" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-      Background="LightSkyBlue"
 
 	mc:Ignorable="d"
 
 	Title="SubMenuPage">
-
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/background.png" />
+    </Page.Background>
     <Grid>
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
@@ -48,22 +49,19 @@
     </TextBlock.Triggers>
 
         </TextBlock>
-        <Image Margin="283.493,22,0,0" Source="/Resources/CCF-logo.png" HorizontalAlignment="Left" Height="132" VerticalAlignment="Top" Width="201.551" RenderTransformOrigin="0.762,0.818"/>
-        
-            <s:SurfaceButton
-                Margin="195.693,59,0,0"
-                Width="76.333"
-                Height="72.6"
+        <Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>
+
+        <s:SurfaceButton
+                Margin="195.693,59,0,0" Padding="0"
                 BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" BorderBrush="#4D000000" Background="LightSkyBlue" FontSize="12" FontFamily="Segoe UI">
-                <Image Height="60"
-                    Stretch="Fill"
+                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
+            <Image Height="60"
                     Width="60"
-                    Source="back_button.png" >
-                	<Image.Effect>
-                		<ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
-                	</Image.Effect>
-                </Image>
-            </s:SurfaceButton>
+                    Source="/Resources/back_button.png">
+                <Image.Effect>
+                    <ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
+                </Image.Effect>
+            </Image>
+        </s:SurfaceButton>
     </Grid>
 </Page>

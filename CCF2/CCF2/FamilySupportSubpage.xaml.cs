@@ -12,55 +12,43 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
 
 namespace CCF2
 {
     /// <summary>
-    /// Interaction logic for HomePage.xaml
+    /// Interaction logic for WhatWeDoSubPage.xaml
     /// </summary>
-    /// 
-    public partial class FamilySupportSubpage : Page
+    public partial class FamilySupportSubPage : Page
     {
-        public SurfaceWindow1 fsw;
-        public FamilySupportSubpage(SurfaceWindow1 window, String name)
+        public SurfaceWindow1 sw1;
+        public FamilySupportSubPage(SurfaceWindow1 window, String name)
         {
-            fsw = window;
+            sw1 = window;
             InitializeComponent();
-            fsw.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
-            fsw.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+            sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
+            sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+            String textContent = "empty";
+            XmlTextReader reader = new XmlTextReader("Resources/FamilySupportInfo.xml");
+
+            while (reader.Read())
+            {
+                if (reader.Name == "page")
+                {
+                    reader.MoveToAttribute("name");
+                    if (reader.Value == name)
+                    {
+                        reader.MoveToAttribute("content");
+                        textContent = reader.Value;
+                    }
+                }
+            }
 
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            fsw.showPage(new HomePage(fsw));
-        }
-
-
-        private void HowYouCanHelp_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void NewsAndEvents_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-
-        private void FamilySupport_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Volunteer_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ContactUs_Click(object sender, RoutedEventArgs e)
-        {
-
+            sw1.showPage(new WhatWeDo(sw1, "back"));
         }
     }
 }
