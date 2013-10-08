@@ -61,12 +61,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="familysupport.xaml.cs">
+      <DependentUpon>familysupport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FamilySupportSubpage.xaml.cs">
+      <DependentUpon>FamilySupportSubpage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
     </Compile>
     <Compile Include="WhatWeDoSubPage.xaml.cs">
       <DependentUpon>WhatWeDoSubPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="familysupport.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FamilySupportSubpage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="HomePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
