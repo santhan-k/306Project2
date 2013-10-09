@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 namespace CCF2
 {
     /// <summary>
-    /// Interaction logic for WhatWeDo.xaml
+    /// Interaction logic for FamilySupport.xaml
     /// </summary>
     public partial class FamilySupport : Page
     {
@@ -41,6 +41,11 @@ namespace CCF2
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
+        }
+
+        private void FSC_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new FamilySupportSubPage(sw1, "FamilySupportCo-ordinators"));
         }
     }
 }

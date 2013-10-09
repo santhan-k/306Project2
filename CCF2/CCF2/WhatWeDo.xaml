@@ -26,7 +26,7 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
-                <Label Content="What We Do" HorizontalAlignment="Left" Margin="447.25,20.117,0,0" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic"/>
+                <Label Content="What We Do" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic" Margin="20" />
                 <Grid Margin="83.018,117.638,173.046,56.958">
                 	<s:SurfaceButton Content="Our Ambassadors" Height="74.072" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="371.597" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Click="Ambassadors_Click" Background="{x:Null}" />
                 	<s:SurfaceButton Content="How We Help" Margin="0,117.72,0,0" HorizontalAlignment="Left" Width="371.597" Height="74.072" VerticalAlignment="Top" FontFamily="Century Gothic" FontSize="29.333" Foreground="White" Background="{x:Null}" />

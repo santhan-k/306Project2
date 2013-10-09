@@ -28,24 +28,18 @@ namespace CCF2
             InitializeComponent();
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
-            String textContent = "empty";
-            XmlTextReader reader = new XmlTextReader("Resources/FamilySupportInfo.xml");
-
-            while (reader.Read())
+            XmlDocument xml = new XmlDocument();
+            xml.Load("Resources/FamilySupportInfo.xml");
+            
+            headingLabel.Content = xml.SelectSingleNode("//pages/"+name+"/heading/text()").Value;
+            XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
+            if (imageNode != null)
             {
-                if (reader.Name == "page")
-                {
-                    reader.MoveToAttribute("name");
-                    if (reader.Value == name)
-                    {
-                        reader.MoveToAttribute("content");
-                        textContent = reader.Value;
-                    }
-                }
+                bodyImage.Source = new BitmapImage(new Uri(imageNode.Attributes["src"].Value, UriKind.Relative));
+                bodyImage.Visibility = System.Windows.Visibility.Visible;
             }
-
+            bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerXml;
         }
-
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1, "back"));

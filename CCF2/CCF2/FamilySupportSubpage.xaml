@@ -20,76 +20,12 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
-                <Label Content="Family Support" HorizontalAlignment="Left" Margin="447.25,20.117,0,0" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic"/>
-
+                <Label HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic" Name="headingLabel" Content="Heading" Margin="20" />
+                <TextBlock Height="485" HorizontalAlignment="Left" Margin="66,82,0,0" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="729" FontFamily="Century Gothic" FontSize="16" Background="#80FFFFFF" />
+                <Image HorizontalAlignment="Left" Margin="851,78,0,0" Name="bodyImage" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Stretch="None" />
             </Grid>
 
         </Viewbox>
-        
-        <s:SurfaceButton
-                Margin="300.25,400.117,0,0"
-                Content="Beads Of Courage"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="300.25,550.117,0,0"
-                Content="Sharing Magazines"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="300.25,700.117,0,0"
-                Content="Parent Resources"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="300.25,850.117,0,0"
-                Content="Family Support Contact List"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="1050.25,400.117,0,0"
-                Content="Support Services"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="1050.25,550.117,0,0"
-                Content="Holiday Homes"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="1050.25,700.117,0,0"
-                Content="Scholarships"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-        
-
         <TextBlock FontSize="22" x:Name="txtScrolling" Text="News Feed" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top">
 <TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />

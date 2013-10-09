@@ -20,7 +20,7 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
-                <Label Content="Family Support" HorizontalAlignment="Left" Margin="447.25,20.117,0,0" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic"/>
+                <Label Content="Family Support" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="32" FontFamily="Century Gothic" Margin="20" />
 
             </Grid>
 
@@ -28,43 +28,24 @@
 
         <s:SurfaceButton
                 Margin="300.25,400.117,0,0"
-                Content="Beads Of Courage"
-                Width="450.333"
+                Content="Family Support Co-ordinators"
+                Width="482"
                 Height="50.6"
                 BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
+                Click="FSC_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
         </s:SurfaceButton>
 
         <s:SurfaceButton
                 Margin="300.25,550.117,0,0"
-                Content="Sharing Magazines"
+                Content="Beads of Courage"
                 Width="450.333"
                 Height="50.6"
                 BorderThickness="0"
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
         </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="300.25,700.117,0,0"
-                Content="Parent Resources"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
-        <s:SurfaceButton
-                Margin="300.25,850.117,0,0"
-                Content="Family Support Contact List"
-                Width="450.333"
-                Height="50.6"
-                BorderThickness="0"
-                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" FontFamily="Century Gothic" Background="{x:Null}">
-        </s:SurfaceButton>
-
         <s:SurfaceButton
                 Margin="1050.25,400.117,0,0"
-                Content="Support Services"
+                Content="Family Places"
                 Width="450.333"
                 Height="50.6"
                 BorderThickness="0"
@@ -123,5 +104,6 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        <s:SurfaceButton Background="{x:Null}" BorderThickness="0" Content="Sharing Magazine" FontFamily="Century Gothic" FontSize="32" Foreground="White" Height="50.6" HorizontalAlignment="Left" Margin="300.25,700.117,0,0" VerticalAlignment="Top" Width="450.333" />
     </Grid>
 </Page>

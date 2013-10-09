@@ -148,6 +148,9 @@
     <Resource Include="Resources\CCF-logo2.png" />
     <Resource Include="Resources\CCF-logo2_200.png" />
     <Resource Include="Resources\back_button.png" />
+    <Resource Include="Resources\FamilySupportInfo.xml">
+      <SubType>Designer</SubType>
+    </Resource>
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -156,6 +159,9 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y $(ProjectDir)Resources\*.xml $(TargetDir)Resources\</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
