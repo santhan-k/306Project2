@@ -154,6 +154,8 @@
     </Resource>
     <Resource Include="Resources\holiday_home.jpg" />
     <Resource Include="Resources\family_places.jpg" />
+    <Resource Include="Resources\beads_of_courage.jpg" />
+    <Resource Include="Resources\beadsOfCourage.PNG" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
