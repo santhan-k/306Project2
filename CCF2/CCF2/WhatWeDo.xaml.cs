@@ -47,5 +47,46 @@ namespace CCF2
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "OurAmbassadors"));
         }
+
+        private void HowWeHelp_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "HowWeHelp"));
+
+        }
+
+        private void OurHistory_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "OurHistory"));
+
+        }
+        private void HealthProfessionals_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "HealthProfessionals"));
+
+        }
+
+        private void AboutUs_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "AboutUs"));
+
+        }
+
+        private void OurStories_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "OurStories"));
+
+        }
+
+        private void OurPeople_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "OurPeople"));
+
+        }
+
+        private void Vacancies_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new WhatWeDoSubPage(sw1, "Vacancies"));
+
+        }
     }
 }
