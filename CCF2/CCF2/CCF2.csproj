@@ -141,6 +141,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\sharing_magazine.jpg" />
     <Resource Include="Resources\WhatWeDoInfo.xml" />
     <Resource Include="Resources\CCF-logo.png" />
     <Resource Include="Resources\back_button_256.png" />
@@ -151,6 +152,8 @@
     <Resource Include="Resources\FamilySupportInfo.xml">
       <SubType>Designer</SubType>
     </Resource>
+    <Resource Include="Resources\holiday_home.jpg" />
+    <Resource Include="Resources\family_places.jpg" />
     <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

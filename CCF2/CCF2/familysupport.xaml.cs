@@ -45,7 +45,32 @@ namespace CCF2
 
         private void FSC_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new FamilySupportSubPage(sw1, "FamilySupportCo-ordinators"));
+            sw1.showPage(new FamilySupportSubPage(sw1, "FSC"));
+        }
+
+        private void BeadsOfCourage_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new FamilySupportSubPage(sw1, "BeadsOfCourage"));
+        }
+
+        private void SharingMagazine_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new FamilySupportSubPage(sw1, "SharingMagazine"));
+        }
+
+        private void FamilyPlaces_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new FamilySupportSubPage(sw1, "FamilyPlaces"));
+        }
+
+        private void HolidayHomes_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new FamilySupportSubPage(sw1, "HolidayHomes"));
+        }
+
+        private void Scholarships_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new FamilySupportSubPage(sw1, "Scholarships"));
         }
     }
 }

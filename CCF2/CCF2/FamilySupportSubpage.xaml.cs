@@ -35,14 +35,14 @@ namespace CCF2
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
             if (imageNode != null)
             {
-                bodyImage.Source = new BitmapImage(new Uri(imageNode.Attributes["src"].Value, UriKind.Relative));
+                bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
                 bodyImage.Visibility = System.Windows.Visibility.Visible;
             }
-            bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerXml;
+            bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText;
         }
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new WhatWeDo(sw1, "back"));
+            sw1.showPage(new FamilySupport(sw1, "back"));
         }
     }
 }
