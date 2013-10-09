@@ -28,23 +28,17 @@ namespace CCF2
             InitializeComponent();
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
-            String textContent= "empty";
-            XmlTextReader reader = new XmlTextReader("Resources/WhatWeDoInfo.xml");
+            XmlDocument xml = new XmlDocument();
+            xml.Load("Resources/WhatWeDoInfo.xml");
 
-            while (reader.Read())
+            headingLabel.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
+            XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
+            if (imageNode != null)
             {
-                if (reader.Name == "page")
-                {
-                    reader.MoveToAttribute("name");
-                    if (reader.Value == name)
-                    {
-                        reader.MoveToAttribute("content");
-                        textContent = reader.Value;
-                    }
-                }
+                bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
+                bodyImage.Visibility = System.Windows.Visibility.Visible;
             }
-
-            content.Text = textContent;
+            bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText;
 
         }
 
