@@ -44,5 +44,10 @@ namespace CCF2
         {
             sw1.showPage(new FamilySupport(sw1, "back"));
         }
+
+        private void bodyImage_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
     }
 }
