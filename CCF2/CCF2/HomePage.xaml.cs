@@ -38,7 +38,7 @@ namespace CCF2
 
         private void HowYouCanHelp_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void NewsAndEvents_Click(object sender, RoutedEventArgs e)
