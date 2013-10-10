@@ -90,7 +90,15 @@
     </TextBlock.Triggers>
 
         </TextBlock>
-        <Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>
+        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
+
+        <Button Height="Auto" Width="200" Margin="-925.493,-840,0,0" Click="Home_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Resources/CCF-logo2_200.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
 
         <s:SurfaceButton
                 Margin="195.693,59,0,0" Padding="0"

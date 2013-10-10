@@ -72,5 +72,10 @@ namespace CCF2
         {
             sw1.showPage(new FamilySupportSubPage(sw1, "Scholarships"));
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new HomePage(sw1));
+        }
     }
 }
