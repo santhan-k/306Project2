@@ -88,5 +88,11 @@ namespace CCF2
             sw1.showPage(new WhatWeDoSubPage(sw1, "Vacancies"));
 
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new HomePage(sw1));
+        }
+
     }
 }
