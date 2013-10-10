@@ -38,10 +38,12 @@ namespace CCF2
 
         }
 
+        //Back button listener
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
+
 
         private void FSC_Click(object sender, RoutedEventArgs e)
         {

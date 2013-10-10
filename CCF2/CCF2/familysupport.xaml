@@ -4,6 +4,7 @@
 	mc:Ignorable="d"
 
 	Title="FamilySupportPage">
+    <!--Background image from the CCF website-->
     <Page.Background>
         <ImageBrush ImageSource="Resources/background.png" />
     </Page.Background>
@@ -26,6 +27,7 @@
 
         </Viewbox>
 
+        <!--Buttons for the 6 different options-->
         <s:SurfaceButton
                 Margin="300.25,400.117,0,0"
                 Content="Family Support Co-ordinators"
@@ -79,7 +81,7 @@
                 Click="Scholarships_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="{x:Null}" VerticalContentAlignment="Center">
         </s:SurfaceButton>
 
-
+        <!--Scrolling news feed-->
         <TextBlock FontSize="22" x:Name="txtScrolling" Text="News Feed" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
 <TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />
@@ -101,6 +103,7 @@
         </TextBlock>
         <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
 
+         <!--Logo/Home button-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>
@@ -109,6 +112,7 @@
             </Button.Template>
         </Button>
 
+        <!--Back button-->
         <s:SurfaceButton
                 Margin="195.693,59,0,0" Padding="0"
                 BorderThickness="0"
