@@ -31,17 +31,15 @@
                 	<s:SurfaceButton Content="Our Ambassadors" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="350" FontSize="32" Foreground="White" Click="Ambassadors_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="How We Help" Margin="0,117.72,0,0" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="HowWeHelp_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="Our History" Margin="0,0,0,116.398" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="OurHistory_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Health  Professionals" Margin="0" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="HealthProfessionals_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Health Professionals" Margin="0" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="HealthProfessionals_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="About Us" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="350" FontSize="32" Foreground="White" Click="AboutUs_Click" Background="{x:Null}" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="Our Stories" Margin="0,117.72,0,0" HorizontalAlignment="Right" Width="350" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="OurStories_Click" Background="{x:Null}" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="Our People" Margin="0,0,0,116.398" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="350" FontSize="32" Foreground="White" Click="OurPeople_Click" Background="{x:Null}" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Vacancies" Margin="0" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="350" FontSize="32" Foreground="White" Click="Vacancies_Click" Background="{x:Null}" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-
                 </Grid>
 
             </Grid>
         </Viewbox>
-        <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top">
+        <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
 <TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />
     </TextBlock.RenderTransform>
