@@ -42,7 +42,16 @@
                 Height="75"
                 BorderThickness="0"
                 Click="BeadsOfCourage_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="{x:Null}" VerticalContentAlignment="Center">
+                <!--
+                <s:SurfaceButton.Background>
+                    <RadialGradientBrush SpreadMethod="Pad">
+                        <GradientStop Color="Red" Offset="0.5" />
+                        <GradientStop Color="Black" Offset="1" />
+                    </RadialGradientBrush>
+                </s:SurfaceButton.Background>
+                -->
         </s:SurfaceButton>
+        
         <s:SurfaceButton
                 Margin="1050.25,400.117,0,0"
                 Content="Family Places"

@@ -50,6 +50,7 @@ namespace CCF2
 
         private void BeadsOfCourage_Click(object sender, RoutedEventArgs e)
         {
+            // BeadsOfCourage.Background = new RadialGradientBrush(Colors.Green, Colors.Black);
             sw1.showPage(new FamilySupportSubPage(sw1, "BeadsOfCourage"));
         }
 
