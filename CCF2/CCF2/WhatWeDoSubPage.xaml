@@ -31,9 +31,9 @@
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" FontFamily="Century Gothic" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" />
-                <TextBlock Height="543" Foreground="FloralWhite" HorizontalAlignment="Left" Margin="-1,58,0,0" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="736" FontFamily="Century Gothic" FontSize="27" />
+                <TextBlock Height="543" TextAlignment="Justify" Foreground="FloralWhite" HorizontalAlignment="Left" Margin="-1,58,0,0" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="736" FontFamily="Century Gothic" FontSize="27" />
 
-                <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Fill" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="453" Width="400"   />
+                <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Fill" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="574" Width="400"   />
             </Grid>
 
         </Viewbox>
