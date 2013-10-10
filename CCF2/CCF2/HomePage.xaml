@@ -12,6 +12,7 @@
         <ImageBrush ImageSource="Resources/background.png" />
     </Page.Background>
     <Grid>
+        <!--Scrolling news feed-->
         <TextBlock FontSize="22" Name="txtScrolling" Text="Child Cancer Foundation News feed coming soon!" Margin="-1,176,0,0" Width="1617">
 <TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />
@@ -24,6 +25,8 @@
             </BeginStoryboard>
         </EventTrigger>
     </TextBlock.Triggers></TextBlock>
+        
+        <!--Grid containind the six different input blocks-->
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
             <Grid Height="597" Width="1197.661">
                 <s:SurfaceButton  HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="WhatWeDo_Click" Background="White">
@@ -75,7 +78,10 @@
 
             </Grid>
         </Viewbox>
+        <!--CCF Logo-->
         <Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200" />
+        
+        <!--Rectangles for blocking the newsfeed-->
         <Rectangle Height="89" HorizontalAlignment="Left" Margin="1255,140,0,0" Name="rectangle1" Stroke="#0035BCDE" VerticalAlignment="Top" Width="300">
             <Rectangle.Fill>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

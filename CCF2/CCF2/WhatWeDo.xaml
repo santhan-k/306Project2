@@ -27,6 +27,7 @@
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
                 <Label Content="What We Do" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Margin="20" Foreground="Black" />
+                <!--Grid containing the 8 links to sub pages-->
                 <Grid Margin="83.018,117.638,173.046,56.958">
                 	<s:SurfaceButton Content="Our Ambassadors" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="350" FontSize="32" Foreground="White" Click="Ambassadors_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="How We Help" Margin="0,117.72,0,0" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="HowWeHelp_Click" Background="{x:Null}" VerticalContentAlignment="Center" />
@@ -39,27 +40,28 @@
 
             </Grid>
         </Viewbox>
+        <!--Code for the scrolling news feed-->
         <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
-<TextBlock.RenderTransform>
-  <TranslateTransform x:Name="translate" />
-    </TextBlock.RenderTransform>
-      <TextBlock.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard>
-                <Storyboard RepeatBehavior="Forever">
-                    <DoubleAnimation
-                        From="1100" To="0"
-                        Storyboard.TargetName="translate"
-                        Storyboard.TargetProperty="X"
-                        Duration="0:0:9" />
-                </Storyboard>
-            </BeginStoryboard>
-        </EventTrigger>
-    </TextBlock.Triggers>
-
+            <TextBlock.RenderTransform>
+              <TranslateTransform x:Name="translate" />
+                </TextBlock.RenderTransform>
+                  <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever">
+                                <DoubleAnimation
+                                    From="1100" To="0"
+                                    Storyboard.TargetName="translate"
+                                    Storyboard.TargetProperty="X"
+                                    Duration="0:0:9" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
         </TextBlock>
         <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
 
+         <!--Home button/logo-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>
@@ -68,6 +70,7 @@
             </Button.Template>
         </Button>
 
+        <!--Back button-->
         <s:SurfaceButton
                 Margin="195.693,59,0,0" Padding="0"
                 BorderThickness="0"

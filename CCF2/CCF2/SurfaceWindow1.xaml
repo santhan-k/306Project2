@@ -10,6 +10,7 @@
     WindowState="Maximized"
     WindowStartupLocation="CenterScreen"
     >
+    <!--Blue gradient background from CCF website-->
     <Window.Background>
         <ImageBrush ImageSource="Resources/background.png" />
     </Window.Background>
@@ -22,7 +23,7 @@
             </Setter>
         </Style>
         
-       
+       <!--Page Trasnitions-->
         <Storyboard x:Key="SlidePageLeftEntry">
             <ThicknessAnimation Duration="0:0:0.8" Storyboard.TargetProperty="Margin" From="400,0,-400,0" To="0" DecelerationRatio=".9" />
             <DoubleAnimation Duration="0:0:.9" Storyboard.TargetProperty="Opacity" From="0" To="1" /> </Storyboard>
@@ -31,7 +32,6 @@
             <ThicknessAnimation Duration="0:0:.8" Storyboard.TargetProperty="Margin" To="-400,0,400,0" AccelerationRatio=".9" />
             <DoubleAnimation Duration="0:0:.8" Storyboard.TargetProperty="Opacity" To="0" />
         </Storyboard>
-
 
         <Storyboard x:Key="SlidePageRightEntry">
             <ThicknessAnimation Duration="0:0:0.8" Storyboard.TargetProperty="Margin" From="-400,0,400,0" To="0" DecelerationRatio=".9" />
@@ -42,7 +42,10 @@
             <ThicknessAnimation Duration="0:0:.5" Storyboard.TargetProperty="Margin" To="400,0,-400,0" AccelerationRatio=".9" />
             <DoubleAnimation Duration="0:0:.5" Storyboard.TargetProperty="Opacity" To="0" />
         </Storyboard>
+        
     </Window.Resources>
+    
+    <!--Frame that will be used to display other pages-->
     <Frame Name="display"
            NavigationUIVisibility="Hidden">
     </Frame>

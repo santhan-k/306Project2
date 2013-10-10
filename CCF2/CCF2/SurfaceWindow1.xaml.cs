@@ -26,6 +26,8 @@ namespace CCF2
     public partial class SurfaceWindow1 : Window
     {
         public Stack<Page> pages;
+
+        //Storyboards used to create animations between pages
         public Storyboard showP;
         public Storyboard hideP;
 
@@ -44,14 +46,16 @@ namespace CCF2
             AddWindowAvailabilityHandlers();
         }
 
-        //Code stolen from http://biederdb.googlecode.com/svn/trunk/PageTransitionsDemo/WpfPageTransitions/PageTransition.xaml.cs
-
+        //This function is called by the other pages to indicate what page needs to be displayed
         public void showPage(Page p)
         {
             pages.Push(p);
+
+            //Start a new task.   Doing it this way has performance benefits
             Task.Factory.StartNew(() => newPage());
         }
 
+        //Functoin's responsibility is to replace the old page with the one that needs to be loaded
         public void newPage()
         {
             Dispatcher.Invoke((Action)delegate
@@ -73,6 +77,7 @@ namespace CCF2
            
         }
 
+        //Finally loads the next page
         private void ShowNextPage()
         {
             Page newPage = pages.Pop();
@@ -80,17 +85,20 @@ namespace CCF2
             display.Content = newPage;
         }
 
+        //Unloads the page that needs to be removed
         private void UnloadPage(Page page)
         {
             hideP.Completed += hidePage_Completed;
             hideP.Begin(display);
         }
 
+        //Display the new page
         private void newPage_loaded(object sender, RoutedEventArgs e)
         {
             showP.Begin(display);
         }
 
+        //Hide page that has just been pulled out of the window
         private void hidePage_Completed(object sender, EventArgs e)
         {
             display.Content = null;

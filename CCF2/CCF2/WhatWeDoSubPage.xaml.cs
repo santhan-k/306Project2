@@ -26,8 +26,12 @@ namespace CCF2
         {
             sw1 = window;
             InitializeComponent();
+
+            //Removing the old page and showing the new one 
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+
+            //Loading content from XML file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/WhatWeDoInfo.xml");
 
@@ -35,6 +39,7 @@ namespace CCF2
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
             if (imageNode != null)
             {
+                //Loading image from the image URI Found in the XML file
                 bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
                 bodyImage.Visibility = System.Windows.Visibility.Visible;
                 //bodyText.Width = 740;
@@ -43,11 +48,13 @@ namespace CCF2
 
         }
 
+        //Action listener for The back click button
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1,"back"));
         }
 
+        //Action listener for the event that is caused when the logo is clicked
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
