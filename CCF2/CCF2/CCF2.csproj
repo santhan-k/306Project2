@@ -164,6 +164,7 @@
     <Resource Include="Resources\WhatWeDo2.PNG" />
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Resource Include="Resources\CCF-logo.png" />
     <Resource Include="Resources\back_button_256.png" />
