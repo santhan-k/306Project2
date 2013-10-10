@@ -37,6 +37,7 @@ namespace CCF2
             {
                 bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
                 bodyImage.Visibility = System.Windows.Visibility.Visible;
+                bodyText.Width = 740;
             }
             bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
         }
