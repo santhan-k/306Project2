@@ -49,5 +49,10 @@ namespace CCF2
         {
 
         }
+
+        private void Home_Click(object sender, RoutedEventArgs e)
+        {
+            sw1.showPage(new HomePage(sw1));
+        }
     }
 }
