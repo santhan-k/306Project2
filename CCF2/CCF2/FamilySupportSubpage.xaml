@@ -8,13 +8,13 @@
         <ImageBrush ImageSource="Resources/background.png" />
     </Page.Background>
     <Grid>
-        <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
+        <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="748*" />
                     <ColumnDefinition Width="450*" />
                 </Grid.ColumnDefinitions>
-                <GridSplitter HorizontalAlignment="Stretch" Margin="596,-626.697,147,24.593" RenderTransformOrigin="0.5,0.5">
+                <GridSplitter   HorizontalAlignment="Stretch" Margin="596,-626.697,147,24.593" RenderTransformOrigin="0.5,0.5">
                     <GridSplitter.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
