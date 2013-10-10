@@ -142,6 +142,26 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\sharing_magazine.jpg" />
+    <Resource Include="Resources\AboutUs.jpg" />
+    <Resource Include="Resources\ContactUs1.PNG" />
+    <Resource Include="Resources\ContactUs2.PNG" />
+    <Resource Include="Resources\FamilySupport1.PNG" />
+    <Resource Include="Resources\FamilySupport2.PNG" />
+    <Resource Include="Resources\HealthProfessionals.jpg" />
+    <Resource Include="Resources\HowWeHelp.jpg" />
+    <Resource Include="Resources\HowYouCanHelp1.PNG" />
+    <Resource Include="Resources\HowYouCanHelp2.PNG" />
+    <Resource Include="Resources\NewsAndEvents1.PNG" />
+    <Resource Include="Resources\NewsAndEvents2.PNG" />
+    <Resource Include="Resources\OurAmbassadors.png" />
+    <Resource Include="Resources\OurHistory.jpg" />
+    <Resource Include="Resources\OurPeople.PNG" />
+    <Resource Include="Resources\OurStories.jpg" />
+    <Resource Include="Resources\SiblingBeads.png" />
+    <Resource Include="Resources\Volunteer1.PNG" />
+    <Resource Include="Resources\Volunteer2.PNG" />
+    <Resource Include="Resources\WhatWeDo1.PNG" />
+    <Resource Include="Resources\WhatWeDo2.PNG" />
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

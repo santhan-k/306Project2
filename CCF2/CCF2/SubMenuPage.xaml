@@ -16,7 +16,7 @@
     <Grid>
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
-                <GridSplitter HorizontalAlignment="Stretch" Margin="595.67,-626.697,596.991,24.593" RenderTransformOrigin="0.5,0.5">
+                <GridSplitter HorizontalAlignment="Stretch" Margin="595.67,-626.697,601,24.593" RenderTransformOrigin="0.5,0.5">
                     <GridSplitter.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
