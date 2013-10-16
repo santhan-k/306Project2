@@ -49,7 +49,7 @@
                             </Button.Template>
                         </Button>
 
-                        <Button Height="Auto" Width="500" Margin="-1300,-380,0,0" Click="CraftyKnitwitsKnitathonGrandAuction_Click">
+                        <Button Height="Auto" Width="500" Margin="-1300,-380,0,0" Click="ChildCancerLegendsLuncheon_Click">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Width="500" Height="380" Source="Resources/nae2.jpg" Stretch="Fill"/>
@@ -57,7 +57,7 @@
                             </Button.Template>
                         </Button>
 
-                        <Button Height="Auto" Width="500" Margin="-200,-380,0,0" Click="ChildCancerLegendsLuncheon_Click">
+                        <Button Height="Auto" Width="500" Margin="-200,-380,0,0" Click="CraftyKnitwitsKnitathonGrandAuction_Click">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Width="500" Height="380" Source="Resources/nae3.jpg" Stretch="Fill"/>
