@@ -1,0 +1,19 @@
+﻿<Page x:Class="CCF2.WelcomeScreen"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:s="http://schemas.microsoft.com/surface/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+
+	Title="WelcomeScreen" Foreground="#00000000">
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/background.png" />
+    </Page.Background>
+    <Grid>
+        <MediaElement Source="C:\Users\Santhan\34545\trunk\CCF2\CCF2\Resources\CCFVideo.mp4" SpeedRatio="0.8" x:Name="mainVideo" Margin="100,45,100,140" Width="1600" Height="900" MediaEnded="mainVideo_MediaEnded" MediaOpened="mainVideo_MediaOpened" LoadedBehavior="Play" UnloadedBehavior="Stop" Stretch="Fill"/>
+    	<s:SurfaceButton Content="Touch Screen To Begin" Height="128" Margin="78,0,95,8" Click="Begin_Click" VerticalAlignment="Bottom" Foreground="White" Background="Transparent" FontSize="45" HorizontalAlignment="Center"/>
+        <s:SurfaceButton Height="1080" Background="Transparent" HorizontalAlignment="Left" Margin="-8,1,0,-1" Name="rectangle1" Width="1980" Click="Begin_Click" Foreground="White" BorderThickness="0" FontSize="60" />
+    </Grid>
+</Page>
