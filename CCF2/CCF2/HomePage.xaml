@@ -79,7 +79,7 @@
             </Grid>
         </Viewbox>
         <!--CCF Logo-->
-        <Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200" />
+        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200" />-->
         
         <!--Rectangles for blocking the newsfeed-->
         <Rectangle Height="89" HorizontalAlignment="Left" Margin="1255,140,0,0" Name="rectangle1" Stroke="#0035BCDE" VerticalAlignment="Top" Width="300">
@@ -98,5 +98,13 @@
                 </LinearGradientBrush>
             </Rectangle.Fill>
         </Rectangle>
+        <!--Logo/Home button-->
+        <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Resources/CCF-logo2_200.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
     </Grid>
 </Page>
