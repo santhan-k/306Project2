@@ -13,14 +13,14 @@
     </Page.Background>
     <Grid>
         <!--Scrolling news feed-->
-        <TextBlock FontSize="22" Name="txtScrolling" Text="Child Cancer Foundation News feed coming soon!" Margin="-1,176,0,0" Width="1617">
+        <TextBlock FontSize="22" Name="txtScrolling" Text="Executive Travel have embarked on a yearlong fundraising programme for CCF . . Assurity Consulting Group came on board once again as part of our One Day for Child Cancer campaign in July . . The Governor-General Dinner held in Hamilton last week . . Renowned artist Don Packwood has painted 'Three of 17 NZ Speed Legends' using the unique oil paintings . . The Wooden Toy Box just gave away $50,000 worth of toys and CCF got a huge 41% of them . . Eric Bettridge is the latest recipient of the Child Cancer Distinguished Service Award . . we sent out a survey to a random selection of our supporters to find out how you think we are doing . . Former New Zealand pop icons TrueBliss are back to raise awareness of child cancer . . The Rotary Annual Charity Yacht with an amazing $15000 donation . . The Glenora Bears Rugby League charity match is held on Saturday 22 November at 2.30p . . " Margin="-1,176,0,0" Width="8800" TextAlignment="Justify" TextWrapping="Wrap">
 <TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />
     </TextBlock.RenderTransform><TextBlock.Triggers>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard>
                 <Storyboard RepeatBehavior="Forever">
-                    <DoubleAnimation From="1100" To="0" Storyboard.TargetName="translate" Storyboard.TargetProperty="X" Duration="0:0:9" />
+                    <DoubleAnimation From="1100" To="-8000" Storyboard.TargetName="translate" Storyboard.TargetProperty="X" Duration="0:0:50" />
                 </Storyboard>
             </BeginStoryboard>
         </EventTrigger>
