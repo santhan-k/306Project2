@@ -39,8 +39,8 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
-        <Image Name="mainImage" Margin="424,223,469,271" Stretch="Fill" />
-        <Label Name="TitleText" Content="Label" HorizontalAlignment="Left" Height="100.8" Margin="302.953,158,0,0" VerticalAlignment="Top" Width="1117" FontSize="36"/>
+        <Image Name="mainImage" Width="500" Height="400" Margin="424,350,469,271" Stretch="Fill" />
+        <Label Name="TitleText" Content="Label" HorizontalAlignment="Left" Height="100.8" Margin="302.953,250,0,0" VerticalAlignment="Top" Width="1117" FontSize="36"/>
         <s:SurfaceTextBox Name="MainBodyText" Height="317" Margin="302.953,0,306.846,-50" TextWrapping="Wrap" Text="When:&#xd;&#xa;&#xd;&#xa;Where:&#xd;&#xa;&#xd;&#xa;Description:" VerticalAlignment="Bottom" Background="{x:Null}" FontSize="21.333" BorderThickness="0" TextAlignment="Justify" />
     </Grid>
 </Page>
