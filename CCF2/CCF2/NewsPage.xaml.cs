@@ -55,7 +55,7 @@ namespace CCF2
         //Action listener for The back click button
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new testNE(sw1, "back"));
+            sw1.showPage(new NewsAndEvents(sw1, "back"));
         }
 
         //Action listener for the event that is caused when the logo is clicked
