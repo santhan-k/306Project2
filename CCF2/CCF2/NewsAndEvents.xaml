@@ -40,12 +40,62 @@
                         <Rectangle Width="145" Height="120" Fill="Green" />
                         <s:SurfaceScrollViewer Height="543" HorizontalAlignment="Left" Margin="-1,58,0,0" VerticalAlignment="Top" Width="1199" Padding="4,0,0,0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
                     <StackPanel Orientation="Horizontal" CanHorizontallyScroll="True">-->
-                        <Image Width="500" Height="380" Source="Resources/nae1.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+                        <Button Height="Auto" Width="500" Margin="-2400,50,0,0" Click="CharityHomeForCCE_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Width="500" Height="380" Source="Resources/nae1.jpg" Stretch="Fill"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button Height="Auto" Width="500" Margin="-1300,-380,0,0" Click="CraftyKnitwitsKnitathonGrandAuction_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Width="500" Height="380" Source="Resources/nae2.jpg" Stretch="Fill"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button Height="Auto" Width="500" Margin="-200,-380,0,0" Click="ChildCancerLegendsLuncheon_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Width="500" Height="380" Source="Resources/nae3.jpg" Stretch="Fill"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button Height="Auto" Width="500" Margin="900,-380,0,0" Click="Charitybeginsattheoffice_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Width="500" Height="380" Source="Resources/nae4.jpg" Stretch="Fill"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button Height="Auto" Width="500" Margin="2000,-380,0,0" Click="GovernorGeneralDinnerinHamiltongreatnightforall_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Width="500" Height="380" Source="Resources/nae5.jpg" Stretch="Fill"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+                        <Button Height="Auto" Width="500" Margin="3100,-380,0,0" Click="CRCSpeedshowauctionpaintingsforcharity_Click">
+                            <Button.Template>
+                                <ControlTemplate>
+                                    <Image Width="500" Height="380" Source="Resources/nae6.jpg" Stretch="Fill"/>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+
+
+                        <!--<Image Width="500" Height="380" Source="Resources/nae1.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center" />
                         <Image Width="500" Height="380" Margin="600,-380,0,0" Source="Resources/nae2.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <Image Width="500" Height="380" Margin="1200,-380,0,0" Source="Resources/nae3.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <Image Width="500" Height="380" Margin="1800,-380,0,0" Source="Resources/nae4.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
                         <Image Width="500" Height="380" Margin="2400,-380,0,0" Source="Resources/nae5.jpg" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-                        <Image Width="500" Height="380" Margin="3000,-380,0,0" Source="Resources/nae6.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                        <Image Width="500" Height="380" Margin="3000,-380,0,0" Source="Resources/nae6.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Center"/>-->
                     </StackPanel>
                 </s:SurfaceScrollViewer>
             </Grid>
