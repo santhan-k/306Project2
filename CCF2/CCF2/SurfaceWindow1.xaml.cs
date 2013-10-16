@@ -40,7 +40,7 @@ namespace CCF2
 
             InitializeComponent();
             pages = new Stack<Page>();
-            display.Content = new HomePage(this);
+            display.Content = new WelcomeScreen(this);
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
