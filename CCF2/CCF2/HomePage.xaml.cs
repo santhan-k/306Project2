@@ -38,7 +38,7 @@ namespace CCF2
 
         private void HowYouCanHelp_Click(object sender, RoutedEventArgs e)
         {
-           
+            sw1.showPage(new HowYouCanHelp(sw1, "howyoucanhelp"));  
         }
 
         private void NewsAndEvents_Click(object sender, RoutedEventArgs e)

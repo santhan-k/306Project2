@@ -67,6 +67,15 @@
     <Compile Include="FamilySupportSubPage.xaml.cs">
       <DependentUpon>FamilySupportSubPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HowYouCanHelp.xaml.cs">
+      <DependentUpon>HowYouCanHelp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HowYouCanHelpSubPage.xaml.cs">
+      <DependentUpon>HowYouCanHelpSubPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NewsAndEvents.xaml.cs">
+      <DependentUpon>NewsAndEvents.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
     </Compile>
@@ -85,9 +94,17 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="NewsAndEvents.xaml">
-      <SubType>Component</SubType>
+    <Page Include="HowYouCanHelp.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HowYouCanHelpSubPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewsAndEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="SubMenuPage.xaml">
       <SubType>Designer</SubType>
@@ -169,6 +186,7 @@
     <Resource Include="Resources\NewsAndEventsInfo.xml">
       <SubType>Component</SubType>
     </Resource>
+    <Resource Include="Resources\HowYouCanHelpInfo.xml" />
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
