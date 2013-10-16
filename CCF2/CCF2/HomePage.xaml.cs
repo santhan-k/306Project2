@@ -43,7 +43,7 @@ namespace CCF2
 
         private void NewsAndEvents_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new NewsAndEvents(sw1, "newsand events"));
+            sw1.showPage(new NewsAndEvents(sw1, "newsandevents"));
 
         }
 
