@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EventsPage.xaml.cs">
+      <DependentUpon>EventsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FamilySupport.xaml.cs">
       <DependentUpon>FamilySupport.xaml</DependentUpon>
     </Compile>
@@ -76,12 +79,22 @@
     <Compile Include="NewsAndEvents.xaml.cs">
       <DependentUpon>NewsAndEvents.xaml</DependentUpon>
     </Compile>
+    <Compile Include="NewsPage.xaml.cs">
+      <DependentUpon>NewsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="testNE.xaml.cs">
+      <DependentUpon>testNE.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
     </Compile>
     <Compile Include="WhatWeDoSubPage.xaml.cs">
       <DependentUpon>WhatWeDoSubPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="EventsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="FamilySupport.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -103,6 +116,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="NewsAndEvents.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NewsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -128,6 +145,10 @@
       <DependentUpon>SurfaceWindow1.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="testNE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="WhatWeDo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,6 +208,14 @@
       <SubType>Component</SubType>
     </Resource>
     <Resource Include="Resources\HowYouCanHelpInfo.xml" />
+    <Resource Include="Resources\bead2.png" />
+    <Resource Include="Resources\bead3.png" />
+    <Resource Include="Resources\bead4.png" />
+    <Resource Include="Resources\bead5.png" />
+    <Resource Include="Resources\bead6.png" />
+    <Resource Include="Resources\bead7.png" />
+    <Resource Include="Resources\bead8.png" />
+    <Resource Include="Resources\beads1.png" />
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
