@@ -31,10 +31,22 @@
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
-                <s:SurfaceScrollViewer Name="ScrolBar" Width="740" Height ="500" HorizontalAlignment="Left" Margin="0,64,0,32">
-                    <TextBlock  TextAlignment="Justify" Foreground="FloralWhite" HorizontalAlignment="Left" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="700" Height="Auto" FontSize="27" Padding="4,0,0,0" />
+                <s:SurfaceScrollViewer Margin="-1,58,0,0">
+                    <StackPanel CanHorizontallyScroll="True">
+                        <!--<Rectangle Width="125" Height="95" Fill="Cyan" />
+                        <Rectangle Width="150" Height="100" Fill="Red" />
+                        <Rectangle Width="135" Height="115" Fill="Blue" />
+                        <Rectangle Width="145" Height="120" Fill="Green" />
+                        <s:SurfaceScrollViewer Height="543" HorizontalAlignment="Left" Margin="-1,58,0,0" VerticalAlignment="Top" Width="1199" Padding="4,0,0,0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
+                    <StackPanel Orientation="Horizontal" CanHorizontallyScroll="True">-->
+                        <Image Width="125" Height="95" Source="Resources/nae1.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="125" Height="95" Margin="150,-95,0,0" Source="Resources/nae2.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="125" Height="95" Margin="300,-95,0,0" Source="Resources/nae3.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="125" Height="95" Margin="450,-95,0,0" Source="Resources/nae4.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="125" Height="95" Margin="600,-95,0,0" Source="Resources/nae5.jpg" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="125" Height="95" Margin="750,-95,0,0" Source="Resources/nae6.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                    </StackPanel>
                 </s:SurfaceScrollViewer>
-                <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Fill" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="574" Width="400"   />
             </Grid>
 
         </Viewbox>
