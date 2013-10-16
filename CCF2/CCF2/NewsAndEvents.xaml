@@ -17,10 +17,11 @@
         <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="748*" />
+                    <ColumnDefinition Width="85*" />
+                    <ColumnDefinition Width="663*" />
                     <ColumnDefinition Width="450*" />
                 </Grid.ColumnDefinitions>
-                <GridSplitter HorizontalAlignment="Stretch" Margin="596,-641,151,39" RenderTransformOrigin="0.5,0.5">
+                <GridSplitter HorizontalAlignment="Stretch" Margin="511,-641,151,39" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
                     <GridSplitter.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -30,8 +31,8 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
-                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
-                <s:SurfaceScrollViewer Margin="-1,58,0,0">
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" />
+                <s:SurfaceScrollViewer Margin="-1,58,0,0" Grid.ColumnSpan="18">
                     <StackPanel CanHorizontallyScroll="True">
                         <!--<Rectangle Width="125" Height="95" Fill="Cyan" />
                         <Rectangle Width="150" Height="100" Fill="Red" />
@@ -39,12 +40,12 @@
                         <Rectangle Width="145" Height="120" Fill="Green" />
                         <s:SurfaceScrollViewer Height="543" HorizontalAlignment="Left" Margin="-1,58,0,0" VerticalAlignment="Top" Width="1199" Padding="4,0,0,0" Grid.ColumnSpan="2" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Auto">
                     <StackPanel Orientation="Horizontal" CanHorizontallyScroll="True">-->
-                        <Image Width="125" Height="95" Source="Resources/nae1.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <Image Width="125" Height="95" Margin="150,-95,0,0" Source="Resources/nae2.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <Image Width="125" Height="95" Margin="300,-95,0,0" Source="Resources/nae3.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <Image Width="125" Height="95" Margin="450,-95,0,0" Source="Resources/nae4.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <Image Width="125" Height="95" Margin="600,-95,0,0" Source="Resources/nae5.jpg" Stretch="None" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-                        <Image Width="125" Height="95" Margin="750,-95,0,0" Source="Resources/nae6.jpg" Stretch="None"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="500" Height="380" Source="Resources/nae1.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="500" Height="380" Margin="150,-95,0,0" Source="Resources/nae2.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="500" Height="380" Margin="300,-95,0,0" Source="Resources/nae3.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="500" Height="380" Margin="450,-95,0,0" Source="Resources/nae4.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="500" Height="380" Margin="600,-95,0,0" Source="Resources/nae5.jpg" Stretch="Fill" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        <Image Width="500" Height="380" Margin="750,-95,0,0" Source="Resources/nae6.jpg" Stretch="Fill"  HorizontalAlignment="Left" VerticalAlignment="Top"/>
                     </StackPanel>
                 </s:SurfaceScrollViewer>
             </Grid>
