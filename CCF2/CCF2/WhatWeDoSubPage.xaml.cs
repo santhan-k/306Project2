@@ -45,6 +45,9 @@ namespace CCF2
                 //bodyText.Width = 740;
             }
             bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
+            //Run r = new Run("test");
+            //r.FontWeight = FontWeights.Bold;
+            //bodyText.Inlines.Add(r);
 
         }
 

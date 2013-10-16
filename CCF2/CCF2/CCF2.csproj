@@ -85,6 +85,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="NewsAndEvents.xaml">
+      <SubType>Component</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="SubMenuPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -162,6 +166,9 @@
     <Resource Include="Resources\Volunteer2.PNG" />
     <Resource Include="Resources\WhatWeDo1.PNG" />
     <Resource Include="Resources\WhatWeDo2.PNG" />
+    <Resource Include="Resources\NewsAndEventsInfo.xml">
+      <SubType>Component</SubType>
+    </Resource>
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
