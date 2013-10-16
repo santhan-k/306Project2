@@ -216,6 +216,28 @@
     <Resource Include="Resources\bead7.png" />
     <Resource Include="Resources\bead8.png" />
     <Resource Include="Resources\beads1.png" />
+    <Resource Include="Resources\AssurityConsultingsupportOneDay.jpg" />
+    <Resource Include="Resources\Charitybeginsattheoffice.jpg" />
+    <Resource Include="Resources\CharityHomeForCCE.jpg" />
+    <Resource Include="Resources\ChildCancerLegendsLuncheon.jpg" />
+    <Resource Include="Resources\CraftyKnitwitsKnitathonGrandAuction.jpg" />
+    <Resource Include="Resources\CRCSpeedshowauctionpaintingsforcharity.jpg" />
+    <Resource Include="Resources\Donate1.jpg" />
+    <Resource Include="Resources\EventsInfo.xml" />
+    <Resource Include="Resources\Governor-GeneralDinnerinHamiltongreatnightforall.JPG" />
+    <Resource Include="Resources\nae1.jpg" />
+    <Resource Include="Resources\nae2.jpg" />
+    <Resource Include="Resources\nae3.jpg" />
+    <Resource Include="Resources\nae4.jpg" />
+    <Resource Include="Resources\nae5.jpg" />
+    <Resource Include="Resources\nae6.jpg" />
+    <Resource Include="Resources\NewsInfo.xml" />
+    <Resource Include="Resources\OurSponsors.JPG" />
+    <Resource Include="Resources\OurCampaigns.JPG" />
+    <Resource Include="Resources\Volunteer123.JPG" />
+    <Resource Include="Resources\Fundraise.JPG" />
+    <Resource Include="Resources\MakeAGift.jpg" />
+    <Resource Include="Resources\Schools.jpg" />
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
