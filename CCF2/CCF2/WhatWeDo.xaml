@@ -83,25 +83,16 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
-        <Grid HorizontalAlignment="Left" Margin="279.493,373.5,0,225" Width="94.007">
-        	<Image Margin="2.779,146.779,1.772,0" Source="Resources/bead2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Height="71.942" VerticalAlignment="Top">
-        		<Image.RenderTransform>
-        			<TransformGroup>
-        				<ScaleTransform/>
-        				<SkewTransform/>
-        				<RotateTransform Angle="0.366"/>
-        				<TranslateTransform/>
-        			</TransformGroup>
-        		</Image.RenderTransform>
-        	</Image>
-        	<Image Height="82" Margin="5.007,8,0,0" Source="Resources/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
-        	<Image Height="62" Margin="8,0,-1.993,142" Source="Resources/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
-        	<Image Height="88.5" Margin="8,0,0,0" Source="Resources/bead7.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+        <Grid HorizontalAlignment="Left" Margin="280,373.5,0,225" Width="50">
+        	<Image Margin="-35,50,1.772,0" Source="Resources/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/> 
+        	<Image Height="82" Margin="-35,-60,0,0" Source="Resources/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
+        	<Image Height="62" Margin="-35,0,0,65" Source="Resources/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+        	<Image Height="88.5" Margin="-35,0,0,-40" Source="Resources/bead7.png" Stretch="Fill" VerticalAlignment="Bottom"/>
         </Grid>
-        <Grid Margin="0,373.5,378,225" HorizontalAlignment="Right" Width="94.007">
-        	<Image Height="70.5" Margin="7.507,8,0,0" Source="Resources/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
-        	<Image Margin="7.507,141,11.5,240.5" Source="Resources/bead5.png" Stretch="Fill"/>
-        	<Image Height="100" Margin="-7.493,0,0,110" Source="Resources/bead6.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+        <Grid Margin="0,373.5,310,225" HorizontalAlignment="Right" Width="94.007">
+        	<Image Height="70.5" Margin="0,-50,0,0" Source="Resources/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
+        	<Image Margin="0,0,0,90" Source="Resources/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="83" Width="72" />
+            <Image  Margin="0,0,0,36" Source="Resources/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="83" Width="72"/>
         </Grid>
     </Grid>
 </Page>

@@ -126,5 +126,15 @@
             </Image>
         </s:SurfaceButton>
         <s:SurfaceButton Background="{x:Null}" BorderThickness="0" Content="Sharing Magazine" FontSize="32" Foreground="White" Height="75" HorizontalAlignment="Left" Margin="300.25,700.117,0,0" VerticalAlignment="Top" Width="500" Click="SharingMagazine_Click" VerticalContentAlignment="Center" />
+        <Grid HorizontalAlignment="Left" Margin="240,454,0,145" Width="50">
+            <Image Margin="-35,100,1.772,0" Source="Resources/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
+            <Image Height="82" Margin="-35,-60,0,0" Source="Resources/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Height="62" Margin="-35,0,0,-45" Source="Resources/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid Margin="0,373.5,150,225" HorizontalAlignment="Right" Width="94.007">
+            <Image Height="70.5" Margin="-35,30,1.772,0" Source="Resources/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Margin="-35,150,0,0" Source="Resources/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="50" Width="72" />
+            <Image  Margin="-35,0,0,-150" Source="Resources/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="50" Width="72"/>
+        </Grid>
     </Grid>
 </Page>

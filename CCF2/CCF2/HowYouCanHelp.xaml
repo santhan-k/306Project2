@@ -84,5 +84,17 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        <Grid HorizontalAlignment="Left" Margin="280,373.5,0,225" Width="50">
+            <Image Margin="-35,50,1.772,0" Source="Resources/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
+            <Image Height="82" Margin="-35,-60,0,0" Source="Resources/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Height="62" Margin="-35,0,0,65" Source="Resources/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+            <Image Height="88.5" Margin="-35,0,0,-40" Source="Resources/bead7.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+        </Grid>
+        <Grid Margin="0,373.5,310,225" HorizontalAlignment="Right" Width="94.007">
+            <Image Height="70.5" Margin="0,-50,0,0" Source="Resources/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Margin="0,0,0,90" Source="Resources/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="72" />
+            <Image  Margin="11.003,0,11.003,54" Source="Resources/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="60" Width="72" d:LayoutOverrides="HorizontalMargin"/>
+            <Image Height="60.4" Margin="0,0,1.807,-46" Source="Resources/beads1.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+        </Grid>
     </Grid>
 </Page>
