@@ -46,58 +46,51 @@ namespace CCF2
             sw3.showPage(new HomePage(sw3));
         }
 
-        //Action listener for the Our Ambassadors page
-        private void Ambassadors_Click(object sender, RoutedEventArgs e)
+        //Action listener for the CharityHomeForCCE button
+        private void CharityHomeForCCE_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "OurAmbassadors"));
+            sw3.showPage(new EventsPage(sw3, "CharityHomeForCCE"));
         }
 
-        //Action Listerner for the HowWeHelp Button
-        private void HowWeHelp_Click(object sender, RoutedEventArgs e)
+        //Action Listerner for the CraftyKnitwitsKnitathonGrandAuction Button
+        private void CraftyKnitwitsKnitathonGrandAuction_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "HowWeHelp"));
-
-        }
-
-        //Action Listener for the OurHistory button
-        private void OurHistory_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "OurHistory"));
+            sw3.showPage(new EventsPage(sw3, "CraftyKnitwitsKnitathonGrandAuction"));
 
         }
 
-        //Action Listener Health Professionals
-        private void HealthProfessionals_Click(object sender, RoutedEventArgs e)
+        //Action Listener for the Child Cancer Legends Luncheon button
+        private void ChildCancerLegendsLuncheon_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "HealthProfessionals"));
+            sw3.showPage(new EventsPage(sw3, "ChildCancerLegendsLuncheon"));
 
         }
 
-        //Action Listener for the About Us Page
-        private void AboutUs_Click(object sender, RoutedEventArgs e)
+        //Action Listener Assurity Consulting support One Day button
+        private void AssurityConsultingsupportOneDays_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "AboutUs"));
+            sw3.showPage(new NewsPage(sw3, "AssurityConsultingsupportOneDay"));
 
         }
 
-        //Action Listener for the Our Stories button
-        private void OurStories_Click(object sender, RoutedEventArgs e)
+        //Action Listener for the Charitybeginsattheoffice Page
+        private void Charitybeginsattheoffice_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "OurStories"));
+            sw3.showPage(new NewsPage(sw3, "Charitybeginsattheoffice"));
 
         }
 
-        //Action listener for the Our People button
-        private void OurPeople_Click(object sender, RoutedEventArgs e)
+        //Action Listener for the Governor-GeneralDinnerinHamiltongreatnightforall button
+        private void GovernorGeneralDinnerinHamiltongreatnightforall_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "OurPeople"));
+            sw3.showPage(new NewsPage(sw3, "Governor-GeneralDinnerinHamiltongreatnightforall"));
 
         }
 
-        //Action listener for the Vacancies button
-        private void Vacancies_Click(object sender, RoutedEventArgs e)
+        //Action listener for the CRCSpeedshowauctionpaintingsforcharity button
+        private void CRCSpeedshowauctionpaintingsforcharity_Click(object sender, RoutedEventArgs e)
         {
-            sw3.showPage(new WhatWeDoSubPage(sw3, "Vacancies"));
+            sw3.showPage(new NewsPage(sw3, "CRCSpeedshowauctionpaintingsforcharity"));
 
         }
 
