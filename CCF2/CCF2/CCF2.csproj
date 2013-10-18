@@ -85,6 +85,9 @@
     <Compile Include="testNE.xaml.cs">
       <DependentUpon>testNE.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WelcomeScreen.xaml.cs">
+      <DependentUpon>WelcomeScreen.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WhatWeDo.xaml.cs">
       <DependentUpon>WhatWeDo.xaml</DependentUpon>
     </Compile>
@@ -146,6 +149,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="testNE.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WelcomeScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -238,6 +245,7 @@
     <Resource Include="Resources\Fundraise.JPG" />
     <Resource Include="Resources\MakeAGift.jpg" />
     <Resource Include="Resources\Schools.jpg" />
+    <Content Include="Resources\CCFVideo.mp4" />
     <Content Include="Resources\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <SubType>Designer</SubType>
