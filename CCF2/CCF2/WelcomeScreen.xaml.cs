@@ -31,12 +31,13 @@ namespace CCF2
             //mainVideo.Play();
         }
 
-
+        //Link takes the user to the homepage when the screen is touched
         private void Begin_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
 
+        //Restarts the video when it ends
         private void mainVideo_MediaEnded(object sender, RoutedEventArgs e)
         {
             mainVideo.Position = TimeSpan.Zero;

@@ -12,8 +12,8 @@
         <ImageBrush ImageSource="Resources/background.png" />
     </Page.Background>
     <Grid>
-        <MediaElement Source="C:\Users\Santhan\34545\trunk\CCF2\CCF2\Resources\CCFVideo.mp4" SpeedRatio="0.8" x:Name="mainVideo" Margin="100,45,100,140" Width="1600" Height="900" MediaEnded="mainVideo_MediaEnded" MediaOpened="mainVideo_MediaOpened" LoadedBehavior="Play" UnloadedBehavior="Stop" Stretch="Fill"/>
-    	<s:SurfaceButton Content="Touch Screen To Begin" Height="128" Margin="78,0,95,8" Click="Begin_Click" VerticalAlignment="Bottom" Foreground="White" Background="Transparent" FontSize="45" HorizontalAlignment="Center"/>
+        <MediaElement Source="Resources\CCFVideo.mp4" SpeedRatio="0.8" x:Name="mainVideo" Margin="45,45,45,130" Width="1800" Height="1013" MediaEnded="mainVideo_MediaEnded" MediaOpened="mainVideo_MediaOpened" LoadedBehavior="Play" UnloadedBehavior="Stop" Stretch="Fill"/>
+    	<s:SurfaceButton Content="Touch Screen To Begin" Height="128" Margin="78,0,95,-10" Click="Begin_Click" VerticalAlignment="Bottom" Foreground="White" Background="Transparent" FontSize="45" HorizontalAlignment="Center"/>
         <s:SurfaceButton Height="1080" Background="Transparent" HorizontalAlignment="Left" Margin="-8,1,0,-1" Name="rectangle1" Width="1980" Click="Begin_Click" Foreground="White" BorderThickness="0" FontSize="60" />
     </Grid>
 </Page>
