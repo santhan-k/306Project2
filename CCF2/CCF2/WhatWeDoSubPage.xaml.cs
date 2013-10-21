@@ -33,7 +33,7 @@ namespace CCF2
 
             //Loading content from XML file
             XmlDocument xml = new XmlDocument();
-            xml.Load("Resources/WhatWeDoInfo.xml");
+            xml.Load("Resources/xml/WhatWeDoInfo.xml");
 
             headingLabel.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");

@@ -12,7 +12,7 @@
     >
     <!--Blue gradient background from CCF website-->
     <Window.Background>
-        <ImageBrush ImageSource="Resources/background.png" />
+        <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Window.Background>
     <Window.Resources>
         <Style TargetType="{x:Type Frame}">

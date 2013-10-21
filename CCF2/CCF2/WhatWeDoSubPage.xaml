@@ -11,7 +11,7 @@
 
 	Title="WhatWeDoSubPage">
     <Page.Background>
-        <ImageBrush ImageSource="Resources/background.png" />
+        <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
         <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
@@ -63,7 +63,7 @@
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>
-                    <Image Source="Resources/CCF-logo2_200.png"/>
+                    <Image Source="Resources/images/Common/CCF-logo2_200.png"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -74,7 +74,7 @@
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
             <Image Height="60"
                     Width="60"
-                    Source="/Resources/back_button.png">
+                    Source="Resources/images/Common/back_button.png">
                 <Image.Effect>
                     <ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
                 </Image.Effect>

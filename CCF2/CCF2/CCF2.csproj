@@ -190,85 +190,82 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\sharing_magazine.jpg" />
-    <Resource Include="Resources\AboutUs.jpg" />
-    <Resource Include="Resources\ContactUs1.PNG" />
-    <Resource Include="Resources\ContactUs2.PNG" />
-    <Resource Include="Resources\FamilySupport1.PNG" />
-    <Resource Include="Resources\FamilySupport2.PNG" />
-    <Resource Include="Resources\HealthProfessionals.jpg" />
-    <Resource Include="Resources\HowWeHelp.jpg" />
-    <Resource Include="Resources\HowYouCanHelp1.PNG" />
-    <Resource Include="Resources\HowYouCanHelp2.PNG" />
-    <Resource Include="Resources\NewsAndEvents1.PNG" />
-    <Resource Include="Resources\NewsAndEvents2.PNG" />
-    <Resource Include="Resources\OurAmbassadors.png" />
-    <Resource Include="Resources\OurHistory.jpg" />
-    <Resource Include="Resources\OurPeople.PNG" />
-    <Resource Include="Resources\OurStories.jpg" />
-    <Resource Include="Resources\SiblingBeads.png" />
-    <Resource Include="Resources\Volunteer1.PNG" />
-    <Resource Include="Resources\Volunteer2.PNG" />
-    <Resource Include="Resources\WhatWeDo1.PNG" />
-    <Resource Include="Resources\WhatWeDo2.PNG" />
-    <Resource Include="Resources\NewsAndEventsInfo.xml">
-      <SubType>Component</SubType>
-    </Resource>
-    <Resource Include="Resources\HowYouCanHelpInfo.xml" />
-    <Resource Include="Resources\bead2.png" />
-    <Resource Include="Resources\bead3.png" />
-    <Resource Include="Resources\bead4.png" />
-    <Resource Include="Resources\bead5.png" />
-    <Resource Include="Resources\bead6.png" />
-    <Resource Include="Resources\bead7.png" />
-    <Resource Include="Resources\bead8.png" />
-    <Resource Include="Resources\beads1.png" />
-    <Resource Include="Resources\AssurityConsultingsupportOneDay.jpg" />
-    <Resource Include="Resources\Charitybeginsattheoffice.jpg" />
-    <Resource Include="Resources\CharityHomeForCCE.jpg" />
-    <Resource Include="Resources\ChildCancerLegendsLuncheon.jpg" />
-    <Resource Include="Resources\CraftyKnitwitsKnitathonGrandAuction.jpg" />
-    <Resource Include="Resources\CRCSpeedshowauctionpaintingsforcharity.jpg" />
-    <Resource Include="Resources\Donate1.jpg" />
-    <Resource Include="Resources\EventsInfo.xml" />
-    <Resource Include="Resources\Governor-GeneralDinnerinHamiltongreatnightforall.JPG" />
-    <Resource Include="Resources\nae1.jpg" />
-    <Resource Include="Resources\nae2.jpg" />
-    <Resource Include="Resources\nae3.jpg" />
-    <Resource Include="Resources\nae4.jpg" />
-    <Resource Include="Resources\nae5.jpg" />
-    <Resource Include="Resources\nae6.jpg" />
-    <Resource Include="Resources\NewsInfo.xml" />
-    <Resource Include="Resources\OurSponsors.JPG" />
-    <Resource Include="Resources\OurCampaigns.JPG" />
-    <Resource Include="Resources\Volunteer123.JPG" />
-    <Resource Include="Resources\Fundraise.JPG" />
-    <Resource Include="Resources\MakeAGift.jpg" />
-    <Resource Include="Resources\Schools.jpg" />
-    <Content Include="Resources\CCFVideo.mp4" />
-    <Content Include="Resources\WhatWeDoInfo.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <SubType>Designer</SubType>
-    </Content>
-    <Resource Include="Resources\CCF-logo.png" />
-    <Resource Include="Resources\back_button_256.png" />
-    <Resource Include="Resources\background.png" />
-    <Resource Include="Resources\CCF-logo2.png" />
-    <Resource Include="Resources\CCF-logo2_200.png" />
-    <Resource Include="Resources\back_button.png" />
-    <Content Include="Resources\FamilySupportInfo.xml">
-      <SubType>Designer</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Resource Include="Resources\holiday_home.jpg" />
-    <Resource Include="Resources\family_places.jpg" />
-    <Resource Include="Resources\beads_of_courage.jpg" />
-    <Content Include="Resources\icon.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\CCF2.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Resources\images\AboutUs\AboutUs.jpg" />
+    <Resource Include="Resources\images\AboutUs\OurAmbassadors.png" />
+    <Resource Include="Resources\images\AboutUs\OurPeople.PNG" />
+    <Resource Include="Resources\images\Common\background.png" />
+    <Resource Include="Resources\images\Common\back_button.png" />
+    <Resource Include="Resources\images\Common\back_button_256.png" />
+    <Resource Include="Resources\images\Common\Beads\bead1.png" />
+    <Resource Include="Resources\images\Common\Beads\bead2.png" />
+    <Resource Include="Resources\images\Common\Beads\bead3.png" />
+    <Resource Include="Resources\images\Common\Beads\bead4.png" />
+    <Resource Include="Resources\images\Common\Beads\bead5.png" />
+    <Resource Include="Resources\images\Common\Beads\bead6.png" />
+    <Resource Include="Resources\images\Common\Beads\bead7.png" />
+    <Resource Include="Resources\images\Common\Beads\bead8.png" />
+    <Resource Include="Resources\images\Common\beads_of_courage.jpg" />
+    <Resource Include="Resources\images\Common\CCF-logo.png" />
+    <Resource Include="Resources\images\Common\CCF-logo2.png" />
+    <Resource Include="Resources\images\Common\CCF-logo2_200.png" />
+    <Resource Include="Resources\images\ContactUs\ContactForm.jpg" />
+    <Resource Include="Resources\images\FamilySupport\family_places.jpg" />
+    <Resource Include="Resources\images\FamilySupport\holiday_home.jpg" />
+    <Resource Include="Resources\images\FamilySupport\sharing_magazine.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\Donate1.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\Fundraise.JPG" />
+    <Resource Include="Resources\images\HowYouCanHelp\MakeAGift.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\OurCampaigns.JPG" />
+    <Resource Include="Resources\images\HowYouCanHelp\OurSponsors.JPG" />
+    <Resource Include="Resources\images\HowYouCanHelp\OurStories.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\Schools.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\SiblingBeads.png" />
+    <Resource Include="Resources\images\HowYouCanHelp\Volunteer123.JPG" />
+    <Resource Include="Resources\images\Menu\ContactUs1.PNG" />
+    <Resource Include="Resources\images\Menu\ContactUs2.PNG" />
+    <Resource Include="Resources\images\Menu\FamilySupport1.PNG" />
+    <Resource Include="Resources\images\Menu\FamilySupport2.PNG" />
+    <Resource Include="Resources\images\Menu\HowYouCanHelp1.PNG" />
+    <Resource Include="Resources\images\Menu\HowYouCanHelp2.PNG" />
+    <Resource Include="Resources\images\Menu\NewsAndEvents1.PNG" />
+    <Resource Include="Resources\images\Menu\NewsAndEvents2.PNG" />
+    <Resource Include="Resources\images\Menu\Volunteer1.PNG" />
+    <Resource Include="Resources\images\Menu\Volunteer2.PNG" />
+    <Resource Include="Resources\images\Menu\WhatWeDo1.PNG" />
+    <Resource Include="Resources\images\Menu\WhatWeDo2.PNG" />
+    <Resource Include="Resources\images\NewsAndEvents\AssurityConsultingsupportOneDay.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\Charitybeginsattheoffice.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\CharityHomeForCCE.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\ChildCancerLegendsLuncheon.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\CraftyKnitwitsKnitathonGrandAuction.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\CRCSpeedshowauctionpaintingsforcharity.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\Governor-GeneralDinnerinHamiltongreatnightforall.JPG" />
+    <Resource Include="Resources\images\NewsAndEvents\nae1.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\nae2.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\nae3.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\nae4.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\nae5.jpg" />
+    <Resource Include="Resources\images\NewsAndEvents\nae6.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\HealthProfessionals.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\HowWeHelp.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurHistory.jpg" />
+    <Resource Include="Resources\qr\ContactUsForm.jpg" />
+    <Resource Include="Resources\qr\FamilySupport.jpg" />
+    <Resource Include="Resources\qr\Fb.jpg" />
+    <Resource Include="Resources\qr\FundraisingOffice.jpg" />
+    <Resource Include="Resources\qr\MainOffice.jpg" />
+    <Resource Include="Resources\qr\MainOfficeNumber.jpg" />
+    <Resource Include="Resources\qr\MainOfficeNumber.png" />
+    <Resource Include="Resources\qr\Tweet.jpg" />
+    <Resource Include="Resources\qr\Volunteer.png" />
+    <Resource Include="Resources\video\CCF.mp4" />
+    <Resource Include="Resources\xml\CCF2.xml" />
+    <Resource Include="Resources\xml\EventsInfo.xml" />
+    <Resource Include="Resources\xml\FamilySupportInfo.xml" />
+    <Resource Include="Resources\xml\HowYouCanHelpInfo.xml" />
+    <Resource Include="Resources\xml\NewsAndEventsInfo.xml" />
+    <Resource Include="Resources\xml\NewsInfo.xml" />
+    <Resource Include="Resources\xml\WhatWeDoInfo.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

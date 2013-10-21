@@ -6,7 +6,7 @@
 	Title="FamilySupportPage">
     <!--Background image from the CCF website-->
     <Page.Background>
-        <ImageBrush ImageSource="Resources/background.png" />
+        <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
@@ -107,7 +107,7 @@
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>
-                    <Image Source="Resources/CCF-logo2_200.png"/>
+                    <Image Source="Resources/images/Common/CCF-logo2_200.png"/>
                 </ControlTemplate>
             </Button.Template>
         </Button>
@@ -119,7 +119,7 @@
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
             <Image Height="60"
                     Width="60"
-                    Source="/Resources/back_button.png">
+                    Source="Resources/images/Common/back_button.png">
                 <Image.Effect>
                     <ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
                 </Image.Effect>
@@ -127,14 +127,14 @@
         </s:SurfaceButton>
         <s:SurfaceButton Background="#4A000000" BorderThickness="0" Content="Sharing Magazine" FontSize="32" Foreground="White" Height="75" HorizontalAlignment="Left" Margin="300.25,700.117,0,0" VerticalAlignment="Top" Width="480" Click="SharingMagazine_Click" VerticalContentAlignment="Center" />
         <Grid HorizontalAlignment="Left" Margin="240,454,0,145" Width="50">
-            <Image Margin="-35,100,1.772,0" Source="Resources/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
-            <Image Height="82" Margin="-35,-60,0,0" Source="Resources/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
-            <Image Height="62" Margin="-35,0,0,-45" Source="Resources/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+            <Image Margin="-35,100,1.772,0" Source="Resources/images/Common/Beads/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
+            <Image Height="82" Margin="-35,-60,0,0" Source="Resources/images/Common/Beads/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Height="62" Margin="-35,0,0,-45" Source="Resources/images/Common/Beads/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid Margin="0,373.5,160,225" HorizontalAlignment="Right" Width="94.007">
-            <Image Height="70.5" Margin="-35,30,28,0" Source="Resources/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
-            <Image Margin="-35,155,0,0" Source="Resources/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="72" />
-            <Image  Margin="-35,0,0,-140" Source="Resources/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="72" Width="72"/>
+            <Image Height="70.5" Margin="-35,30,28,0" Source="Resources/images/Common/Beads/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Margin="-35,155,0,0" Source="Resources/images/Common/Beads/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="72" />
+            <Image  Margin="-35,0,0,-140" Source="Resources/images/Common/Beads/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="72" Width="72"/>
         </Grid>
     </Grid>
 </Page>
