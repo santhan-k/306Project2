@@ -29,14 +29,14 @@
                 <Label Content="How You Can Help" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Margin="20" Foreground="Black" />
                 <!--Grid containing the 8 links to sub pages-->
                 <Grid Margin="83.018,117.638,173.046,56.958">
-                    <s:SurfaceButton Content="Beads Of Courage®" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="350" FontSize="32" Foreground="White" Click="BeadsOfCourage_Click" VerticalContentAlignment="Center" Background="#4A000000" />
-                    <s:SurfaceButton Content="Sponsors" Margin="0,117.72,0,0" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="Sponsors_Click" Background="#4A000000" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Donate" Margin="0,0,0,116.398" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="Donate_Click" Background="#4A000000" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Fundraise" Margin="0" HorizontalAlignment="Left" Width="350" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="Fundraise_Click" Background="#4A000000" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Make A Gift" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="350" FontSize="32" Foreground="White" Click="MakeAGift_Click" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Our Campaigns" Margin="0,117.72,0,0" HorizontalAlignment="Right" Width="350" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="OurCampaigns_Click" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Volunteer" Margin="0,0,0,116.398" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="350" FontSize="32" Foreground="White" Click="Volunteer_Click" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
-                    <s:SurfaceButton Content="Schools" Margin="0" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="350" FontSize="32" Foreground="White" Click="Schools_Click" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Beads of Courage®" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="400" FontSize="32" Foreground="White" Click="BeadsOfCourage_Click" VerticalContentAlignment="Center" Background="#4A000000" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Sponsors" Margin="0,117.72,0,0" HorizontalAlignment="Left" Width="400" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="Sponsors_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Donate" Margin="0,0,0,116.398" HorizontalAlignment="Left" Width="400" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="Donate_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Fundraise" Margin="0" HorizontalAlignment="Left" Width="400" Height="75" VerticalAlignment="Bottom" FontSize="32" Foreground="White" Click="Fundraise_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Make a Gift" Height="75" Margin="0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="400" FontSize="32" Foreground="White" Click="MakeAGift_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Our Campaigns" Margin="0,117.72,0,0" HorizontalAlignment="Right" Width="400" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="OurCampaigns_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Volunteer" Margin="0,0,0,116.398" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="400" FontSize="32" Foreground="White" Click="Volunteer_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+                    <s:SurfaceButton Content="Schools" Margin="0" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="400" FontSize="32" Foreground="White" Click="Schools_Click" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
                 </Grid>
 
             </Grid>
@@ -85,16 +85,16 @@
             </Image>
         </s:SurfaceButton>
         <Grid HorizontalAlignment="Left" Margin="280,373.5,0,225" Width="50">
-            <Image Margin="-35,50,1.772,0" Source="Resources/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
-            <Image Height="82" Margin="-35,-60,0,0" Source="Resources/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
-            <Image Height="62" Margin="-35,0,0,65" Source="Resources/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
-            <Image Height="88.5" Margin="-35,0,0,-40" Source="Resources/bead7.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+            <Image Margin="-35,50,1.772,0" Source="Resources/images/Common/Beads/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
+            <Image Height="82" Margin="-35,-60,0,0" Source="Resources/images/Common/Beads/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Height="62" Margin="-35,0,0,65" Source="Resources/images/Common/Beads/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+            <Image Height="88.5" Margin="-35,0,0,-40" Source="Resources/images/Common/Beads/bead7.png" Stretch="Fill" VerticalAlignment="Bottom"/>
         </Grid>
         <Grid Margin="0,373.5,310,225" HorizontalAlignment="Right" Width="94.007">
-            <Image Height="70.5" Margin="0,-50,0,0" Source="Resources/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
-            <Image Margin="0,0,0,90" Source="Resources/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="72" />
-            <Image  Margin="11.003,0,11.003,54" Source="Resources/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="60" Width="72" d:LayoutOverrides="HorizontalMargin"/>
-            <Image Height="60.4" Margin="0,0,1.807,-46" Source="Resources/beads1.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+            <Image Height="70.5" Margin="0,-50,0,0" Source="Resources/images/Common/Beads/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
+            <Image Margin="0,0,0,90" Source="Resources/images/Common/Beads/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="60" Width="72" />
+            <Image  Margin="11.003,0,11.003,54" Source="Resources/images/Common/Beads/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="60" Width="72" d:LayoutOverrides="HorizontalMargin"/>
+            <Image Height="60.4" Margin="0,0,1.807,-46" Source="Resources/images/Common/Beads/bead1.png" Stretch="Fill" VerticalAlignment="Bottom"/>
         </Grid>
     </Grid>
 </Page>
