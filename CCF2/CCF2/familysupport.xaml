@@ -60,7 +60,7 @@
                 Width="460"
                 Height="75"
                 BorderThickness="0"
-                Click="FamilyPlaces_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Right">
+                Click="FamilyPlaces_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
         </s:SurfaceButton>
 
         <s:SurfaceButton
@@ -69,7 +69,7 @@
                 Width="460"
                 Height="75"
                 BorderThickness="0"
-                Click="HolidayHomes_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Right">
+                Click="HolidayHomes_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
         </s:SurfaceButton>
 
         <s:SurfaceButton
@@ -78,7 +78,7 @@
                 Width="460"
                 Height="75"
                 BorderThickness="0"
-                Click="Scholarships_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Right">
+                Click="Scholarships_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" HorizontalContentAlignment="Right" VerticalContentAlignment="Center">
         </s:SurfaceButton>
 
         <!--Scrolling news feed-->

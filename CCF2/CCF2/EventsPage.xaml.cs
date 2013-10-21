@@ -30,7 +30,7 @@ namespace CCF2
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
             //Loading content from XML file
             XmlDocument xml = new XmlDocument();
-            xml.Load("Resources/EventsInfo.xml");
+            xml.Load("Resources/xml/EventsInfo.xml");
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
             if (imageNode != null)
             {

@@ -2,7 +2,7 @@
 <pages>
   <OurAmbassadors>
     <heading>Our Ambassadors</heading>
-    <img src="Resources/OurAmbassadors.png" />
+    <img src="Resources/images/WhatWeDo/OurAmbassadors.png" />
     <content>
 The Child Cancer Foundation is incredibly grateful for the wonderful support and work our ambassadors do for the Foundation who range form athletes to radio personalities. Continue down the page to find out who these terrific people are.
 
@@ -20,7 +20,7 @@ The Child Cancer Foundation is incredibly grateful for the wonderful support and
 
   <HowWeHelp>
     <heading>How We Help</heading>
-    <img src="Resources/HowWeHelp.jpg" />
+    <img src="Resources/images/WhatWeDo/HowWeHelp.jpg" />
     <content>
 <b>Family Support Coordinators</b>
       
@@ -62,7 +62,7 @@ Our family places are bases where the children and families can take time off fr
 
   <AboutUs>
     <heading>About Us</heading>
-    <img src="Resources/AboutUs.jpg" />
+    <img src="Resources/images/WhatWeDo/AboutUs.jpg" />
     <content>
 Every week in New Zealand three families are told their child has cancer. We support these families from the very beginning.  Our vision is that every child and their family walking the child cancer journey will never feel alone and our mission is to support them throughout their journey.
 
@@ -82,7 +82,7 @@ The Foundation’s work with children with cancer and their families is unique a
 
   <OurStories>
     <heading>Our Stories</heading>
-    <img src="Resources/OurStories.jpg" />
+    <img src="Resources/images/WhatWeDo/OurStories.jpg" />
     <content>
       <b>Claudia Little... Look at her now!</b>
 
@@ -119,7 +119,7 @@ Joyce as one of our 2011 ambassadors
 
   <OurHistory>
     <heading>Our History</heading>
-    <img src="Resources/OurHistory.jpg" />
+    <img src="Resources/images/WhatWeDo/OurHistory.jpg" />
     <content>
 In 1978 a group of concerned parents together with health professionals, formed a small Auckland based committee looking at the special needs of children with cancer and their families.
 
@@ -129,7 +129,7 @@ From the small beginning, dedicated people established what is now a national or
 
   <OurPeople>
     <heading>Our People</heading>
-    <img src="Resources/OurPeople.png" />
+    <img src="Resources/images/WhatWeDo/OurPeople.png" />
     <content>
 Child Cancer Services
 
@@ -166,7 +166,7 @@ Auckland
 
   <HealthProfessionals>
     <heading>Health Professionals</heading>
-    <img src="Resources/HealthProfessionals.jpg" />
+    <img src="Resources/images/WhatWeDo/HealthProfessionals.jpg" />
     <content>
       The Foundation works alongside the health professionals to encourage further research and education to ensure that every New Zealand child facing cancer has the best possible outcome. In recent years, the Foundation has also contributed towards research into the late effects of cancer treatment.
     </content>

@@ -190,9 +190,9 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\images\AboutUs\AboutUs.jpg" />
-    <Resource Include="Resources\images\AboutUs\OurAmbassadors.png" />
-    <Resource Include="Resources\images\AboutUs\OurPeople.PNG" />
+    <Resource Include="Resources\images\WhatWeDo\AboutUs.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurAmbassadors.png" />
+    <Resource Include="Resources\images\WhatWeDo\OurPeople.png" />
     <Resource Include="Resources\images\Common\background.png" />
     <Resource Include="Resources\images\Common\back_button.png" />
     <Resource Include="Resources\images\Common\back_button_256.png" />
@@ -212,15 +212,15 @@
     <Resource Include="Resources\images\FamilySupport\family_places.jpg" />
     <Resource Include="Resources\images\FamilySupport\holiday_home.jpg" />
     <Resource Include="Resources\images\FamilySupport\sharing_magazine.jpg" />
-    <Resource Include="Resources\images\HowYouCanHelp\Donate1.jpg" />
-    <Resource Include="Resources\images\HowYouCanHelp\Fundraise.JPG" />
+    <Resource Include="Resources\images\HowYouCanHelp\Donate.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\Fundraise.jpg" />
     <Resource Include="Resources\images\HowYouCanHelp\MakeAGift.jpg" />
-    <Resource Include="Resources\images\HowYouCanHelp\OurCampaigns.JPG" />
-    <Resource Include="Resources\images\HowYouCanHelp\OurSponsors.JPG" />
-    <Resource Include="Resources\images\HowYouCanHelp\OurStories.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\OurCampaigns.jpg" />
+    <Resource Include="Resources\images\HowYouCanHelp\OurSponsors.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories.jpg" />
     <Resource Include="Resources\images\HowYouCanHelp\Schools.jpg" />
-    <Resource Include="Resources\images\HowYouCanHelp\SiblingBeads.png" />
-    <Resource Include="Resources\images\HowYouCanHelp\Volunteer123.JPG" />
+    <Resource Include="Resources\images\WhatWeDo\SiblingBeads.png" />
+    <Resource Include="Resources\images\HowYouCanHelp\Volunteer.jpg" />
     <Resource Include="Resources\images\Menu\ContactUs1.PNG" />
     <Resource Include="Resources\images\Menu\ContactUs2.PNG" />
     <Resource Include="Resources\images\Menu\FamilySupport1.PNG" />
@@ -258,14 +258,30 @@
     <Resource Include="Resources\qr\MainOfficeNumber.png" />
     <Resource Include="Resources\qr\Tweet.jpg" />
     <Resource Include="Resources\qr\Volunteer.png" />
-    <Resource Include="Resources\video\CCF.mp4" />
-    <Resource Include="Resources\xml\CCF2.xml" />
-    <Resource Include="Resources\xml\EventsInfo.xml" />
-    <Resource Include="Resources\xml\FamilySupportInfo.xml" />
-    <Resource Include="Resources\xml\HowYouCanHelpInfo.xml" />
-    <Resource Include="Resources\xml\NewsAndEventsInfo.xml" />
-    <Resource Include="Resources\xml\NewsInfo.xml" />
-    <Resource Include="Resources\xml\WhatWeDoInfo.xml" />
+    <None Include="Resources\video\CCF.mp4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Resources\xml\CCF2.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\xml\EventsInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\xml\FamilySupportInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\xml\HowYouCanHelpInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\xml\NewsAndEventsInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\xml\NewsInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\xml\WhatWeDoInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

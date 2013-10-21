@@ -2,7 +2,7 @@
 <pages>
   <BeadsOfCourage>
     <heading>Beads Of Courage</heading>
-    <img src="Resources/beads_of_courage.jpg" />
+    <img src="Resources/images/Common/beads_of_courage.jpg" />
     <content>
       The Beads of Courage® programme provides something tangible that a child can use to tell family and care-givers about their experience during treatment. With each procedure or milestone in their treatment, they get a special bead.
 
@@ -11,7 +11,7 @@
 
   <Sponsors>
     <heading>Sponsors</heading>
-    <img src="Resources/OurSponsors.JPG" />
+    <img src="Resources/images/HowYouCanHelp/OurSponsors.jpg" />
     <content>
       Child Cancer Foundation recognises the vital and valuable contribution and support from our Sponsors and Partners. Our Sponsors, Support Partners and Business Partners help us achieve our vision that every child and their family walking the child cancer journey will never feel alone. We receive no government funding and rely on the generosity and support of all our partners.
     </content>
@@ -19,7 +19,7 @@
 
   <Donate>
     <heading>Donate</heading>
-    <img src="Resources/Donate1.jpg" />
+    <img src="Resources/images/HowYouCanHelp/Donate.jpg" />
     <content>
       <b>You can make a difference by donating in a variety of ways that suit you. By making a donation you are helping us to help children with cancer and their families.</b>
       <b>Making a one-off donation - https://support.childcancer.org.nz/ </b>
@@ -37,7 +37,7 @@
 
   <Fundraise>
     <heading>Fundraise</heading>
-    <img src="Resources/Fundraise.JPG" />
+    <img src="Resources/images/HowYouCanHelp/Fundraise.jpg" />
     <content>
       <b>Raise money for child cancer and have fun! Get together with your friends, family, workmates or community and organise a fundraising event.</b>
       <b>Holding a fundraising event is making a difference!  </b>
@@ -49,7 +49,7 @@
 
   <MakeAGift>
     <heading>Make A Gift</heading>
-    <img src="Resources/MakeAGift.jpg" />
+    <img src="Resources/images/HowYouCanHelp/MakeAGift.jpg" />
     <content>
       Each year children undergo an astounding 100,000 treatments and procedures during their child cancer journey.
       
@@ -65,7 +65,7 @@
 
   <OurCampaigns>
     <heading>Our Campaigns</heading>
-    <img src="Resources/OurCampaigns.JPG" />
+    <img src="Resources/images/HowYouCanHelp/OurCampaigns.jpg" />
     <content>
 A number of national campaigns are organised to raise the $6 million
 we need each year to continue to support the children and their families
@@ -77,7 +77,7 @@ http://www.childcancer.org.nz/How-you-can-help/Our-campaigns.aspx
 
   <Volunteer>
     <heading>Volunteer</heading>
-    <img src="Resources/Volunteer123.JPG" />
+    <img src="Resources/images/HowYouCanHelp/Volunteer.jpg" />
     <content>
 Child Cancer Foundation could not carry out the work 
 we do in the community without the help of our volunteers.
@@ -88,7 +88,7 @@ http://www.childcancer.org.nz/How-you-can-help/Volunteering-Form.aspx
 
   <Schools>
     <heading>Schools</heading>
-    <img src="Resources/Schools.jpg" />
+    <img src="Resources/images/HowYouCanHelp/Schools.jpg" />
     <content>
 We would love your school to get involved and support 
 New Zealand children facing the child cancer journey.

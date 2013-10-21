@@ -13,7 +13,7 @@ Application forms can be found on our website: www.childcancer.org.nz
 
   <SharingMagazine>
     <heading>Sharing magazine</heading>
-    <img src="Resources/sharing_magazine.jpg" />
+    <img src="Resources/images/FamilySupport/sharing_magazine.jpg" />
     <content>
 Sharing is a magazine for families, members and friends of the Foundation. It is published three times annually and includes family stories, news and Child Cancer Foundation family activities.
     </content>
@@ -21,7 +21,7 @@ Sharing is a magazine for families, members and friends of the Foundation. It is
 
   <HolidayHomes>
     <heading>Holiday homes</heading>
-    <img src="Resources/holiday_home.jpg" />
+    <img src="Resources/images/FamilySupport/holiday_home.jpg" />
     <content>Child Cancer Foundation has three holiday homes available to our children with cancer and their families. We have homes in Taupo, Arrowtown and Hawkes Bay. All our houses can be booked rent free for one week. The homes are well-resourced and provide families with the opportunity to spend time together in a relaxing setting.
 
 If your family would like to book a holiday home please contact:
@@ -34,7 +34,7 @@ If your family would like to book a holiday home please contact:
 
   <FamilyPlaces>
     <heading>Family places</heading>
-    <img src="Resources/family_places.jpg" />
+    <img src="Resources/images/FamilySupport/family_places.jpg" />
     <content>
 Family Places are a base for children and families to take time out from the hospital and to meet with other families, Child Cancer Foundation staff and volunteers in a caring private environment.  They provide a friendly place to go at any point during the child cancer journey.
 
@@ -63,7 +63,7 @@ If you are a family requiring support, please don't hesitate to get in contact w
 
   <BeadsOfCourage>
     <heading>Beads of Courage®</heading>
-    <img src="Resources/beads_of_courage.jpg" />
+    <img src="Resources/images/Common/beads_of_courage.jpg" />
     <content>The Beads of Courage® programme provides something tangible that a child can use to tell family and care-givers about their experience during treatment. With each procedure or milestone in their treatment, they get a special bead.
 
 Family Support Manager contacts:

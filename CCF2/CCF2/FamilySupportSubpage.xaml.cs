@@ -29,7 +29,7 @@ namespace CCF2
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
             XmlDocument xml = new XmlDocument();
-            xml.Load("Resources/FamilySupportInfo.xml");
+            xml.Load("Resources/xml/FamilySupportInfo.xml");
             
             headingLabel.Content = xml.SelectSingleNode("//pages/"+name+"/heading/text()").Value;
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
