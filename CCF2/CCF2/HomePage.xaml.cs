@@ -63,7 +63,7 @@ namespace CCF2
 
         private void Volunteer_Click(object sender, RoutedEventArgs e)
         {
-
+            sw1.showPage(new VolunteerPage(sw1, "volunteer"));
         }
         //Action listener for the event that is caused when the logo is clicked
         private void Home_Click(object sender, RoutedEventArgs e)
