@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Xml.Linq;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,6 +23,7 @@ namespace CCF2
     /// </summary>
     public partial class ContactUsPage : Page
     {
+        public ObservableCollection<TweetModel> Tweets { get; set; } 
         public UserTweetsViewModel UserTweetsWidget { get; set; } 
         public SurfaceWindow1 sw1;
         public ContactUsPage(SurfaceWindow1 window, String name)
@@ -38,8 +42,35 @@ namespace CCF2
                 sw1.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
                 sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
             }
-            UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
-            this.DataContext = this; 
+
+            XDocument doc = XDocument.Load("Resources/xml/Tweets.xml");
+            var tweetmes = doc.Element("Tweets").Elements("Tweet");
+            
+            ObservableCollection<TweetModel> result = new ObservableCollection<TweetModel>();
+            foreach (XElement message in tweetmes)
+            {
+                TweetModel tweet = new TweetModel()
+                {
+                    Text = message.Attribute("Text").Value,
+                    
+                    ScreenName = message.Attribute("ScreenName").Value,
+                    UserName = "@" + message.Attribute("UserName").Value,
+                    PublicationDate = message.Attribute("PublicationDate").Value,
+                    Image = message.Attribute("Image").Value
+                    
+
+
+                };
+                
+                result.Add(tweet);
+            }
+            
+            this.Tweets = result;
+            this.tweetsListView.DataContext = this;
+            this.DataContext = this;
+            
+            //UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
+            //this.DataContext = this; 
 
         }
         //Action listener for the back button
