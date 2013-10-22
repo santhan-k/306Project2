@@ -29,37 +29,37 @@
         <!--Grid containind the six different input blocks-->
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
             <Grid Height="597" Width="1197.661">
-                <s:SurfaceButton  HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="WhatWeDo_Click" Background="White">
+                <s:SurfaceButton  HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="WhatWeDo_Click" Background="#FFF88E1D">
                     <Image  Source="Resources/images/Menu/WhatWeDo1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-                <s:SurfaceButton Height="260" Margin="432.67,0,434.991,0" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Click="HowYouCanHelp_Click" Background="White">
-                    <Image  Source="Resources/images/Menu/HowYouCanHelp1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
+                <s:SurfaceButton Height="260" Margin="432.67,0,434.991,0" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Click="HowYouCanHelp_Click" Background="#FFDC1F53">
+                    <Image  Source="Resources/images/Menu/HowYouCanHelp1.PNG" HorizontalAlignment="Left" Height="252" VerticalAlignment="Center" Width="322" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-                <s:SurfaceButton HorizontalAlignment="Right" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="NewsAndEvents_Click" Background="White">
-                    <Image  Source="Resources/images/Menu/NewsAndEvents1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
+                <s:SurfaceButton HorizontalAlignment="Right" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="NewsAndEvents_Click" Background="#FFF9F247">
+                    <Image  Source="Resources/images/Menu/NewsAndEvents1.PNG" HorizontalAlignment="Left" Height="Auto" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-                <s:SurfaceButton HorizontalAlignment="Left" Height="260" Margin="0,337,0,0" VerticalAlignment="Top" Width="330" Click="FamilySupport_Click" Background="White">
+                <s:SurfaceButton HorizontalAlignment="Left" Height="260" Margin="0,337,0,0" VerticalAlignment="Top" Width="330" Click="FamilySupport_Click" Background="#FFC6DD2C">
                     <Image  Source="Resources/images/Menu/FamilySupport1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                         </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-                <s:SurfaceButton  Height="260" Margin="432.67,337,434.991,0" VerticalAlignment="Top" Click="Volunteer_Click" Background="White">
+                <s:SurfaceButton  Height="260" Margin="432.67,337,434.991,0" VerticalAlignment="Top" Click="Volunteer_Click" Background="#FFA54398">
                     <Image  Source="Resources/images/Menu/Volunteer1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
-                <s:SurfaceButton HorizontalAlignment="Right" Height="260" Margin="0,337,0,0" VerticalAlignment="Top" Width="330" Click="ContactUs_Click" Background="White">
+                <s:SurfaceButton HorizontalAlignment="Right" Height="260" Margin="0,337,0,0" VerticalAlignment="Top" Width="330" Click="ContactUs_Click" Background="#FF2226F1">
                     <Image  Source="Resources/images/Menu/ContactUs1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
@@ -100,6 +100,14 @@
         </Rectangle>
         <!--Logo/Home button-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
+        	<Button.Background>
+        		<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+        			<GradientStop Color="#FFF3F3F3" Offset="0"/>
+        			<GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+        			<GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+        			<GradientStop Color="#FFC1D72C" Offset="1"/>
+        		</LinearGradientBrush>
+        	</Button.Background>
             <Button.Template>
                 <ControlTemplate>
                     <Image Source="Resources/images/Common/CCF-logo2_200.png"/>
