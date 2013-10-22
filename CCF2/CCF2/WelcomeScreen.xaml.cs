@@ -34,7 +34,7 @@ namespace CCF2
         //Link takes the user to the homepage when the screen is touched
         private void Begin_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new HomePage(sw1));
+            sw1.showPage(new HomePage(sw1, "s"));
         }
 
         //Restarts the video when it ends

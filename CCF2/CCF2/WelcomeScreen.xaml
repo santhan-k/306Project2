@@ -12,8 +12,8 @@
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
-        <MediaElement x:Name="mainVideo" Margin="45,45,45,130" Width="1800" Height="1013" MediaEnded="mainVideo_MediaEnded" MediaOpened="mainVideo_MediaOpened" UnloadedBehavior="Stop" LoadedBehavior="Play" Source="Resources/video/CCF.mp4" />
-    	<s:SurfaceButton Content="Touch Screen To Begin" Height="128" Margin="78,0,95,-10" Click="Begin_Click" VerticalAlignment="Bottom" Foreground="White" Background="Transparent" FontSize="45" HorizontalAlignment="Center"/>
-        <s:SurfaceButton Height="1080" Background="Transparent" HorizontalAlignment="Left" Margin="-8,1,0,-1" Name="rectangle1" Width="1980" Click="Begin_Click" Foreground="White" BorderThickness="0" FontSize="60" />
+        <MediaElement x:Name="mainVideo" Margin="30,30,30,120" Width="1920" Height="1080" MediaEnded="mainVideo_MediaEnded" MediaOpened="mainVideo_MediaOpened" UnloadedBehavior="Stop" LoadedBehavior="Play" Source="Resources/video/CCF.mp4" />
+        <s:SurfaceButton Height="1080" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" Name="rectangle1" Width="1920" Click="Begin_Click" Foreground="White" BorderThickness="0" FontSize="60" />
+        <s:SurfaceButton Content="Touch Screen To Begin" Background="Transparent" Width="1920" Height="128"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,0,0" Click="Begin_Click" VerticalAlignment="Bottom" Foreground="White" FontSize="45" HorizontalAlignment="Center"/>
     </Grid>
 </Page>
