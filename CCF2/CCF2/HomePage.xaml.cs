@@ -31,6 +31,15 @@ namespace CCF2
 
         }
 
+        public HomePage(SurfaceWindow1 window, string name)
+        {
+            sw1 = window;
+            InitializeComponent();
+            sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
+            sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+
+        }
+
         private void WhatWeDo_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1,"whatwedo"));
