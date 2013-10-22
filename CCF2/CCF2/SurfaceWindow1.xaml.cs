@@ -17,7 +17,7 @@ using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
 using Microsoft.Surface.Presentation.Input;
-
+using CCF2.Models;
 namespace CCF2
 {
     /// <summary>
@@ -30,7 +30,7 @@ namespace CCF2
         //Storyboards used to create animations between pages
         public Storyboard showP;
         public Storyboard hideP;
-
+        public UserTweetsViewModel UserTweetsWidget { get; set; } 
 
         /// <summary>
         /// Default constructor.
@@ -40,6 +40,10 @@ namespace CCF2
 
             InitializeComponent();
             pages = new Stack<Page>();
+
+
+            UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
+            
             display.Content = new WelcomeScreen(this);
 
             // Add handlers for window availability events
