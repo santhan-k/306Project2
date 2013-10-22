@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LinqToTwitterCP">
+      <HintPath>..\packages\linqtotwitter.2.1.09\lib\net40-client\LinqToTwitterCP.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Expression.Effects" />
     <Reference Include="Microsoft.Expression.Interactions" />
     <Reference Include="System" />
@@ -61,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ContactUsPage.xaml.cs">
+      <DependentUpon>ContactUsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EventsPage.xaml.cs">
       <DependentUpon>EventsPage.xaml</DependentUpon>
     </Compile>
@@ -76,6 +82,8 @@
     <Compile Include="HowYouCanHelpSubPage.xaml.cs">
       <DependentUpon>HowYouCanHelpSubPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\TweetModel.cs" />
+    <Compile Include="Models\UserTweetsViewModel .cs" />
     <Compile Include="NewsAndEvents.xaml.cs">
       <DependentUpon>NewsAndEvents.xaml</DependentUpon>
     </Compile>
@@ -91,6 +99,10 @@
     <Compile Include="WhatWeDoSubPage.xaml.cs">
       <DependentUpon>WhatWeDoSubPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="ContactUsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EventsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -169,6 +181,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
