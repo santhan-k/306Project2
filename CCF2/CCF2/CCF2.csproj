@@ -264,6 +264,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <Resource Include="Resources\images\Common\string.jpg" />
+    <Resource Include="Resources\qr\fbTrns.png" />
+    <Resource Include="Resources\qr\twitterTrns.png" />
     <Content Include="Resources\xml\CCF2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
