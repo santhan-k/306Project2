@@ -69,3 +69,5 @@ C:\Users\Santhan\34545\trunk\CCF2\CCF2\obj\Debug\CCF2.pdb
 C:\Users\Santhan\34545\trunk\CCF2\CCF2\bin\Debug\LinqToTwitterCP.dll
 C:\Users\Santhan\34545\trunk\CCF2\CCF2\obj\Debug\ContactUsPage.baml
 C:\Users\Santhan\34545\trunk\CCF2\CCF2\obj\Debug\ContactUsPage.g.cs
+H:\Desktop\306Project2\trunk\CCF2\CCF2\obj\Debug\CCF2.exe
+H:\Desktop\306Project2\trunk\CCF2\CCF2\obj\Debug\CCF2.pdb
