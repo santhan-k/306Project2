@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages>
+  <News>
+    <heading>News</heading>
+    <content>
+      Child Cancer Foundation Scholarship Fund aims to assist children aged 0 to 12 years with cancer, their siblings aged 0 to 12 years, or parents, achieve their personal education and developmental goals. Any activity that has the potential to educationally or developmentally benefit the applicant will be considered.
+
+      The Scholarship sub-committee, which meets four times a year, receives and considers all applications. Allocations made depend on the funds available and are made according to the policy guidelines of the Child Cancer Foundation.
+
+      Application forms can be found on our website: www.childcancer.org.nz
+    </content>
+  </News>
+
+  <Events>
+    <heading>Events</heading>
+    <img src="Resources/images/FamilySupport/sharing_magazine.jpg" />
+    <content>
+      Sharing is a magazine for families, members and friends of the Foundation. It is published three times annually and includes family stories, news and Child Cancer Foundation family activities.
+    </content>
+  </Events>
+</pages>
