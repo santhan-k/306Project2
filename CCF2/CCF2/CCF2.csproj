@@ -200,6 +200,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\images\Common\string1.png" />
     <Resource Include="Resources\images\WhatWeDo\AboutUs.jpg" />
     <Resource Include="Resources\images\WhatWeDo\OurAmbassadors.png" />
     <Resource Include="Resources\images\WhatWeDo\OurPeople.png" />
