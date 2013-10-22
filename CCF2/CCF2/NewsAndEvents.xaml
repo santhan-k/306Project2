@@ -150,7 +150,7 @@
                             </Button.Template>
                         </Button>
 
-                        <Button Height="200" Width="500" Margin="3100,-380,0,0" Click="CRCSpeedshowauctionpaintingsforcharity_Click">
+                        <Button Height="200" Width="500" Margin="3100,-200,0,0" Click="CRCSpeedshowauctionpaintingsforcharity_Click">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae6.jpg" Stretch="Fill"/>
