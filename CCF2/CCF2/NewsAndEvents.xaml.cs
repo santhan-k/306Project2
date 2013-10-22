@@ -100,5 +100,10 @@ namespace CCF2
             sw3.showPage(new HomePage(sw3));
         }
 
+        private void SurfaceScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
+        {
+
+        }
+
     }
 }
