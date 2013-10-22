@@ -15,7 +15,7 @@
     </Page.Background>
     <Grid>
         <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
-            <Grid Height="600.507" Width="1197.661">
+            <Grid Height="632.507" Width="1197.661">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="85*" />
                     <ColumnDefinition Width="663*" />
@@ -31,8 +31,8 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
-                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="News" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" />
-                <s:SurfaceScrollViewer Margin="-1,-232,0,0" Grid.ColumnSpan="18" Height="260">
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="News" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" />
+                <s:SurfaceScrollViewer Margin="-1,-200,0,0" Grid.ColumnSpan="18" Height="260">
                     <StackPanel CanHorizontallyScroll="True" Height="210">
                         <!--<Rectangle Width="125" Height="95" Fill="Cyan" />
                         <Rectangle Width="150" Height="100" Fill="Red" />
@@ -99,9 +99,9 @@
                     </StackPanel>
                 </s:SurfaceScrollViewer>
 
-                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="eventLabel" Content="Events" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" Margin="-1,290,0,0" />
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="eventLabel" Content="Events" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" Margin="-1,322,0,0" />
                 
-                <s:SurfaceScrollViewer Margin="-1,350,0,0" Grid.ColumnSpan="18" ScrollChanged="SurfaceScrollViewer_ScrollChanged" Height="260">
+                <s:SurfaceScrollViewer Margin="-1,382,0,0" Grid.ColumnSpan="18" ScrollChanged="SurfaceScrollViewer_ScrollChanged" Height="260">
                     <StackPanel CanHorizontallyScroll="True" Height="210" CanVerticallyScroll="False">
                         <!--<Rectangle Width="125" Height="95" Fill="Cyan" />
                         <Rectangle Width="150" Height="100" Fill="Red" />
