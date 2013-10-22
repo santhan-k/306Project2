@@ -63,7 +63,7 @@ namespace CCF2
         }
         private void ContactUs_Click(object sender, RoutedEventArgs e)
         {
-            //sw1.showPage(new testNE(sw1, "testNE"));
+            sw1.showPage(new ContactUsPage(sw1, "testNE"));
         }
     }
 }

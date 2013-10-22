@@ -1,0 +1,123 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:s="http://schemas.microsoft.com/surface/2008" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
+      x:Class="CCF2.ContactUsPage" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+
+	mc:Ignorable="d"
+
+	Title="ContactUsPage">
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/images/Common/background.png" />
+    </Page.Background>
+    <Grid>
+        <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
+            <Grid Height="600.507" Width="1198">
+                <GridSplitter HorizontalAlignment="Stretch" Margin="595.67,-626.697,601,24.593" RenderTransformOrigin="0.5,0.5">
+                    <GridSplitter.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-89.971"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </GridSplitter.RenderTransform>
+                </GridSplitter>
+                <Label Content="Contact Us" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Margin="20" Foreground="Black" />
+                <TextBlock x:Name="pageTitle"  VerticalAlignment="Center" IsHitTestVisible="false" FontSize="48" Margin="50,0,0,0" />
+                <Grid DataContext="{Binding UserTweetsWidget}" Background="Transparent" Width="610" Margin="593,40,0,0" HorizontalAlignment="Left">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <s:SurfaceListBox x:Name="tweetsListView" 
+                  Grid.Row="1" 
+                  ItemsSource="{Binding Tweets}" 
+                  
+                  Margin="0,20,0,0">
+                        <s:SurfaceListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="50"/>
+                                        <ColumnDefinition Width="500"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid Grid.Column="0" Margin="0,0,5,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <Image Grid.Row="0" Source="{Binding Image}" VerticalAlignment="Top"/>
+                                    </Grid>
+                                    <Grid Grid.Column="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="30"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel Grid.Row="0" Orientation="Horizontal">
+                                            <TextBlock Text="{Binding ScreenName}" Margin="0,0,5,0" FontWeight="Bold" />
+                                            <TextBlock Text="{Binding UserName}" Opacity="0.485"/>
+                                        </StackPanel>
+                                        <TextBlock Grid.Row="1" TextWrapping="Wrap" Text="{Binding Text}"/>
+                                        <TextBlock Grid.Row="2" Text="{Binding PublicationDate}" Opacity="0.5" />
+                                    </Grid>
+                                </Grid>
+                            </DataTemplate>
+                        </s:SurfaceListBox.ItemTemplate>
+                    </s:SurfaceListBox>
+                </Grid>
+                <!--Grid containing the 8 links to sub pages-->
+            </Grid>
+
+
+        </Viewbox>
+        <!--Code for the scrolling news feed-->
+        <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
+            <TextBlock.RenderTransform>
+              <TranslateTransform x:Name="translate" />
+                </TextBlock.RenderTransform>
+                  <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard RepeatBehavior="Forever">
+                                <DoubleAnimation
+                                    From="1100" To="0"
+                                    Storyboard.TargetName="translate"
+                                    Storyboard.TargetProperty="X"
+                                    Duration="0:0:9" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+        </TextBlock>
+        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
+
+        <!--Home button/logo-->
+        <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Resources/images/Common/CCF-logo2_200.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <!--Back button-->
+        <s:SurfaceButton
+                Margin="195.693,59,0,0" Padding="0"
+                BorderThickness="0"
+                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
+            <Image Height="60"
+                    Width="60"
+                    Source="Resources/images/Common/back_button.png">
+                <Image.Effect>
+                    <ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
+                </Image.Effect>
+            </Image>
+        </s:SurfaceButton>
+    </Grid>
+</Page>
