@@ -63,17 +63,17 @@ namespace CCF2
 
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
-        private void HowYouCanHelpSubPage_Touch_TouchDown(object sender, TouchEventArgs e)
+        private void HowYouCanHelpSub_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
-        private void HowYouCanHelpSubPage_Touch_TouchUp(object sender, TouchEventArgs e)
+        private void HowYouCanHelpSub_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
-        private void HowYouCanHelpSubPage_Touch_TouchMove(object sender, TouchEventArgs e)
+        private void HowYouCanHelpSub_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)
             {

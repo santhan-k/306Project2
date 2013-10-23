@@ -116,6 +116,6 @@
             </Button.Template>
         </Button>
         <!-- Finger swipe image -->
-        <Image Source="Resources/images/Common/finger_swipe.png" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="1255,40,0,0"/>
+        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

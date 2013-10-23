@@ -131,5 +131,7 @@
             <Image Margin="-35,155,0,0" Source="Resources/images/Common/Beads/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="72" Width="72" />
             <Image  Margin="-35,0,0,-140" Source="Resources/images/Common/Beads/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="72" Width="72"/>
         </Grid>
+        <!-- Finger swipe image -->
+        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

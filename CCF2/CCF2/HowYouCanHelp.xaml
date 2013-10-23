@@ -97,5 +97,7 @@
             <Image  Margin="11.003,0,11.003,54" Source="Resources/images/Common/Beads/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="60" Width="72" d:LayoutOverrides="HorizontalMargin"/>
             <Image Height="60.4" Margin="0,0,1.807,-46" Source="Resources/images/Common/Beads/bead1.png" Stretch="Fill" VerticalAlignment="Bottom"/>
         </Grid>
+        <!-- Finger swipe image -->
+        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

@@ -71,7 +71,7 @@
                         </s:SurfaceListBox.ItemTemplate>
                     </s:SurfaceListBox>
                 </Grid>
-                <s:SurfaceTextBox HorizontalAlignment="Left" Margin="17.264,108.739,0,181.191" TextWrapping="Wrap" Width="556.463" OpacityMask="#FF1A0C0C" Background="Transparent" Foreground="White" Text="You can call our free phone number : &#xa;0800 4 CHILD (0800 4 24453)&#xd;&#xa;&#xa;Contact us form: http://www.childcancer.org.nz/Contact-Us.aspx&#xd;&#xa;&#xa;Alternatively you can visit our facebook and twitter pages using the QRCodes provided below.&#xa; " BorderBrush="#00000000" FontSize="24"/>
+                <TextBlock HorizontalAlignment="Left" Margin="17.264,108.739,0,181.191" TextWrapping="Wrap" Width="556.463" OpacityMask="#FF1A0C0C" Background="Transparent" Foreground="White" Text="You can call our free phone number : &#xa;0800 4 CHILD (0800 4 24453)&#xd;&#xa;&#xa;Contact us form: http://www.childcancer.org.nz/Contact-Us.aspx&#xd;&#xa;&#xa;Alternatively you can visit our facebook and twitter pages using the QRCodes provided below.&#xa; " FontSize="24"/>
                 <TextBlock HorizontalAlignment="Left" Height="47" Margin="17.264,0,0,-13.809" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="150" FontSize="17" Foreground="White"><Run Language="en-nz" Text="Like us on "/><Run Language="en-nz" Text="facebook"/></TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="47" Margin="345.159,0,0,-13.809" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="150" FontSize="17" Foreground="White"><Run Language="en-nz" Text="Follow"/><Run Text=" us on twitter"/></TextBlock>
                 <Image HorizontalAlignment="Left" Height="150" Margin="17.264,0,0,33.191" Source="Resources/qr/fbTrns.png" Stretch="Fill" VerticalAlignment="Bottom" Width="150"/>
@@ -124,6 +124,7 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
-        
+        <!-- Finger swipe image -->
+        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

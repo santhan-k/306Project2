@@ -27,7 +27,6 @@
                 </GridSplitter>
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
                 <TextBlock Height="543" HorizontalAlignment="Left" Margin="-1,58,0,0" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" FontSize="25" Foreground="White" TextAlignment="Justify" Padding="4,0,0,0" Grid.ColumnSpan="2" Width="1150" />
-                
                 <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="453" Width="400" Stretch="Uniform" ImageFailed="bodyImage_ImageFailed" />
             </Grid>
 
@@ -73,5 +72,7 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        <!-- Finger swipe image -->
+        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

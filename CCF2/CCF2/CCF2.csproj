@@ -93,6 +93,12 @@
     <Compile Include="NewsPage.xaml.cs">
       <DependentUpon>NewsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="OurStories.xaml.cs">
+      <DependentUpon>OurStories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OurStoriesSubPage.xaml.cs">
+      <DependentUpon>OurStoriesSubPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VolunteerPage.xaml.cs">
       <DependentUpon>VolunteerPage.xaml</DependentUpon>
     </Compile>
@@ -138,6 +144,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="NewsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OurStories.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="OurStoriesSubPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -274,6 +288,10 @@
     <Resource Include="Resources\images\Common\string.jpg" />
     <Resource Include="Resources\qr\fbTrns.png" />
     <Resource Include="Resources\qr\twitterTrns.png" />
+    <Resource Include="Resources\images\Common\finger_swipe2.png" />
+    <Resource Include="Resources\images\OurStories\ClaudiaLittle.jpg" />
+    <Resource Include="Resources\images\OurStories\DequarnHarrison.JPG" />
+    <Resource Include="Resources\images\OurStories\JoyceSingh.jpg" />
     <Content Include="Resources\xml\CCF2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -292,6 +310,7 @@
     <Content Include="Resources\xml\NewsInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\xml\OurStoriesInfo.xml" />
     <Content Include="Resources\xml\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
