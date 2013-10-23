@@ -7,7 +7,8 @@
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-	Title="HowYouCanHelpSubPage">
+      TouchDown="HowYouCanHelpSubPage_Touch_TouchDown" TouchUp="HowYouCanHelpSubPage_Touch_TouchUp" TouchMove="HowYouCanHelpSubPage_Touch_TouchMove"
+	  Title="HowYouCanHelpSubPage">
 
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />

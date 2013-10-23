@@ -6,10 +6,10 @@
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
       x:Class="CCF2.HowYouCanHelp" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-
-	mc:Ignorable="d"
-
-	Title="HowYouCanHelp">
+      mc:Ignorable="d"
+      TouchDown="HowYouCanHelp_Touch_TouchDown" TouchUp="HowYouCanHelp_Touch_TouchUp" TouchMove="HowYouCanHelp_Touch_TouchMove"
+	  Title="HowYouCanHelp">
+    
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
