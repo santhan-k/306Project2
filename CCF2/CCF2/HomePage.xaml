@@ -37,7 +37,7 @@
                     </s:SurfaceButton.Effect>
                 </s:SurfaceButton>
                 <s:SurfaceButton Height="260" Margin="432.67,0,434.991,0" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Click="HowYouCanHelp_Click" Background="#FFDC1F53">
-                    <Image  Source="Resources/images/Menu/HowYouCanHelp1.PNG" HorizontalAlignment="Left" Height="252" VerticalAlignment="Center" Width="322" Stretch="Fill"/>
+                    <Image  Source="Resources/images/Menu/HowYouCanHelp1.PNG" HorizontalAlignment="Left" Height="252" VerticalAlignment="Center" Width="322" Stretch="Fill" />
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
