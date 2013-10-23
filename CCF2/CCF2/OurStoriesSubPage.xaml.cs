@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
+using Microsoft.Surface.Presentation.Input;
 
 namespace CCF2
 {
@@ -63,17 +64,17 @@ namespace CCF2
         }
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
-        private void WhatWeDo_Touch_TouchDown(object sender, TouchEventArgs e)
+        private void OurStoriesSub_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
-        private void WhatWeDo_Touch_TouchUp(object sender, TouchEventArgs e)
+        private void OurStoriesSub_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
-        private void WhatWeDo_Touch_TouchMove(object sender, TouchEventArgs e)
+        private void OurStoriesSub_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)
             {
@@ -89,7 +90,7 @@ namespace CCF2
 
                 if (isRight == 1)
                 {
-                    sw1.showPage(new HomePage(sw1));
+                    sw1.showPage(new OurStories(sw1, "back"));
                     currentTouchDevices.Clear();
                     return;
                 }

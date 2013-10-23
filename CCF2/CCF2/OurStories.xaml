@@ -6,10 +6,10 @@
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
       x:Class="CCF2.OurStories" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-
-	mc:Ignorable="d"
-
-	Title="OurStories">
+      mc:Ignorable="d"
+      TouchDown="OurStories_Touch_TouchDown" TouchUp="OurStories_Touch_TouchUp" TouchMove="OurStories_Touch_TouchMove"
+	  Title="OurStories">
+    
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
