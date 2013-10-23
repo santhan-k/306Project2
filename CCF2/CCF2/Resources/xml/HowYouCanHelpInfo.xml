@@ -3,75 +3,62 @@
   <BeadsOfCourage>
     <heading>Beads Of Courage</heading>
     <img src="Resources/images/Common/beads_of_courage.jpg" />
-    <content>
-      The Beads of Courage® programme provides something tangible that a child can use to tell family and care-givers about their experience during treatment. With each procedure or milestone in their treatment, they get a special bead.
-
+    <content>The Beads of Courage® programme provides something tangible that a child can use to tell family and care-givers about their experience during treatment. With each procedure or milestone in their treatment, they get a special bead.
     </content>
   </BeadsOfCourage>
 
   <Sponsors>
     <heading>Sponsors</heading>
     <img src="Resources/images/HowYouCanHelp/OurSponsors.jpg" />
-    <content>
-      Child Cancer Foundation recognises the vital and valuable contribution and support from our Sponsors and Partners. Our Sponsors, Support Partners and Business Partners help us achieve our vision that every child and their family walking the child cancer journey will never feel alone. We receive no government funding and rely on the generosity and support of all our partners.
+    <content>Child Cancer Foundation recognises the vital and valuable contribution and support from our Sponsors and Partners. Our Sponsors, Support Partners and Business Partners help us achieve our vision that every child and their family walking the child cancer journey will never feel alone. We receive no government funding and rely on the generosity and support of all our partners.
     </content>
   </Sponsors>
 
   <Donate>
     <heading>Donate</heading>
     <img src="Resources/images/HowYouCanHelp/Donate.jpg" />
-    <content>
-      <b>You can make a difference by donating in a variety of ways that suit you. By making a donation you are helping us to help children with cancer and their families.</b>
-      <b>Making a one-off donation - https://support.childcancer.org.nz/ </b>
-      <b>Making an on-going donation</b>
-      
-     To become a regular supporter please contact: 
-          Sophie Armitage PHN 09 303 9972
-          EML sarmitage@childcancer.org.nz
-               
-     For more information please contact:  
-          Darragh O'Riordan PHN 09 303 9882
-          EML doriordan@childcancer.org.nz
+    <content>You can make a difference by donating in a variety of ways that suit you. By making a donation you are helping us to help children with cancer and their families.
+
+Making a one-off donation:
+      https://support.childcancer.org.nz/
+
+Making an on-going donation:
+     To become a regular supporter please contact:
+      Sophie Armitage PHN 09 303 9972
+        EML sarmitage@childcancer.org.nz
+
+     For more information please contact:
+      Darragh O'Riordan PHN 09 303 9882
+        EML doriordan@childcancer.org.nz
     </content>
   </Donate>
 
   <Fundraise>
     <heading>Fundraise</heading>
     <img src="Resources/images/HowYouCanHelp/Fundraise.jpg" />
-    <content>
-      <b>Raise money for child cancer and have fun! Get together with your friends, family, workmates or community and organise a fundraising event.</b>
-      <b>Holding a fundraising event is making a difference!  </b>
-      <b>FUNdraising is about having fun and finding a way to raise money for children with cancer and their families who are in need.  This is a rewarding way to show your support and getting others involved.</b>
-      
-
+    <content>Raise money for child cancer and have fun! Get together with your friends, family, workmates or community and organise a fundraising event. Holding a fundraising event is making a difference! FUNdraising is about having fun and finding a way to raise money for children with cancer and their families who are in need.  This is a rewarding way to show your support and getting others involved.
     </content>
   </Fundraise>
 
   <MakeAGift>
     <heading>Make A Gift</heading>
     <img src="Resources/images/HowYouCanHelp/MakeAGift.jpg" />
-    <content>
-      Each year children undergo an astounding 100,000 treatments and procedures during their child cancer journey.
+    <content>Each year children undergo an astounding 100,000 treatments and procedures during their child cancer journey.
       
-      <b>Gift a Star of Courage</b>
-      <b>Make a $500 donation and gift a star to directly support a child’s cancer journey</b>
+Gift a Star of Courage (Make a $500 donation and gift a star to directly support a child’s cancer journey.):
       https://support.childcancer.org.nz/stars-of-courage
       
-      <b>Gift a Bead of Courage®</b>
+Gift a Bead of Courage®:
       https://support.childcancer.org.nz/beads-of-courage
-
     </content>
   </MakeAGift>
 
   <OurCampaigns>
     <heading>Our Campaigns</heading>
     <img src="Resources/images/HowYouCanHelp/OurCampaigns.jpg" />
-    <content>
-A number of national campaigns are organised to raise the $6 million
-we need each year to continue to support the children and their families
-affected by child cancer.
+    <content>A number of national campaigns are organised to raise the $6 million we need each year to continue to support the children and their families affected by child cancer.
 
-For more Info :
+For more Info:
 http://www.childcancer.org.nz/How-you-can-help/Our-campaigns.aspx
     </content>
   </OurCampaigns>
@@ -79,11 +66,12 @@ http://www.childcancer.org.nz/How-you-can-help/Our-campaigns.aspx
   <Volunteer>
     <heading>Volunteer</heading>
     <img src="Resources/images/HowYouCanHelp/Volunteer.jpg" />
-    <content>
-Child Cancer Foundation could not carry out the work 
-we do in the community without the help of our volunteers.
+    <content>Child Cancer Foundation could not carry out the work we do in the community without the help of our volunteers.
+
+Our volunteers provide a range of services and support including participating in CCF Branch activities, helping out at the Family Places, working alongside our staff and helping our fundraising team during events such as the national Annual Street Appeal and Funrazor events.
+
 If you are interested in becoming a volunteer,
-please go to the following link
+please go to the following link:
 http://www.childcancer.org.nz/How-you-can-help/Volunteering-Form.aspx
     </content>
   </Volunteer>
@@ -91,13 +79,9 @@ http://www.childcancer.org.nz/How-you-can-help/Volunteering-Form.aspx
   <Schools>
     <heading>Schools</heading>
     <img src="Resources/images/HowYouCanHelp/Schools.jpg" />
-    <content>
-We would love your school to get involved and support 
-New Zealand children facing the child cancer journey.
-We are extremely grateful for schools raising money 
-for children and families facing the child cancer journey.
+    <content>We would love your school to get involved and support New Zealand children facing the child cancer journey. We are extremely grateful for schools raising money for children and families facing the child cancer journey.
 
-To Register go to the following link
+To Register go to the following link:
 http://www.childcancer.org.nz/How-you-can-help/School-Fundraising-Form.aspx
     </content>
   </Schools>
