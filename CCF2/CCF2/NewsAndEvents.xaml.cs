@@ -17,6 +17,7 @@ using System.Xml.XPath;
 using System.Net;
 using System.IO;
 using System.Xml;
+using Microsoft.Surface.Presentation.Input;
 
 namespace CCF2
 {
@@ -177,5 +178,39 @@ namespace CCF2
 
         }
 
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
+
+        private void NewsAndEvents_Touch_TouchDown(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
+        }
+
+        private void NewsAndEvents_Touch_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
+        }
+
+        private void NewsAndEvents_Touch_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isRight = 0;
+
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetPosition(this).X - td.Value.X > 100)
+                        isRight++;
+                    else
+                        return;
+                }
+
+                if (isRight == 1)
+                {
+                    sw3.showPage(new HomePage(sw3));
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
+        }
     }
 }
