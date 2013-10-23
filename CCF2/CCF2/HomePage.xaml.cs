@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Surface.Presentation.Input;
 
 namespace CCF2
 {
@@ -79,6 +80,41 @@ namespace CCF2
         private void ContactUs_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new ContactUsPage(sw1, "testNE"));
+        }
+
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
+
+        private void Home_Touch_TouchDown(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
+        }
+
+        private void Home_Touch_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
+        }
+
+        private void Home_Touch_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isRight = 0;
+
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetPosition(this).X - td.Value.X > 100)
+                        isRight++;
+                    else
+                        return;
+                }
+
+                if (isRight == 1)
+                {
+                    sw1.showPage(new WelcomeScreen(sw1));
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
         }
     }
 }

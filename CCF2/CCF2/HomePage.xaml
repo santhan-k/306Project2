@@ -6,8 +6,9 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-
-	Title="HomePage">
+      TouchDown="Home_Touch_TouchDown" TouchUp="Home_Touch_TouchUp" TouchMove="Home_Touch_TouchMove"
+      Title="HomePage">
+    
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
