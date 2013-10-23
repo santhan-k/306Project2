@@ -31,63 +31,16 @@ namespace CCF2
         {
             sw3 = window;
             InitializeComponent();
-            String ccfURL = "http://childcancer.org.nz";
-            String newsURL = ccfURL + "/News-and-events/News.aspx";
-            String eventsURL = ccfURL + "/News-and-events/Events.aspx";
-            String imagesFolder = "Resources/images/";
-            String newsXMLPath = "Resources/xml/news.xml";
-            String newsDivXPath = "//div[@id='contentPrimary']";
-            String newsItemXPath = "//div[@class='item']";
-            WebClient web = new WebClient();
-            int i = 0;
+
+            if (!Directory.Exists("Resources/images/NewsAndEvents"))
+            {
+                Directory.CreateDirectory("Resources/images/NewsAndEvents");
+            }
+
             try
             {
-                HtmlDocument newsHTML = new HtmlWeb().Load(newsURL);
-                XmlWriter writer = XmlWriter.Create(newsXMLPath);
-                writer.WriteStartElement("news");
-                foreach (HtmlNode n in newsHTML.DocumentNode.SelectNodes(newsDivXPath + newsItemXPath))
-                {
-                    String title = n.SelectSingleNode("h3/a").InnerText;
-                    String articleURL = ccfURL + n.SelectSingleNode("h3/a").Attributes["href"].Value;
-                    String date = n.SelectSingleNode("small").InnerText;
-                    String blurb = n.SelectSingleNode("p").InnerText;
-
-                    writer.WriteStartElement("item");
-                    writer.WriteElementString("title", title);
-                    writer.WriteElementString("date", date);
-                    writer.WriteElementString("blurb", blurb);
-                    writer.WriteStartElement("photos");
-
-                    HtmlNode articleImage = n.SelectSingleNode("img");
-                    if (articleImage != null)
-                    {
-                        String imgPath = imagesFolder + i.ToString() + ".jpg";
-                        web.DownloadFile(new Uri(ccfURL + articleImage.Attributes["src"].Value), imgPath);
-                        writer.WriteStartElement("img");
-                        writer.WriteAttributeString("src", imgPath);
-                        writer.WriteEndElement();
-                        i++;
-                    }
-
-                    HtmlDocument articleHTML = new HtmlWeb().Load(articleURL);
-
-                    if (articleHTML.DocumentNode.SelectSingleNode(newsDivXPath + "//img") != null)
-                    {
-                        foreach (HtmlNode img in articleHTML.DocumentNode.SelectNodes(newsDivXPath + "//img"))
-                        {
-                            String imgPath = imagesFolder + i.ToString() + ".jpg";
-                            web.DownloadFile(new Uri(ccfURL + img.Attributes["src"].Value), imgPath);
-                            writer.WriteStartElement("img");
-                            writer.WriteAttributeString("src", imgPath);
-                            writer.WriteEndElement();
-                            i++;
-                        }
-                    }
-
-                    writer.WriteEndElement();
-                    writer.WriteEndElement();
-                    writer.Flush();
-                }
+                getNewsOrEvents("News");
+                getNewsOrEvents("Events");
             }
             catch
             {
@@ -108,9 +61,71 @@ namespace CCF2
 
         }
 
-        private String filenameFromPath(String path)
+        private void getNewsOrEvents(String content)
         {
-            return path.Substring(path.LastIndexOf('/') + 1);
+            WebClient web = new WebClient();
+            String ccfURL = "http://childcancer.org.nz";
+            String url = ccfURL + "/News-and-events/" + content + ".aspx";
+            String contentXPath = "//div[@id='contentPrimary']";
+            String itemXPath = "//div[@class='item']";
+
+            String imagesFolder = "Resources/images/NewsAndEvents/";
+            String xmlPath = "Resources/xml/" + content + ".xml";
+            int imageID = 0;
+            int itemID = 0;
+
+            HtmlDocument newsHTML = new HtmlWeb().Load(url);
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            XmlWriter writer = XmlWriter.Create(xmlPath,settings);
+            writer.WriteStartElement(content);
+
+            foreach (HtmlNode n in newsHTML.DocumentNode.SelectNodes(contentXPath + itemXPath))
+            {
+                String title = n.SelectSingleNode("h3/a").InnerText;
+                String itemURL = ccfURL + n.SelectSingleNode("h3/a").Attributes["href"].Value;
+                String details = n.SelectSingleNode("small").InnerText;
+                String blurb = n.SelectSingleNode("p").InnerText;
+
+                writer.WriteStartElement("item");
+                writer.WriteElementString("id", itemID.ToString());
+                writer.WriteElementString("title", title);
+                writer.WriteElementString("details", details.Replace("<br>","\n"));
+                writer.WriteElementString("blurb", blurb);
+                writer.WriteStartElement("photos");
+
+                HtmlNode itemImage = n.SelectSingleNode("img");
+                if (itemImage != null)
+                {
+                    String imgPath = imagesFolder + content + imageID.ToString() + ".jpg";
+                    web.DownloadFile(new Uri(ccfURL + itemImage.Attributes["src"].Value), imgPath);
+                    writer.WriteStartElement("img");
+                    writer.WriteAttributeString("src", imgPath);
+                    writer.WriteEndElement();
+                    imageID++;
+                }
+
+                HtmlDocument itemHTML = new HtmlWeb().Load(itemURL);
+
+                if (itemHTML.DocumentNode.SelectSingleNode(contentXPath + "//img") != null)
+                {
+                    foreach (HtmlNode img in itemHTML.DocumentNode.SelectNodes(contentXPath + "//img"))
+                    {
+                        String imgPath = imagesFolder + content + imageID.ToString() + ".jpg";
+                        web.DownloadFile(new Uri(ccfURL + img.Attributes["src"].Value), imgPath);
+                        writer.WriteStartElement("img");
+                        writer.WriteAttributeString("src", imgPath);
+                        writer.WriteEndElement();
+                        imageID++;
+                    }
+                }
+
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                itemID++;
+            }
+            writer.WriteEndElement();
+            writer.Flush();
         }
 
         //Action listener for the back button
