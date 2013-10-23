@@ -103,6 +103,9 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        <!-- Finger swipe image -->
+        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
+
     </Grid>
 </Page>
 

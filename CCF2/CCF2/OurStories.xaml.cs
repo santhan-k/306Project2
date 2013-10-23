@@ -71,5 +71,39 @@ namespace CCF2
         {
             sw1.showPage(new HomePage(sw1));
         }
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
+
+        private void WhatWeDo_Touch_TouchDown(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
+        }
+
+        private void WhatWeDo_Touch_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
+        }
+
+        private void WhatWeDo_Touch_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isRight = 0;
+
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetPosition(this).X - td.Value.X > 100)
+                        isRight++;
+                    else
+                        return;
+                }
+
+                if (isRight == 1)
+                {
+                    sw1.showPage(new HomePage(sw1));
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
+        }
     }
 }
