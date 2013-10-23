@@ -268,7 +268,6 @@
     <Resource Include="Resources\qr\MainOfficeNumber.jpg" />
     <Resource Include="Resources\qr\MainOfficeNumber.png" />
     <Resource Include="Resources\qr\Tweet.jpg" />
-    <Resource Include="Resources\qr\Volunteer.png" />
     <None Include="Resources\video\CCF.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -296,6 +295,7 @@
     <Content Include="Resources\xml\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\qr\volunteerQR.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
