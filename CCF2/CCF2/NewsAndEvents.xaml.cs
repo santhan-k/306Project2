@@ -31,50 +31,67 @@ namespace CCF2
             sw3 = window;
             InitializeComponent();
             String ccfURL = "http://childcancer.org.nz";
-            String newsURL = "/News-and-events/News.aspx";
+            String newsURL = ccfURL + "/News-and-events/News.aspx";
+            String eventsURL = ccfURL + "/News-and-events/Events.aspx";
             String imagesFolder = "Resources/images/";
-            HtmlDocument newsHTML;
+            String newsXMLPath = "Resources/xml/news.xml";
+            String newsDivXPath = "//div[@id='contentPrimary']";
+            String newsItemXPath = "//div[@class='item']";
             WebClient web = new WebClient();
-            //try
-            //{
-            //    using (Stream stream = new WebClient().OpenRead(newsURL))
-            //    {
-            //        newsHTML = new HtmlWeb().Load(ccfUrl + newsURL);
-            //        newsHTML.Save(newsUrl.);
-            //        create xml file
-            //    }
-            //}
-            //catch
-            //{
-                //MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
-                newsHTML = new HtmlDocument();
-                newsHTML.Load(filenameFromPath(newsURL));
-            //}
-                int i = 0;
-                foreach (HtmlNode n in newsHTML.DocumentNode.SelectNodes("//div[@id='contentPrimary']//div[@class='item']"))
+            int i = 0;
+            try
+            {
+                HtmlDocument newsHTML = new HtmlWeb().Load(newsURL);
+                XmlWriter writer = XmlWriter.Create(newsXMLPath);
+                writer.WriteStartElement("news");
+                foreach (HtmlNode n in newsHTML.DocumentNode.SelectNodes(newsDivXPath + newsItemXPath))
                 {
                     String title = n.SelectSingleNode("h3/a").InnerText;
-                    String articleURL = n.SelectSingleNode("h3/a").Attributes["href"].Value;
+                    String articleURL = ccfURL + n.SelectSingleNode("h3/a").Attributes["href"].Value;
                     String date = n.SelectSingleNode("small").InnerText;
-                    String caption = n.SelectSingleNode("p").InnerText;
+                    String blurb = n.SelectSingleNode("p").InnerText;
+
+                    writer.WriteStartElement("item");
+                    writer.WriteElementString("title", title);
+                    writer.WriteElementString("date", date);
+                    writer.WriteElementString("blurb", blurb);
+                    writer.WriteStartElement("photos");
+
                     HtmlNode articleImage = n.SelectSingleNode("img");
                     if (articleImage != null)
                     {
-                        web.DownloadFile(new Uri(ccfURL + articleImage.Attributes["src"].Value), imagesFolder + i++.ToString() + ".jpg");
+                        String imgPath = imagesFolder + i.ToString() + ".jpg";
+                        web.DownloadFile(new Uri(ccfURL + articleImage.Attributes["src"].Value), imgPath);
+                        writer.WriteStartElement("img");
+                        writer.WriteAttributeString("src", imgPath);
+                        writer.WriteEndElement();
+                        i++;
                     }
 
-                    HtmlDocument articleHTML = new HtmlDocument();
-                    articleHTML.Load(filenameFromPath(articleURL));
+                    HtmlDocument articleHTML = new HtmlWeb().Load(articleURL);
 
-                    if (articleHTML.DocumentNode.SelectSingleNode("//div[@id='contentPrimary']//img") != null)
+                    if (articleHTML.DocumentNode.SelectSingleNode(newsDivXPath + "//img") != null)
                     {
-                        foreach (HtmlNode img in articleHTML.DocumentNode.SelectNodes("//div[@id='contentPrimary']//img"))
+                        foreach (HtmlNode img in articleHTML.DocumentNode.SelectNodes(newsDivXPath + "//img"))
                         {
-                            web.DownloadFile(new Uri(ccfURL + img.Attributes["src"].Value), imagesFolder + i++.ToString() + ".jpg");
+                            String imgPath = imagesFolder + i.ToString() + ".jpg";
+                            web.DownloadFile(new Uri(ccfURL + img.Attributes["src"].Value), imgPath);
+                            writer.WriteStartElement("img");
+                            writer.WriteAttributeString("src", imgPath);
+                            writer.WriteEndElement();
+                            i++;
                         }
                     }
-                    
+
+                    writer.WriteEndElement();
+                    writer.WriteEndElement();
+                    writer.Flush();
                 }
+            }
+            catch
+            {
+                MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
+            }
 
             //If new page is initiated from the home page, it comes in the form the right
             if (name == "newsandevents")
