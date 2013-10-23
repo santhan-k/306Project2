@@ -1,0 +1,108 @@
+﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+      xmlns:s="http://schemas.microsoft.com/surface/2008" 
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
+      x:Class="CCF2.OurStories" 
+      d:DesignHeight="1080" d:DesignWidth="1920"
+
+	mc:Ignorable="d"
+
+	Title="OurStories">
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/images/Common/background.png" />
+    </Page.Background>
+    <Grid>
+        <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
+            <Grid Height="632.507" Width="1197.661">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85*" />
+                    <ColumnDefinition Width="663*" />
+                    <ColumnDefinition Width="450*" />
+                </Grid.ColumnDefinitions>
+                <Button Margin="8,128.423,0,104.083" Click="DequarnHarrison_Click" Grid.Column="1" HorizontalAlignment="Left" Width="260" Height="400">
+            		<Button.Template>
+            			<ControlTemplate>
+                            <Image Width="260" Height="400" Source="Resources/images/OurStories/DequarnHarrison.jpg" Stretch="Fill"/>
+            			</ControlTemplate>
+            		</Button.Template>
+            	</Button>
+
+                <Button Width="260" Height="400" Margin="0,128.423,24.895,104.083" Click="ClaudiaLittle_Click" RenderTransformOrigin="1.284,-0.507" Grid.Column="1" HorizontalAlignment="Right" d:LayoutOverrides="HorizontalAlignment">
+            		<Button.Template>
+            			<ControlTemplate>
+                            <Image Width="260" Height="400" Source="Resources/images/OurStories/ClaudiaLittle.jpg" Stretch="Fill" />
+            			</ControlTemplate>
+            		</Button.Template>
+            	</Button>
+
+                <Button Margin="106.886,128.423,82.986,104.083" Click="JoyceSingh_Click" Grid.Column="2" Width="260" Height="400">
+            		<Button.Template>
+            			<ControlTemplate>
+                            <Image Width="260" Height="400" Source="Resources/images/OurStories/JoyceSingh.jpg" Stretch="Fill"/>
+            			</ControlTemplate>
+            		</Button.Template>
+            	</Button>
+                <GridSplitter HorizontalAlignment="Stretch" Margin="511,-641,151,39" RenderTransformOrigin="0.5,0.5" Grid.Column="1">
+                    <GridSplitter.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-90"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </GridSplitter.RenderTransform>
+                </GridSplitter>
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" x:Name="headingLabel" Content="Our Stories" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" />
+                <Label HorizontalAlignment="Left" VerticalAlignment="Bottom" FontSize="26.667" x:Name="DequarnHarrison_label" Content="Dequarn Harrison" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.Column="1" Margin="8,0,0,30.399" d:LayoutOverrides="GridBox" Background="Transparent" Width="260" HorizontalContentAlignment="Center" />
+                <Label VerticalAlignment="Bottom" FontSize="26.667" x:Name="ClaudiaLittle_label" Content="Claudia Little" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.Column="1" Margin="377.917,0,24.895,30.399" Background="Transparent" d:LayoutOverrides="GridBox" HorizontalContentAlignment="Center" />
+                <Label VerticalAlignment="Bottom" FontSize="26.667" x:Name="Joyce_Singh_label" Content="Joyce Singh" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.Column="2" Margin="106.887,0,82.986,30.399" Background="Transparent" HorizontalContentAlignment="Center" d:LayoutOverrides="HorizontalAlignment" />
+            </Grid>
+
+        </Viewbox>
+        <TextBlock FontSize="22" x:Name="txtScrolling" Text="News Feed" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
+<TextBlock.RenderTransform>
+  <TranslateTransform x:Name="translate" />
+    </TextBlock.RenderTransform>
+      <TextBlock.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard>
+                <Storyboard RepeatBehavior="Forever">
+                    <DoubleAnimation
+                        From="1100" To="0"
+                        Storyboard.TargetName="translate"
+                        Storyboard.TargetProperty="X"
+                        Duration="0:0:9" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </TextBlock.Triggers>
+
+        </TextBlock>
+        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
+
+
+        <Button Height="Auto" Width="200" Margin="440,-708,1280,8" Click="Home_Click" Content=" ">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="Resources/images/Common/CCF-logo2_200.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+        <s:SurfaceButton
+                Margin="195.693,59,0,0" Padding="0"
+                BorderThickness="0"
+                Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
+            <Image Height="60"
+                    Width="60"
+                    Source="Resources/images/Common/back_button.png">
+                <Image.Effect>
+                    <ee:BloomEffect BloomIntensity="2" BaseSaturation="0" BaseIntensity="1" BloomSaturation="2" Threshold="0.25"/>
+                </Image.Effect>
+            </Image>
+        </s:SurfaceButton>
+    </Grid>
+</Page>
+
