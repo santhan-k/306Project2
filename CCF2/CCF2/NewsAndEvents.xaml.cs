@@ -18,6 +18,7 @@ using System.Net;
 using System.IO;
 using System.Xml;
 using Microsoft.Surface.Presentation.Input;
+using Microsoft.Surface.Presentation.Controls;
 
 namespace CCF2
 {
@@ -71,6 +72,7 @@ namespace CCF2
 
             foreach (XmlNode node in xml.SelectNodes("//" + content + "/item"))
             {
+                String id = node.SelectSingleNode("id").Value;
                 XmlNode imageNode = node.SelectSingleNode("photos/img");
                 Uri imgUri = new Uri("Resources/images/Common/CCF-logo2_200.png", UriKind.Relative);
 
@@ -78,7 +80,7 @@ namespace CCF2
                 {
                     imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + imageNode.Attributes["src"].Value, UriKind.Absolute);
                 }
-                panel.Children.Add(new Image() { Source = new BitmapImage(imgUri), Margin=new Thickness(10) });
+                panel.Children.Add(new SurfaceButton() { Name = content + id, Padding = new Thickness(0), Content = new Image() { Source = new BitmapImage(imgUri) } });
             }
         }
 
@@ -247,6 +249,13 @@ namespace CCF2
                     return;
                 }
             }
+        }
+
+        private void NewsPanel_PreviewTouchDown(object sender, TouchEventArgs e)
+        {
+            MessageBox.Show(sender.ToString());
+            MessageBox.Show(e.Source.ToString());
+            MessageBox.Show(e.OriginalSource.ToString());
         }
     }
 }
