@@ -32,20 +32,23 @@ namespace CCF2
             sw3 = window;
             InitializeComponent();
 
-            if (!Directory.Exists("Resources/images/NewsAndEvents"))
-            {
-                Directory.CreateDirectory("Resources/images/NewsAndEvents");
-            }
+            showNewsOrEvents("News", newsPanel);
+            showNewsOrEvents("Events", eventsPanel);
+            
+            //if (!Directory.Exists("Resources/images/NewsAndEvents"))
+            //{
+            //    Directory.CreateDirectory("Resources/images/NewsAndEvents");
+            //}
 
-            try
-            {
-                getNewsOrEvents("News");
-                getNewsOrEvents("Events");
-            }
-            catch
-            {
-                MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
-            }
+            //try
+            //{
+            //    getNewsOrEvents("News");
+            //    getNewsOrEvents("Events");
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
+            //}
 
             //If new page is initiated from the home page, it comes in the form the right
             if (name == "newsandevents")
@@ -59,6 +62,24 @@ namespace CCF2
                 sw3.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
             }
 
+        }
+
+        private void showNewsOrEvents(String content, StackPanel panel)
+        {
+            XmlDocument xml = new XmlDocument();
+            xml.Load("Resources/xml/" + content + ".xml");
+
+            foreach (XmlNode node in xml.SelectNodes("//" + content + "/item"))
+            {
+                XmlNode imageNode = node.SelectSingleNode("photos/img");
+                Uri imgUri = new Uri("Resources/images/Common/CCF-logo2_200.png", UriKind.Relative);
+
+                if (imageNode != null)
+                {
+                    imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + imageNode.Attributes["src"].Value, UriKind.Absolute);
+                }
+                panel.Children.Add(new Image() { Source = new BitmapImage(imgUri), Margin=new Thickness(10) });
+            }
         }
 
         private void getNewsOrEvents(String content)
