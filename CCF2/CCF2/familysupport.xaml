@@ -11,6 +11,8 @@
     <Grid>
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
+                <Image Margin="-91,170,1197,-30" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
+                <Image Margin="1228,183,-106,-38" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
                 <GridSplitter HorizontalAlignment="Stretch" Margin="595.67,-626.697,601,24.593" RenderTransformOrigin="0.5,0.5">
                     <GridSplitter.RenderTransform>
                         <TransformGroup>
@@ -125,6 +127,7 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        
         <s:SurfaceButton Background="#4A000000" BorderThickness="0" Content="Sharing Magazine" FontSize="32" Foreground="White" Height="75" HorizontalAlignment="Left" Margin="300.25,700.117,0,0" VerticalAlignment="Top" Width="400" Click="SharingMagazine_Click" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
         <Grid HorizontalAlignment="Left" Margin="240,454,0,145" Width="50">
             <Image Margin="-35,100,1.772,0" Source="Resources/images/Common/Beads/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>

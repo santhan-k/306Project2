@@ -12,6 +12,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Surface.Presentation.Input;
 
 namespace CCF2
 {
@@ -42,6 +43,7 @@ namespace CCF2
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
+           
         }
 
 

@@ -37,7 +37,8 @@
                     <s:SurfaceButton Content="Our Stories" Margin="0,117.72,0,0" HorizontalAlignment="Right" Width="400" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="OurStories_Click" Background="#4A000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="Our People" Margin="0,0,0,116.398" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="400" FontSize="32" Foreground="White" Click="OurPeople_Click" Background="#4A000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                 </Grid>
-
+                <Image Margin="-25,90,1164,50" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
+                <Image Margin="1084,101,55,166" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>   
             </Grid>
         </Viewbox>
         <!--Code for the scrolling news feed-->
@@ -84,30 +85,16 @@
             </Image>
         </s:SurfaceButton>
         <Grid HorizontalAlignment="Left" Margin="280,373.5,0,225" Width="50">
-            <Image Margin="-18.256,-108.448,13.256,-112.641" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-            	<Image.RenderTransform>
-            		<TransformGroup>
-            			<ScaleTransform/>
-            			<SkewTransform/>
-            			<RotateTransform Angle="-1.115"/>
-            			<TranslateTransform/>
-            		</TransformGroup>
-            	</Image.RenderTransform>
-            </Image>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="480*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
             <Image Margin="-35,50,1.772,0" Source="Resources/images/Common/Beads/bead2.png" Stretch="Fill" Height="71.942" VerticalAlignment="Top"/>
             <Image Height="82" Margin="-35,-60,0,0" Source="Resources/images/Common/Beads/bead3.png" Stretch="Fill" VerticalAlignment="Top"/>
-            <Image Height="62" Margin="-35,0,0,65" Source="Resources/images/Common/Beads/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
-            <Image Height="88.5" Margin="-35,0,0,-40" Source="Resources/images/Common/Beads/bead7.png" Stretch="Fill" VerticalAlignment="Bottom"/>
-            <Image Margin="0,-105.448,-1254.244,-115.641" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="55">
-            	<Image.RenderTransform>
-            		<TransformGroup>
-            			<ScaleTransform/>
-            			<SkewTransform/>
-            			<RotateTransform Angle="-1.115"/>
-            			<TranslateTransform/>
-            		</TransformGroup>
-            	</Image.RenderTransform>
-            </Image>
+            <Image Height="62" Margin="-35,0,0,63" Source="Resources/images/Common/Beads/bead4.png" Stretch="Fill" VerticalAlignment="Bottom"/>
+            <Image Height="88.5" Margin="-35,0,0,-40" Source="Resources/images/Common/Beads/bead7.png" Stretch="Fill" VerticalAlignment="Bottom" Grid.RowSpan="2" />
+            <!--<Image Height="300" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="55" Grid.RowSpan="2"/>-->
+           
         </Grid>
         <Grid Margin="0,373.5,310,225" HorizontalAlignment="Right" Width="94.007">
             <Image Height="70.5" Margin="0,-50,0,0" Source="Resources/images/Common/Beads/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
