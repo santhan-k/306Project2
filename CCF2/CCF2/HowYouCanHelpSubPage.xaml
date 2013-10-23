@@ -31,9 +31,9 @@
                 </GridSplitter>
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
                 <s:SurfaceScrollViewer Name="ScrolBar" Width="740" Height ="500" HorizontalAlignment="Left" Margin="0,64,0,32">
-                    <TextBlock  TextAlignment="Justify" Foreground="FloralWhite" HorizontalAlignment="Left" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="700" Height="Auto" FontSize="27" Padding="4,0,0,0" />
+                    <TextBlock  TextAlignment="Justify" Foreground="FloralWhite" HorizontalAlignment="Left" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="700" Height="Auto" FontSize="25" Padding="4,0,0,0" />
                 </s:SurfaceScrollViewer>
-                <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Fill" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="574" Width="400"   />
+                <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Uniform" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="574" Width="400"   />
             </Grid>
 
         </Viewbox>
