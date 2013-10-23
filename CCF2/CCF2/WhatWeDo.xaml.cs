@@ -84,7 +84,7 @@ namespace CCF2
         //Action Listener for the Our Stories button
         private void OurStories_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new WhatWeDoSubPage(sw1, "OurStories"));
+            sw1.showPage(new OurStories(sw1, "ourstories"));
 
         }
 
