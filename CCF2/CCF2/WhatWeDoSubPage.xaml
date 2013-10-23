@@ -6,10 +6,10 @@
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
       x:Class="CCF2.WhatWeDoSubPage" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-
-	mc:Ignorable="d"
-
-	Title="WhatWeDoSubPage">
+	  mc:Ignorable="d"
+      TouchDown="WhatWeDoSubPage_Touch_TouchDown" TouchUp="WhatWeDoSubPage_Touch_TouchUp" TouchMove="WhatWeDoSubPage_Touch_TouchMove"
+      Title="WhatWeDoSubPage">
+    
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
