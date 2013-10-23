@@ -1,7 +1,7 @@
 ﻿<Page xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:s="http://schemas.microsoft.com/surface/2008" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" x:Class="CCF2.FamilySupport" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-
-	mc:Ignorable="d"
+      TouchDown="FamilySupport_Touch_TouchDown" TouchUp="FamilySupport_Touch_TouchUp" TouchMove="FamilySupport_Touch_TouchMove"
+	  mc:Ignorable="d"
 
 	Title="FamilySupportPage">
     <!--Background image from the CCF website-->
@@ -46,14 +46,6 @@
                 Height="75"
                 BorderThickness="0"
                 Click="BeadsOfCourage_Click" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="White" FontSize="32" Background="#4A000000" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
-                <!--
-                <s:SurfaceButton.Background>
-                    <RadialGradientBrush SpreadMethod="Pad">
-                        <GradientStop Color="Red" Offset="0.5" />
-                        <GradientStop Color="Black" Offset="1" />
-                    </RadialGradientBrush>
-                </s:SurfaceButton.Background>
-                -->
         </s:SurfaceButton>
         
         <s:SurfaceButton

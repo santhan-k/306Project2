@@ -43,9 +43,7 @@ namespace CCF2
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
-           
         }
-
 
         private void FSC_Click(object sender, RoutedEventArgs e)
         {
@@ -54,7 +52,6 @@ namespace CCF2
 
         private void BeadsOfCourage_Click(object sender, RoutedEventArgs e)
         {
-            // BeadsOfCourage.Background = new RadialGradientBrush(Colors.Green, Colors.Black);
             sw1.showPage(new FamilySupportSubPage(sw1, "BeadsOfCourage"));
         }
 
@@ -81,6 +78,41 @@ namespace CCF2
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
+        }
+
+        private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
+
+        private void FamilySupport_Touch_TouchDown(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
+        }
+
+        private void FamilySupport_Touch_TouchUp(object sender, TouchEventArgs e)
+        {
+            currentTouchDevices.Remove(e.TouchDevice);
+        }
+
+        private void FamilySupport_Touch_TouchMove(object sender, TouchEventArgs e)
+        {
+            if (currentTouchDevices.Count == 1)
+            {
+                int isRight = 0;
+
+                foreach (KeyValuePair<TouchDevice, Point> td in currentTouchDevices)
+                {
+                    if (td.Key != null && e.TouchDevice.GetPosition(this).X - td.Value.X > 100)
+                        isRight++;
+                    else
+                        return;
+                }
+
+                if (isRight == 1)
+                {
+                    sw1.showPage(new HomePage(sw1));
+                    currentTouchDevices.Clear();
+                    return;
+                }
+            }
         }
     }
 }
