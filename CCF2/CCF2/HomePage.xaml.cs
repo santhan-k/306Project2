@@ -40,27 +40,31 @@ namespace CCF2
 
         }
 
+        //Action listener for the event that is caused when the What We Do menu button is clicked
         private void WhatWeDo_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1,"whatwedo"));
         }
 
+        //Action listener for the event that is caused when the How You Can Help menu button is clicked
         private void HowYouCanHelp_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HowYouCanHelp(sw1, "howyoucanhelp"));  
         }
 
+        //Action listener for the event that is caused when the News And Events menu button is clicked
         private void NewsAndEvents_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new NewsAndEvents(sw1, "newsandevents"));
-
         }
 
+        //Action listener for the event that is caused when the Family Support menu button is clicked
         private void FamilySupport_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new FamilySupport(sw1, "familysupport"));
         }
 
+        //Action listener for the event that is caused when the Volunteer menu button is clicked
         private void Volunteer_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new VolunteerPage(sw1, "volunteer"));
@@ -70,6 +74,8 @@ namespace CCF2
         {
             sw1.showPage(new WelcomeScreen(sw1));
         }
+
+        //Action listener for the event that is caused when the Contact Us menu button is clicked
         private void ContactUs_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new ContactUsPage(sw1, "testNE"));
