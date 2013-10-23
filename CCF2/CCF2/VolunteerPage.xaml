@@ -6,10 +6,10 @@
       xmlns:ee="http://schemas.microsoft.com/expression/2010/effects" 
       x:Class="CCF2.VolunteerPage" 
       d:DesignHeight="1080" d:DesignWidth="1920"
-
-	mc:Ignorable="d"
-
-	Title="VolunteerPage">
+      mc:Ignorable="d"
+      TouchDown="Volunteer_Touch_TouchDown" TouchUp="Volunteer_Touch_TouchUp" TouchMove="Volunteer_Touch_TouchMove"
+      Title="VolunteerPage">
+    
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
