@@ -59,23 +59,22 @@ From the small beginning, dedicated people established what is now a national or
   <OurPeople>
     <heading>Our People</heading>
     <img src="Resources/images/WhatWeDo/OurPeople.png" />
-    <content>      Maryanne Thomson
-        National Manager - Child Cancer Services
-        PHN 09 303 9888
-        EML mthomson@childcancer.org.nz
-        
+    <content>National Manager (Child Cancer Services)
+      Maryanne Thomson
+      PHN 09 303 9888
+      EML mthomson@childcancer.org.nz
+
+Family Support Manager (Auckland / Northland)
       Marie Purcell
-        Family Support Manager - Auckland / Northland
-        PHN 09 303 9977
-        EML mpurcell@childcancer.org.nz
-      </content>
+      PHN 09 303 9977
+      EML mpurcell@childcancer.org.nz
+    </content>
   </OurPeople>
 
   <HealthProfessionals>
     <heading>Health Professionals</heading>
     <img src="Resources/images/WhatWeDo/HealthProfessionals.jpg" />
-    <content>
-      The Foundation works alongside the health professionals to encourage further research and education to ensure that every New Zealand child facing cancer has the best possible outcome. In recent years, the Foundation has also contributed towards research into the late effects of cancer treatment.
+    <content>The Foundation works alongside the health professionals to encourage further research and education to ensure that every New Zealand child facing cancer has the best possible outcome. In recent years, the Foundation has also contributed towards research into the late effects of cancer treatment.
     </content>
   </HealthProfessionals>
 </pages>
