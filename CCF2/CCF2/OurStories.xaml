@@ -37,9 +37,9 @@
                     <Button.Template>
                         <ControlTemplate>
                             <Image
-                                Width="260"
+                                Width="266"
                                 Height="400"
-                                Source="Resources/images/OurStories/DequarnHarrison.jpg"
+                                Source="Resources/images/OurStories/DequarnHarrison_b.jpg"
                                 Stretch="Fill"/>
                         </ControlTemplate>
                     </Button.Template>
@@ -59,9 +59,9 @@
                     <Button.Template>
                         <ControlTemplate>
                             <Image
-                                Width="260"
+                                Width="266"
                                 Height="400"
-                                Source="Resources/images/OurStories/ClaudiaLittle.jpg"
+                                Source="Resources/images/OurStories/ClaudiaLittle_b.jpg"
                                 Stretch="Fill" />
                         </ControlTemplate>
                     </Button.Template>
@@ -78,9 +78,9 @@
                     <Button.Template>
                         <ControlTemplate>
                             <Image
-                                Width="260"
+                                Width="266"
                                 Height="400"
-                                Source="Resources/images/OurStories/JoyceSingh.jpg"
+                                Source="Resources/images/OurStories/JoyceSingh_b.jpg"
                                 Stretch="Fill"/>
                         </ControlTemplate>
                     </Button.Template>
