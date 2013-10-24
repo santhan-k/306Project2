@@ -55,7 +55,7 @@
 
         <!--Back button-->
         <s:SurfaceButton
-                Margin="195.693,59,0,0" Padding="0"
+                Margin="82,55,0,0" Padding="0"
                 BorderThickness="0"
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
             <Image Height="60"
@@ -79,6 +79,9 @@
             <Image Height="60.4" Margin="0,0,1.807,-46" Source="Resources/images/Common/Beads/bead1.png" Stretch="Fill" VerticalAlignment="Bottom"/>
         </Grid>
         <!-- Finger swipe image -->
-        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
+        <Image Source="/CCF2;component/Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="73" VerticalAlignment="Top" Width="74" Stretch="Uniform" Margin="0,42,1673,0"/>
+        <Label Content="or" Height="28" HorizontalAlignment="Left" Margin="140,75,0,0" Name="label1" VerticalAlignment="Top" Foreground="White" FontSize="20" />
+        <Label Content="swipe right" FontSize="20" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="153,112,0,0" Name="label2" VerticalAlignment="Top" Width="117" />
+        <Label Content="back" FontSize="20" Foreground="White" Height="28" HorizontalAlignment="Left" Margin="82,112,0,0" Name="label3" VerticalAlignment="Top" Width="60" />
     </Grid>
 </Page>

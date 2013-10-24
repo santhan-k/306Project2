@@ -66,6 +66,7 @@
         <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
 
         <!--Logo/Home button-->
+        <!--Home button/logo-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>

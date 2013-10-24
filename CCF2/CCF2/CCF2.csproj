@@ -310,7 +310,9 @@
     <Content Include="Resources\xml\NewsInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Resource Include="Resources\xml\OurStoriesInfo.xml" />
+    <Content Include="Resources\xml\OurStoriesInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\xml\WhatWeDoInfo.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
