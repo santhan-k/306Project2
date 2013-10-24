@@ -291,9 +291,12 @@
     <Resource Include="Resources\qr\fbTrns.png" />
     <Resource Include="Resources\qr\twitterTrns.png" />
     <Resource Include="Resources\images\Common\finger_swipe2.png" />
-    <Resource Include="Resources\images\OurStories\ClaudiaLittle.jpg" />
-    <Resource Include="Resources\images\OurStories\DequarnHarrison.JPG" />
-    <Resource Include="Resources\images\OurStories\JoyceSingh.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories\ClaudiaLittle.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories\ClaudiaLittle_b.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories\DequarnHarrison.JPG" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories\DequarnHarrison_b.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories\JoyceSingh.jpg" />
+    <Resource Include="Resources\images\WhatWeDo\OurStories\JoyceSingh_b.jpg" />
     <Content Include="Resources\xml\CCF2.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

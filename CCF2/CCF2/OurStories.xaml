@@ -39,7 +39,7 @@
                             <Image
                                 Width="266"
                                 Height="400"
-                                Source="Resources/images/OurStories/DequarnHarrison_b.jpg"
+                                Source="Resources/images/WhatWeDo/OurStories/DequarnHarrison_b.jpg"
                                 Stretch="Fill"/>
                         </ControlTemplate>
                     </Button.Template>
@@ -61,7 +61,7 @@
                             <Image
                                 Width="266"
                                 Height="400"
-                                Source="Resources/images/OurStories/ClaudiaLittle_b.jpg"
+                                Source="Resources/images/WhatWeDo/OurStories/ClaudiaLittle_b.jpg"
                                 Stretch="Fill" />
                         </ControlTemplate>
                     </Button.Template>
@@ -80,7 +80,7 @@
                             <Image
                                 Width="266"
                                 Height="400"
-                                Source="Resources/images/OurStories/JoyceSingh_b.jpg"
+                                Source="Resources/images/WhatWeDo/OurStories/JoyceSingh_b.jpg"
                                 Stretch="Fill"/>
                         </ControlTemplate>
                     </Button.Template>
