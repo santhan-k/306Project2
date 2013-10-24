@@ -23,6 +23,10 @@ namespace CCF2
     public partial class HomePage : Page
     {
         public SurfaceWindow1 sw1;
+
+        /* As the user goes through the pages, the next page slides into focus from the right.
+         * The current page slides to the left and disappears. 
+         */ 
         public HomePage(SurfaceWindow1 window)
         {
             sw1 = window;
@@ -32,6 +36,9 @@ namespace CCF2
 
         }
 
+        /* As the user goes back, the previous page slides into focus from the left and
+         * the current page slides to the right and disappears.
+         */
         public HomePage(SurfaceWindow1 window, string name)
         {
             sw1 = window;
@@ -41,59 +48,69 @@ namespace CCF2
 
         }
 
-        //Action listener for the event that is caused when the What We Do menu button is clicked
+        // Touching the WhatWeDo icon will take the user to the WhatWeDo page
         private void WhatWeDo_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1,"whatwedo"));
         }
 
-        //Action listener for the event that is caused when the How You Can Help menu button is clicked
+        // Touching the HowYouCanHelp icon will take the user to the HowYouCanHelp page
         private void HowYouCanHelp_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HowYouCanHelp(sw1, "howyoucanhelp"));  
         }
 
-        //Action listener for the event that is caused when the News And Events menu button is clicked
+        // Touching the NewsAndEvents icon will take the user to the NewsAndEvents page
         private void NewsAndEvents_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new NewsAndEvents(sw1, "newsandevents"));
         }
 
-        //Action listener for the event that is caused when the Family Support menu button is clicked
+        // Touching the FamilySupport icon will take the user to the FamilySupport page
         private void FamilySupport_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new FamilySupport(sw1, "familysupport"));
         }
 
-        //Action listener for the event that is caused when the Volunteer menu button is clicked
+        // Touching the Volunteer icon will take the user to the Volunteer page
         private void Volunteer_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new VolunteerPage(sw1, "volunteer"));
         }
-        //Action listener for the event that is caused when the logo is clicked
+
+        // Touching the CCF logo will take the user to the welcome splash screen
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WelcomeScreen(sw1));
         }
 
-        //Action listener for the event that is caused when the Contact Us menu button is clicked
+        // Touching the ContactUs icon will take the user to the ContactUs page
         private void ContactUs_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new ContactUsPage(sw1, "testNE"));
         }
 
+        /* The user can go back to the previous page by swiping their finger to the right.
+         * The swipe gesture is made up of 3 phases:
+         * Initial phase: TouchDown, the moment when the user touches the screen.
+         * Middle phase: TouchMove, the speed and direction of the user as they move their finger across the screen.
+         * Final phase: TouchUp, the moment when the user's finger leaves the screen.
+         */
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
+        // TouchDown event triggers the moment when the user touches the screen and captures the (x,y) position of the touch
         private void Home_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
+        // TouchUp event triggers the moment when the user's finger leaves the screen
         private void Home_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
-
+        
+        // TouchMove event triggers when the user's finger moves quickly across the screen
         private void Home_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)
