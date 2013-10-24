@@ -14,57 +14,74 @@
     </Page.Background>
     <Grid>
         <!--Scrolling news feed-->
-        <TextBlock FontSize="22" Name="txtScrolling" Text="Executive Travel have embarked on a yearlong fundraising programme for CCF . . Assurity Consulting Group came on board once again as part of our One Day for Child Cancer campaign in July . . The Governor-General Dinner held in Hamilton last week . . Renowned artist Don Packwood has painted 'Three of 17 NZ Speed Legends' using the unique oil paintings . . The Wooden Toy Box just gave away $50,000 worth of toys and CCF got a huge 41% of them . . Eric Bettridge is the latest recipient of the Child Cancer Distinguished Service Award . . we sent out a survey to a random selection of our supporters to find out how you think we are doing . . Former New Zealand pop icons TrueBliss are back to raise awareness of child cancer . . The Rotary Annual Charity Yacht with an amazing $15000 donation . . The Glenora Bears Rugby League charity match is held on Saturday 22 November at 2.30p . . " Margin="-1,176,0,0" Width="8800" TextAlignment="Justify" TextWrapping="Wrap" DataContext="{Binding}">
-<TextBlock.RenderTransform>
+        <TextBlock FontSize="22" x:Name="txtScrolling" Margin="-1,176,0,0" Width="8800" TextAlignment="Justify" TextWrapping="Wrap" DataContext="{Binding}"><TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />
     </TextBlock.RenderTransform><TextBlock.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard>
-                <Storyboard RepeatBehavior="Forever">
-                    <DoubleAnimation From="1100" To="-8000" Storyboard.TargetName="translate" Storyboard.TargetProperty="X" Duration="0:0:50" />
-                </Storyboard>
-            </BeginStoryboard>
-        </EventTrigger>
-    </TextBlock.Triggers></TextBlock>
+        		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
+        			<BeginStoryboard>
+        				<Storyboard RepeatBehavior="Forever">
+        					<DoubleAnimation From="1100" To="-8000" Storyboard.TargetName="translate" Storyboard.TargetProperty="X" Duration="0:0:50" />
+        				</Storyboard>
+        			</BeginStoryboard>
+        		</EventTrigger>
+    </TextBlock.Triggers><Run Text="Executive Travel have embarked on a yearlong fundraising programme for CCF . . Assurity Consulting Group came on board once again as part of our One Day for Child Cancer campaign in July . . The Governor-General Dinner held in Hamilton last week . . Renowned artist Don Packwood has painted 'Three of 17 NZ Speed Legends' using the unique oil paintings . . The Wooden Toy Box just gave away $50,000 worth of toys and CCF got a huge 41% of them . . Eric Bettridge is the latest recipient of the Child Cancer Distinguished Service Award . . we sent out a survey to a random selection of our supporters to find out how you think we are doing . . Former New Zealand pop icons TrueBliss are back to raise awareness of child cancer . . The Rotary Annual Charity Yacht with an amazing $15000 donation . . The Glenora Bears Rugby League charity match is held on Saturday 22 November at 2.30p . . "/></TextBlock>
         
         <!--Grid containind the six different input blocks-->
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
             <Grid Height="597" Width="1197.661">
                 <s:SurfaceButton  HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="WhatWeDo_Click" Background="#FFF88E1D">
-                    <Image  Source="Resources/images/Menu/WhatWeDo1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
+                	<Canvas Height="260" Width="330">
+                		<TextBlock TextWrapping="Wrap" Text="What We Do" Foreground="#FF080202" FontSize="29.333" TextAlignment="Center" Height="52.166" Width="322"/>
+                		<Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/WhatWeDo2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
+                	</Canvas>
                 </s:SurfaceButton>
                 <s:SurfaceButton Height="260" Margin="432.67,0,434.991,0" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Click="HowYouCanHelp_Click" Background="#FFDC1F53">
-                    <Image  Source="Resources/images/Menu/HowYouCanHelp1.PNG" HorizontalAlignment="Left" Height="252" VerticalAlignment="Center" Width="322" Stretch="Fill" />
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
+                	<Canvas Height="260" Width="330">
+                		<TextBlock TextWrapping="Wrap" Text="How You Can Help" FontSize="29.333" Height="52.166" Width="322" TextAlignment="Center" Foreground="#FF080202"/>
+                        <Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/HowYouCanHelp2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
+                	</Canvas>
                 </s:SurfaceButton>
                 <s:SurfaceButton HorizontalAlignment="Right" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="NewsAndEvents_Click" Background="#FFF9F247">
-                    <Image  Source="Resources/images/Menu/NewsAndEvents1.PNG" HorizontalAlignment="Left" Height="Auto" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
+                	<Canvas Height="260" Width="330">
+                		<TextBlock TextWrapping="Wrap" Text="New and Events" FontSize="29.333" TextAlignment="Center" Foreground="#FF080202" Height="52.166" Width="322"/>
+                        <Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/NewsAndEvents2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
+                    </Canvas>
                 </s:SurfaceButton>
                 <s:SurfaceButton HorizontalAlignment="Left" Height="260" Margin="0,337,0,0" VerticalAlignment="Top" Width="330" Click="FamilySupport_Click" Background="#FFC6DD2C">
-                    <Image  Source="Resources/images/Menu/FamilySupport1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                         </s:SurfaceButton.Effect>
+                	<Canvas Height="260" Width="330">
+                		<TextBlock TextWrapping="Wrap" Text="Family Support" FontSize="29.333" Foreground="#FF080202" Width="322" Height="52.166" TextAlignment="Center"/>
+                        <Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/FamilySupport2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
+                	</Canvas>
                 </s:SurfaceButton>
                 <s:SurfaceButton  Height="260" Margin="432.67,337,434.991,0" VerticalAlignment="Top" Click="Volunteer_Click" Background="#FFA54398">
-                    <Image  Source="Resources/images/Menu/Volunteer1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
+                	<Canvas Height="252" Width="330">
+                		<TextBlock Canvas.Left="8" TextWrapping="Wrap" Text="Volunteer" FontSize="29.333" TextAlignment="Center" Foreground="#FF080202" Height="52.166" Width="314" RenderTransformOrigin="0.496,0.01"/>
+                        <Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/Volunteer2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
+                	</Canvas>
                 </s:SurfaceButton>
                 <s:SurfaceButton HorizontalAlignment="Right" Height="260" Margin="0,337,0,0" VerticalAlignment="Top" Width="330" Click="ContactUs_Click" Background="#FF63B3F1">
-                    <Image  Source="Resources/images/Menu/ContactUs1.PNG" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Center" Width="Auto" Stretch="Fill"/>
                     <s:SurfaceButton.Effect>
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
+                	<Canvas Height="252" Width="330">
+                		<TextBlock TextWrapping="Wrap" Text="Contact Us" FontSize="29.333" Foreground="#FF080202" TextAlignment="Center" Height="52.166" Width="322"/>
+                        <Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/ContactUs2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
+                	</Canvas>
                 </s:SurfaceButton>
                 <GridSplitter HorizontalAlignment="Stretch" Margin="595.67,-626.697,601,24.593" RenderTransformOrigin="0.5,0.5">
                     <GridSplitter.RenderTransform>
