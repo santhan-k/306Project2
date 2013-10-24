@@ -9,15 +9,27 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       TouchDown="Events_Touch_TouchDown" TouchUp="Events_Touch_TouchUp" TouchMove="Events_Touch_TouchMove"
 	  Title="EventsPage">
-    
+
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
-        <Viewbox Margin="283.493,159,282.846,87.814" Stretch="Fill"/>
-
+        <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
+            <Grid Height="600.507" Width="1197.661">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1179*" />
+                    <ColumnDefinition Width="19*" />
+                </Grid.ColumnDefinitions>
+                <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
+                <TextBlock Height="100" HorizontalAlignment="Left" Margin="-1,58,0,0" Name="detailsText" Text="TextBlock" VerticalAlignment="Top" FontSize="20" Foreground="White" TextAlignment="Justify" Padding="4,0,0,0" Grid.ColumnSpan="3" Width="1150" />
+                <TextBlock Height="200" HorizontalAlignment="Left" Margin="0,142,0,0" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" FontSize="25" Foreground="White" TextAlignment="Justify" Padding="4,0,0,0" Grid.ColumnSpan="3" Width="1150" />
+                <s:SurfaceScrollViewer Margin="-1,200,0,0" Height="300">
+                    <StackPanel Name="imagesPanel" Height="250" CanHorizontallyScroll="True" Orientation="Horizontal">
+                    </StackPanel>
+                </s:SurfaceScrollViewer>
+            </Grid>
+        </Viewbox>
         <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
-
 
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
@@ -39,9 +51,6 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
-        <Image Name="mainImage" Width="500" Height="400" Margin="424,350,469,271" Stretch="Fill" />
-        <Label Name="TitleText" Content="Label" HorizontalAlignment="Left" Height="100.8" Margin="302.953,250,0,0" VerticalAlignment="Top" Width="1117" FontSize="36"/>
-        <s:SurfaceTextBox Name="MainBodyText" Height="317" Margin="302.953,0,306.846,-50" TextWrapping="Wrap" Text="When:&#xd;&#xa;&#xd;&#xa;Where:&#xd;&#xa;&#xd;&#xa;Description:" VerticalAlignment="Bottom" Background="{x:Null}" FontSize="21.333" BorderThickness="0" TextAlignment="Justify" />
         <!-- Finger swipe image -->
         <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>

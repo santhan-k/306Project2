@@ -24,7 +24,7 @@ namespace CCF2
     public partial class NewsPage : Page
     {
         public SurfaceWindow1 sw1;
-        public NewsPage(SurfaceWindow1 window, String name)
+        public NewsPage(SurfaceWindow1 window, String itemID)
         {
             sw1 = window;
             InitializeComponent();
@@ -44,7 +44,7 @@ namespace CCF2
             foreach (XmlNode node in xml.SelectNodes("//News/item"))
             {
                 String id = node.SelectSingleNode("id/text()").Value;
-                if (id == name)
+                if (id == itemID)
                 {
                     XmlNode imageNode = node.SelectSingleNode("photos/img");
                     headingLabel.Content = node.SelectSingleNode("title/text()").Value;
@@ -55,9 +55,8 @@ namespace CCF2
                     {
                         foreach (XmlNode n in imageNode.SelectNodes("following-sibling::img"))
                         {
-
                             Uri imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + n.Attributes["src"].Value, UriKind.Absolute);
-                            imagesPanel.Children.Add(new Image() { Source = new BitmapImage(imgUri) });
+                            imagesPanel.Children.Add(new Image() { Source = new BitmapImage(imgUri), Margin=new Thickness(4), Height=250, Stretch=Stretch.UniformToFill });
                         }
                     }
 

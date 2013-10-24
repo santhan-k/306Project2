@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Input;
+using System.IO;
 
 namespace CCF2
 {
@@ -23,7 +24,7 @@ namespace CCF2
     public partial class EventsPage : Page
     {
         public SurfaceWindow1 sw1;
-        public EventsPage(SurfaceWindow1 window, String name)
+        public EventsPage(SurfaceWindow1 window, String itemID)
         {
             sw1 = window;
             InitializeComponent();
@@ -38,17 +39,30 @@ namespace CCF2
 
             //Loading content from XML file
             XmlDocument xml = new XmlDocument();
-            xml.Load("Resources/xml/EventsInfo.xml");
-            XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
-            if (imageNode != null)
+            xml.Load("Resources/xml/Events.xml");
+
+            foreach (XmlNode node in xml.SelectNodes("//Events/item"))
             {
-                //Loading image from the image URI Found in the XML file
-                mainImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
-                mainImage.Visibility = System.Windows.Visibility.Visible;
-                //bodyText.Width = 740;
-            }
-            TitleText.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
-            MainBodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();            
+                String id = node.SelectSingleNode("id/text()").Value;
+                if (id == itemID)
+                {
+                    XmlNode imageNode = node.SelectSingleNode("photos/img");
+                    headingLabel.Content = node.SelectSingleNode("title/text()").Value;
+                    detailsText.Text = node.SelectSingleNode("details/text()").Value;
+                    bodyText.Text = node.SelectSingleNode("blurb/text()").InnerText.Trim();
+
+                    if (imageNode != null)
+                    {
+                        foreach (XmlNode n in imageNode.SelectNodes("following-sibling::img"))
+                        {
+                            Uri imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + n.Attributes["src"].Value, UriKind.Absolute);
+                            imagesPanel.Children.Add(new Image() { Source = new BitmapImage(imgUri), Margin = new Thickness(4), Height = 250, Stretch = Stretch.UniformToFill });
+                        }
+                    }
+
+
+                }
+            }        
         }
 
         // Touching the back button will take the user to the News And Events page
