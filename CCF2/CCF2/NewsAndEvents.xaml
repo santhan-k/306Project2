@@ -14,8 +14,8 @@
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
-        <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
-            <Grid Height="632.507" Width="1197.661">
+        <Viewbox Margin="283.493,200.186,282.846,130" Stretch="Fill">
+            <Grid Height="660" Width="1197.661">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="85*" />
                     <ColumnDefinition Width="663*" />
@@ -34,109 +34,15 @@
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="News" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" />
                 <s:SurfaceScrollViewer Margin="-1,-200,0,0" Grid.ColumnSpan="18" Height="260">
                     <StackPanel Name="newsPanel" CanHorizontallyScroll="True" Height="210" Orientation="Horizontal">
-                   <!--<Button Height="200" Width="500" Margin="-2400,0,0,0" Click="CharityHomeForCCE_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae1.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
 
-                        <Button Height="200" Width="500" Margin="-1300,-200,0,0" Click="ChildCancerLegendsLuncheon_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae2.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="-200,-200,0,0" Click="CraftyKnitwitsKnitathonGrandAuction_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae3.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="900,-200,0,0" Click="Charitybeginsattheoffice_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae4.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="2000,-200,0,0" Click="GovernorGeneralDinnerinHamiltongreatnightforall_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae5.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="3100,-200,0,0" Click="CRCSpeedshowauctionpaintingsforcharity_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae6.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>-->
                     </StackPanel>
                 </s:SurfaceScrollViewer>
 
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="eventLabel" Content="Events" Height="100" VerticalContentAlignment="Center" Padding="0" Foreground="Black" Grid.ColumnSpan="2" Margin="-1,322,0,0" />
                 
-                <s:SurfaceScrollViewer Margin="-1,382,0,0" Grid.ColumnSpan="18" ScrollChanged="SurfaceScrollViewer_ScrollChanged" Height="260">
+                <s:SurfaceScrollViewer Margin="-1,410,0,0" Grid.ColumnSpan="18" ScrollChanged="SurfaceScrollViewer_ScrollChanged" Height="260">
                     <StackPanel Name="eventsPanel" CanHorizontallyScroll="True" Height="210" Orientation="Horizontal">
-                     
-
-                        <!--<Button Height="200" Width="500" Margin="-2400,0,0,0" Click="CharityHomeForCCE_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Stretch="Fill" Source="CCF2;component/Resources/Fb.jpg" />
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="-1300,-200,0,0" Click="ChildCancerLegendsLuncheon_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae2.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="-200,-200,0,0" Click="CraftyKnitwitsKnitathonGrandAuction_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae3.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="900,-200,0,0" Click="Charitybeginsattheoffice_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae4.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="2000,-200,0,0" Click="GovernorGeneralDinnerinHamiltongreatnightforall_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae5.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>
-
-                        <Button Height="200" Width="500" Margin="3100,-200,0,0" Click="CRCSpeedshowauctionpaintingsforcharity_Click">
-                            <Button.Template>
-                                <ControlTemplate>
-                                    <Image Width="500" Height="200" Source="Resources/images/NewsAndEvents/nae6.jpg" Stretch="Fill"/>
-                                </ControlTemplate>
-                            </Button.Template>
-                        </Button>-->
+ 
                     </StackPanel>
                 </s:SurfaceScrollViewer>
 
@@ -173,8 +79,9 @@
             </Button.Template>
         </Button>
 
+        <!--Back button-->
         <s:SurfaceButton
-                Margin="195.693,59,0,0" Padding="0"
+                Margin="82,55,0,0" Padding="0"
                 BorderThickness="0"
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
             <Image Height="60"
@@ -185,8 +92,11 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        <Label Content="back" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="82,112,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="or" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="140,75,0,0" Name="label1" VerticalAlignment="Top"  />
         <!-- Finger swipe image -->
-        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
+        <Image Source="/CCF2;component/Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="74" Stretch="Uniform" Margin="172,42,0,0"/>
+        <Label Content="swipe right" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="153,112,0,0" Name="label2" VerticalAlignment="Top" />
     </Grid>
 </Page>
 

@@ -14,7 +14,7 @@
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
-        <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
+        <Viewbox Margin="283.493,200.186,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
                 <GridSplitter HorizontalAlignment="Stretch" Margin="595.67,-626.697,601,24.593" RenderTransformOrigin="0.5,0.5">
                     <GridSplitter.RenderTransform>
@@ -37,8 +37,8 @@
                     <s:SurfaceButton Content="Our Stories" Margin="0,117.72,0,0" HorizontalAlignment="Right" Width="400" Height="75" VerticalAlignment="Top" FontSize="32" Foreground="White" Click="OurStories_Click" Background="#4A000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                     <s:SurfaceButton Content="Our People" Margin="0,0,0,116.398" Height="75" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="400" FontSize="32" Foreground="White" Click="OurPeople_Click" Background="#4A000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
                 </Grid>
-                <Image Margin="-25,90,1164,50" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
-                <Image Margin="1084,101,55,166" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>   
+                <Image Margin="-25,114,1164,70" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
+                <Image Margin="1084,130,55,166" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>   
             </Grid>
         </Viewbox>
         <!--Code for the scrolling news feed-->
@@ -73,7 +73,7 @@
 
         <!--Back button-->
         <s:SurfaceButton
-                Margin="195.693,59,0,0" Padding="0"
+                Margin="82,55,0,0" Padding="0"
                 BorderThickness="0"
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
             <Image Height="60"
@@ -84,7 +84,13 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
-        <Grid HorizontalAlignment="Left" Margin="280,373.5,0,225" Width="50">
+        <Label Content="back" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="82,112,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="or" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="140,75,0,0" Name="label1" VerticalAlignment="Top"  />
+        <!-- Finger swipe image -->
+        <Image Source="/CCF2;component/Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="74" Stretch="Uniform" Margin="172,42,0,0"/>
+        <Label Content="swipe right" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="153,112,0,0" Name="label2" VerticalAlignment="Top" />
+        
+        <Grid HorizontalAlignment="Left" Margin="280,354,0,245" Width="50">
             <Grid.RowDefinitions>
                 <RowDefinition Height="480*" />
                 <RowDefinition Height="2*" />
@@ -96,12 +102,10 @@
             <!--<Image Height="300" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right" Width="55" Grid.RowSpan="2"/>-->
            
         </Grid>
-        <Grid Margin="0,373.5,310,225" HorizontalAlignment="Right" Width="94.007">
+        <Grid Margin="0,344,310,255" HorizontalAlignment="Right" Width="94.007">
             <Image Height="70.5" Margin="0,-50,0,0" Source="Resources/images/Common/Beads/bead8.png" Stretch="Fill" VerticalAlignment="Top"/>
-            <Image Margin="0,0,0,90" Source="Resources/images/Common/Beads/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="83" Width="72" />
-            <Image  Margin="0,0,0,36" Source="Resources/images/Common/Beads/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="83" Width="72"/>
+            <Image Margin="14,0,8,90" Source="Resources/images/Common/Beads/bead5.png" Stretch="Fill" HorizontalAlignment="Center" VerticalAlignment="Center" Height="83" Width="72" />
+            <Image  Margin="14,0,8,36" Source="Resources/images/Common/Beads/bead6.png" Stretch="Fill" VerticalAlignment="Bottom" Height="83" Width="72"/>
         </Grid>
-        <!-- Finger swipe image -->
-        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

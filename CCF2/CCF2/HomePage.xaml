@@ -15,7 +15,7 @@
     <Grid>
         
         <!--Grid containind the six different input blocks-->
-        <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
+        <Viewbox Margin="283.493,200.186,282.846,151.814" Stretch="Fill">
             <Grid Height="597" Width="1197.661">
                 <s:SurfaceButton  HorizontalAlignment="Left" Height="260" VerticalAlignment="Top" Width="330" d:LayoutOverrides="VerticalAlignment" Click="WhatWeDo_Click" Background="#FFF88E1D">
                     <s:SurfaceButton.Effect>
@@ -104,6 +104,5 @@
             </Button.Template>
         </Button>
         <!-- Finger swipe image -->
-        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
     </Grid>
 </Page>

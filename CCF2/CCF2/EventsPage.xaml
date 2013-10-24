@@ -14,7 +14,7 @@
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
-        <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
+        <Viewbox Margin="283.493,200.186,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="1179*" />
@@ -39,8 +39,9 @@
             </Button.Template>
         </Button>
 
+        <!--Back button-->
         <s:SurfaceButton
-                Margin="195.693,59,0,0" Padding="0"
+                Margin="82,55,0,0" Padding="0"
                 BorderThickness="0"
                 Click="Back_Click" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="12" Background="{x:Null}">
             <Image Height="60"
@@ -51,7 +52,10 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        <Label Content="back" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="82,112,0,0" Name="label3" VerticalAlignment="Top" />
+        <Label Content="or" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="140,75,0,0" Name="label1" VerticalAlignment="Top"  />
         <!-- Finger swipe image -->
-        <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
+        <Image Source="/CCF2;component/Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Left" Height="73" VerticalAlignment="Top" Width="74" Stretch="Uniform" Margin="172,42,0,0"/>
+        <Label Content="swipe right" FontSize="20" Foreground="White" HorizontalAlignment="Left" Margin="153,112,0,0" Name="label2" VerticalAlignment="Top" />
     </Grid>
 </Page>

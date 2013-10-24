@@ -12,7 +12,13 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using HtmlAgilityPack;
+using System.Xml.XPath;
+using System.Net;
+using System.IO;
+using System.Xml;
 using Microsoft.Surface.Presentation.Input;
+using Microsoft.Surface.Presentation.Controls;
 
 namespace CCF2
 {
