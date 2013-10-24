@@ -40,7 +40,7 @@
                         <DropShadowEffect/>
                     </s:SurfaceButton.Effect>
                 	<Canvas Height="260" Width="330">
-                		<TextBlock TextWrapping="Wrap" Text="New and Events" FontSize="29.333" TextAlignment="Center" Foreground="#FF080202" Height="52.166" Width="322"/>
+                		<TextBlock TextWrapping="Wrap" Text="News and Events" FontSize="29.333" TextAlignment="Center" Foreground="#FF080202" Height="52.166" Width="322"/>
                         <Image Height="186.504" Canvas.Left="8" Source="Resources/images/Menu/NewsAndEvents2.PNG" Stretch="Fill" Canvas.Top="52.166" Width="298.918"/>
                     </Canvas>
                 </s:SurfaceButton>

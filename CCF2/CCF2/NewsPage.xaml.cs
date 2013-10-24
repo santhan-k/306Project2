@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Xml;
 using Microsoft.Surface.Presentation.Input;
+using System.IO;
 
 namespace CCF2
 {
@@ -35,27 +36,34 @@ namespace CCF2
              */
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
-            
+
             //Loading content from XML file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/News.xml");
-            XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
 
-            if (imageNode != null)
+            foreach (XmlNode node in xml.SelectNodes("//News/item"))
             {
-                //Loading image from the image URI Found in the XML file
-                mainImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
-                mainImage.Visibility = System.Windows.Visibility.Visible;
-                //bodyText.Width = 740;
+                String id = node.SelectSingleNode("id/text()").Value;
+                if (id == name)
+                {
+                    XmlNode imageNode = node.SelectSingleNode("photos/img");
+                    headingLabel.Content = node.SelectSingleNode("title/text()").Value;
+                    detailsText.Text = node.SelectSingleNode("details/text()").Value;
+                    bodyText.Text = node.SelectSingleNode("blurb/text()").InnerText.Trim();
+
+                    if (imageNode != null)
+                    {
+                        foreach (XmlNode n in imageNode.SelectNodes("following-sibling::img"))
+                        {
+
+                            Uri imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + n.Attributes["src"].Value, UriKind.Absolute);
+                            imagesPanel.Children.Add(new Image() { Source = new BitmapImage(imgUri) });
+                        }
+                    }
+
+
+                }
             }
-
-            titleText1.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
-            MainBodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
-        }
-
-        private void SurfaceTextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
 
         // Touching the back button will take the user to the News And Events page
