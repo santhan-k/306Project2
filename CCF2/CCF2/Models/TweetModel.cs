@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace CCF2.Models
 {
+    //Data Model used to store a tweet
     public class TweetModel
     {
         public string ScreenName { get; set; }

@@ -49,6 +49,7 @@ namespace CCF2
                 sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
             }
 
+            //Reading in tweets form the XML file
             XDocument doc = XDocument.Load("Resources/xml/Tweets.xml");
             var tweetmes = doc.Element("Tweets").Elements("Tweet");
             
@@ -71,6 +72,7 @@ namespace CCF2
                 result.Add(tweet);
             }
             
+            //Changing the data context to update the tweetlist
             this.Tweets = result;
             this.tweetsListView.DataContext = this;
             this.DataContext = this;

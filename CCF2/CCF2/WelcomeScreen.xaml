@@ -12,8 +12,11 @@
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
+        <!--Video-->
         <MediaElement x:Name="mainVideo" Margin="30,30,30,120" Width="1920" Height="1080" MediaEnded="mainVideo_MediaEnded" MediaOpened="mainVideo_MediaOpened" UnloadedBehavior="Stop" LoadedBehavior="Play" Source="Resources/video/CCF.mp4" />
+        <!--overlaid Button-->
         <s:SurfaceButton Height="1080" Background="Transparent" HorizontalAlignment="Left" Margin="0,0,0,0" Name="rectangle1" Width="1920" Click="Begin_Click" Foreground="White" BorderThickness="0" FontSize="60" />
+        <!--Button with text instruction-->
         <s:SurfaceButton Content="Touch screen to begin" Background="Transparent" Width="1920" Height="128"  VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,0,0,0" Click="Begin_Click" VerticalAlignment="Bottom" Foreground="White" FontSize="45" HorizontalAlignment="Center"/>
     </Grid>
 </Page>

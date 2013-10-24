@@ -42,29 +42,33 @@ namespace CCF2
         /// </summary>
         public SurfaceWindow1()
         {
-
+            //Initialising the window
             InitializeComponent();
+
+            //Creating a page stack
             pages = new Stack<Page>();
 
-
+            //Retrieving tweets 
             UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
 
+            //Creating a drirectory for the News And events images if it does not exist
             if (!Directory.Exists("Resources/images/NewsAndEvents"))
             {
                 Directory.CreateDirectory("Resources/images/NewsAndEvents");
             }
-
+            //Retrieving News And Events content from the CCF website
             try
             {
                 getNewsOrEvents("News");
                 getNewsOrEvents("Events");
             }
+                //Showing an error message if there is no internet connection
             catch
             {
                 MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
             }
 
-
+            //Displaying the Welcome screen
             display.Content = new WelcomeScreen(this);
 
             // Add handlers for window availability events

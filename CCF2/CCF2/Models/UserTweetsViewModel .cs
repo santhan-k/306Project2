@@ -11,10 +11,13 @@ namespace CCF2.Models
 {
     public class UserTweetsViewModel
     {
+        //Label with the twitter account name
         public string Label { get; set; }
 
+        //List of tweets
         public ObservableCollection<TweetModel> Tweets { get; set; }
 
+        //Authorisation keys and tokens to retrieve tweets
         private const string consumerKey = "9BrcbtKxlq5MOOlD44YAw";
         private const string consumerSecret = "rcLkRuQ0C91q55sp3qRbLAirzZ0zCPEiTCm2dvduPE";
         private const string twitterAccessToken = "1977695389-hif7PDMoTrJED8Nk0fbJ2eAAkdl9GgcPptLghwp";
@@ -23,20 +26,22 @@ namespace CCF2.Models
         public UserTweetsViewModel()
         { }
 
+        //Constructor that consutrcts a new model and retrieves all the tweets
         public UserTweetsViewModel(string userName, int count)
         {
-            //this.Label = string.Format("Tweets by @ChildCancerNZ", userName);
+            
             GetTwitterUserTimeLine(userName, count);
             
         }
 
-        //private ObservableCollection<TweetModel> GetTwitterUserTimeLine(string userName, int count)
+        //Method is responsible for comminucating with the Twitter REST v1.1 API and gather tweets
         private void GetTwitterUserTimeLine(string userName, int count)
         {
             try
             {
                 ObservableCollection<TweetModel> result = new ObservableCollection<TweetModel>();
 
+                //Packaging Authentication details
                 var auth = new SingleUserAuthorizer
                 {
                     Credentials = new SingleUserInMemoryCredentials
@@ -50,8 +55,13 @@ namespace CCF2.Models
 
                 auth.Authorize();
 
+                //Creating a session
                 TwitterContext twitterCtx = new TwitterContext(auth);
+
+                //Retreiving tweets
                 var tweets = twitterCtx.Status.Where(tweet => tweet.ScreenName == userName && tweet.Type == StatusType.User).Take(count).ToList();
+                
+                //Loading tweets into the tweet model.
                 foreach (var item in tweets)
                 {
                     TweetModel tweet = new TweetModel()
@@ -68,6 +78,7 @@ namespace CCF2.Models
 
                 }
 
+                //Writing all the tweets into an XML file for offline use.
                 XmlWriterSettings settings = new XmlWriterSettings();
                 settings.Indent = true;
                 using (XmlWriter writer = XmlWriter.Create(@"Resources/xml/Tweets.xml", settings))

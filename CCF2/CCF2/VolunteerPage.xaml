@@ -28,9 +28,12 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
+                
+                <!--Main Content-->
                 <Label Content="Volunteer" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Margin="20" Foreground="Black" />
                 <TextBlock x:Name="pageTitle"  VerticalAlignment="Center" IsHitTestVisible="false" FontSize="48" Margin="50,0,0,0" />
                 <TextBlock Margin="53,94,390,7" TextWrapping="Wrap" FontSize="26.667" Height="505" Foreground="White" Width="750"><Run Language="en-nz" Text="Child Cancer Foundation could not carry out the work we do in the community without the help of our volunteers."/><LineBreak/><Run Language="en-nz"/><LineBreak/><Run FontWeight="Normal" Language="en-nz" Text="What is volunteering?"/><LineBreak/><Run Language="en-nz" Text="Volunteering provides a wonderful opportunity for people to meet, contribute and support a common cause. Volunteers help us to achieve our purpose by offering their time, skills and valuable advice."/><LineBreak/><Run Language="en-nz"/><LineBreak/><Run FontWeight="Normal" Language="en-nz" Text="What do CCF volunteers do? "/><LineBreak/><Run Language="en-nz" Text="Our volunteers provide a range of services and support including participating in CCF Branch activities, helping out at the Family Places, working alongside our staff and helping our fundraising team during events."/></TextBlock>
+                <!--QR Codes-->
                 <Image HorizontalAlignment="Right" Margin="0,119.843,73.603,230.664" Source="Resources/qr/Volunteer.png" Stretch="Fill" Width="250" Height="250"/>
                 <TextBlock HorizontalAlignment="Right" Height="60" Margin="0,0,51.103,150.269" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="250" FontSize="17" FontWeight="Normal" Foreground="White"><Run Language="en-nz" Text="          Join as a volunteer"/></TextBlock>
                 <Image HorizontalAlignment="Right" Margin="0,107.311,51.103,243.195" Source="Resources/qr/volunteerQR.png" Stretch="Fill" Width="250" Height="250"/>
@@ -39,27 +42,7 @@
 
 
         </Viewbox>
-        <!--Code for the scrolling news feed-->
-        <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
-            <TextBlock.RenderTransform>
-              <TranslateTransform x:Name="translate" />
-                </TextBlock.RenderTransform>
-                  <TextBlock.Triggers>
-                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-                        <BeginStoryboard>
-                            <Storyboard RepeatBehavior="Forever">
-                                <DoubleAnimation
-                                    From="1100" To="0"
-                                    Storyboard.TargetName="translate"
-                                    Storyboard.TargetProperty="X"
-                                    Duration="0:0:9" />
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </TextBlock.Triggers>
-        </TextBlock>
-        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
-
+        
         <!--Home button/logo-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>

@@ -10,6 +10,7 @@
       TouchDown="ContactUs_Touch_TouchDown" TouchUp="ContactUs_Touch_TouchUp" TouchMove="ContactUs_Touch_TouchMove"
       Title="ContactUsPage">
     
+    <!--Page Background-->
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
@@ -28,6 +29,7 @@
                 </GridSplitter>
                 <Label Content="Contact Us" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Margin="20" Foreground="Black" />
                 <TextBlock x:Name="pageTitle"  VerticalAlignment="Center" IsHitTestVisible="false" FontSize="48" Margin="50,0,0,0" />
+                <!--Tweet List-->
                 <Grid DataContext="{Binding UserTweetsWidget}" Background="Transparent" Width="610" Margin="593,40,0,0" HorizontalAlignment="Left">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
@@ -71,9 +73,12 @@
                         </s:SurfaceListBox.ItemTemplate>
                     </s:SurfaceListBox>
                 </Grid>
+                <!--Text Boxes with Contact Info-->
                 <TextBlock HorizontalAlignment="Left" Margin="17.264,108.739,0,181.191" TextWrapping="Wrap" Width="556.463" OpacityMask="#FF1A0C0C" Background="Transparent" Foreground="White" Text="You can call our free phone number: &#xa;      0800 4 CHILD (0800 4 24453)&#xd;&#xa;&#xa;Contact us form:&#xd;http://www.childcancer.org.nz/Contact-Us.aspx&#xd;&#xa;&#xa;Alternatively you can visit our Facebook and Twitter pages using the QRCodes provided below.&#xa; " FontSize="24"/>
                 <TextBlock HorizontalAlignment="Left" Height="47" Margin="17.264,0,0,-13.809" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="150" FontSize="17" Foreground="White"><Run Language="en-nz" Text="Like us on "/><Run Language="en-nz" Text="Facebook"/></TextBlock>
                 <TextBlock HorizontalAlignment="Left" Height="47" Margin="345.159,0,0,-13.809" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="150" FontSize="17" Foreground="White"><Run Language="en-nz" Text="Follow"/><Run Text=" us on Twitter"/></TextBlock>
+                
+                <!--QR Codes-->
                 <Image HorizontalAlignment="Left" Height="150" Margin="17.264,0,0,33.191" Source="Resources/qr/fbTrns.png" Stretch="Fill" VerticalAlignment="Bottom" Width="150"/>
                 <Image HorizontalAlignment="Left" Height="150" Margin="345.159,0,0,33.191" Source="Resources/qr/twitterTrns.png" Stretch="Fill" VerticalAlignment="Bottom" Width="150"/>
                 <!--Grid containing the 8 links to sub pages-->
@@ -81,27 +86,7 @@
 
 
         </Viewbox>
-        <!--Code for the scrolling news feed-->
-        <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
-            <TextBlock.RenderTransform>
-              <TranslateTransform x:Name="translate" />
-                </TextBlock.RenderTransform>
-                  <TextBlock.Triggers>
-                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-                        <BeginStoryboard>
-                            <Storyboard RepeatBehavior="Forever">
-                                <DoubleAnimation
-                                    From="1100" To="0"
-                                    Storyboard.TargetName="translate"
-                                    Storyboard.TargetProperty="X"
-                                    Duration="0:0:9" />
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </TextBlock.Triggers>
-        </TextBlock>
-        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
-
+       
         <!--Home button/logo-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>

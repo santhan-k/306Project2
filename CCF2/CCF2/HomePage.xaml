@@ -13,18 +13,6 @@
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
     <Grid>
-        <!--Scrolling news feed-->
-        <TextBlock FontSize="22" x:Name="txtScrolling" Margin="-1,176,0,0" Width="8800" TextAlignment="Justify" TextWrapping="Wrap" DataContext="{Binding}"><TextBlock.RenderTransform>
-  <TranslateTransform x:Name="translate" />
-    </TextBlock.RenderTransform><TextBlock.Triggers>
-        		<EventTrigger RoutedEvent="FrameworkElement.Loaded">
-        			<BeginStoryboard>
-        				<Storyboard RepeatBehavior="Forever">
-        					<DoubleAnimation From="1100" To="-8000" Storyboard.TargetName="translate" Storyboard.TargetProperty="X" Duration="0:0:50" />
-        				</Storyboard>
-        			</BeginStoryboard>
-        		</EventTrigger>
-    </TextBlock.Triggers><Run Text="Executive Travel have embarked on a yearlong fundraising programme for CCF . . Assurity Consulting Group came on board once again as part of our One Day for Child Cancer campaign in July . . The Governor-General Dinner held in Hamilton last week . . Renowned artist Don Packwood has painted 'Three of 17 NZ Speed Legends' using the unique oil paintings . . The Wooden Toy Box just gave away $50,000 worth of toys and CCF got a huge 41% of them . . Eric Bettridge is the latest recipient of the Child Cancer Distinguished Service Award . . we sent out a survey to a random selection of our supporters to find out how you think we are doing . . Former New Zealand pop icons TrueBliss are back to raise awareness of child cancer . . The Rotary Annual Charity Yacht with an amazing $15000 donation . . The Glenora Bears Rugby League charity match is held on Saturday 22 November at 2.30p . . "/></TextBlock>
         
         <!--Grid containind the six different input blocks-->
         <Viewbox Margin="283.493,247.186,282.846,151.814" Stretch="Fill">
@@ -98,24 +86,7 @@
         </Viewbox>
         <!--CCF Logo-->
         <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200" />-->
-        
-        <!--Rectangles for blocking the newsfeed-->
-        <Rectangle Height="89" HorizontalAlignment="Left" Margin="1255,140,0,0" Name="rectangle1" Stroke="#0035BCDE" VerticalAlignment="Top" Width="300">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF31B8DB" Offset="1" />
-                    <GradientStop Color="#FF37BCDF" Offset="0" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle Height="89" HorizontalAlignment="Left" Margin="0,140,0,0" Name="rectangle2" Stroke="#0035BCDE" VerticalAlignment="Top" Width="300">
-            <Rectangle.Fill>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FF31B8DB" Offset="1" />
-                    <GradientStop Color="#FF37BCDF" Offset="0" />
-                </LinearGradientBrush>
-            </Rectangle.Fill>
-        </Rectangle>
+       
         <!--Logo/Home button-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
         	<Button.Background>

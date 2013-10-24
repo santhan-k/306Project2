@@ -42,26 +42,7 @@
                 <Image Margin="1084,101,55,100" Source="Resources/images/Common/string1.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5"/>
             </Grid>
         </Viewbox>
-        <!--Code for the scrolling news feed-->
-        <TextBlock FontSize="22" x:Name="txtScrolling" Text="Scrolling text thingy" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
-            <TextBlock.RenderTransform>
-              <TranslateTransform x:Name="translate" />
-                </TextBlock.RenderTransform>
-                  <TextBlock.Triggers>
-                    <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-                        <BeginStoryboard>
-                            <Storyboard RepeatBehavior="Forever">
-                                <DoubleAnimation
-                                    From="1100" To="0"
-                                    Storyboard.TargetName="translate"
-                                    Storyboard.TargetProperty="X"
-                                    Duration="0:0:9" />
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger>
-                </TextBlock.Triggers>
-        </TextBlock>
-        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
+       
 
         <!--Home button/logo-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">

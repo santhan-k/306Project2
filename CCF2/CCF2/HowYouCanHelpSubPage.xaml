@@ -30,34 +30,19 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
+                <!--Main heading-->
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
+                
+                <!--Main Text Block-->
                 <TextBlock TextAlignment="Justify" Foreground="FloralWhite" HorizontalAlignment="Left" Margin="0,64,0,32" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="740" Height="500" FontSize="25" Padding="4,0,0,0" />
+                
+                <!--Main Image-->
                 <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Uniform" VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="574" Width="400"   />
             </Grid>
 
         </Viewbox>
-        <TextBlock FontSize="22" x:Name="txtScrolling" Text="News Feed" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
-<TextBlock.RenderTransform>
-  <TranslateTransform x:Name="translate" />
-    </TextBlock.RenderTransform>
-      <TextBlock.Triggers>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard>
-                <Storyboard RepeatBehavior="Forever">
-                    <DoubleAnimation
-                        From="1100" To="0"
-                        Storyboard.TargetName="translate"
-                        Storyboard.TargetProperty="X"
-                        Duration="0:0:9" />
-                </Storyboard>
-            </BeginStoryboard>
-        </EventTrigger>
-    </TextBlock.Triggers>
-
-        </TextBlock>
-        <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
-
-
+        
+        <!--Logo/Home Button-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>
@@ -66,6 +51,7 @@
             </Button.Template>
         </Button>
 
+        <!--Back Button-->
         <s:SurfaceButton
                 Margin="195.693,59,0,0" Padding="0"
                 BorderThickness="0"

@@ -57,7 +57,7 @@ namespace CCF2
 
         private void bodyImage_ImageFailed(object sender, ExceptionRoutedEventArgs e)
         {
-            // insert code here
+
         }
 
         // Touching the CCF logo will take the user to the homepage
