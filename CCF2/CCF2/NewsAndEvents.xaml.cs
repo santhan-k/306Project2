@@ -28,6 +28,9 @@ namespace CCF2
     public partial class NewsAndEvents : Page
     {
         public SurfaceWindow1 sw3;
+        public ICommand NewsCommand { get; set; }
+
+
         public NewsAndEvents(SurfaceWindow1 window, String name)
         {
             sw3 = window;
@@ -35,7 +38,7 @@ namespace CCF2
 
             showNewsOrEvents("News", newsPanel);
             showNewsOrEvents("Events", eventsPanel);
-
+            this.NewsCommand = new TestCommand(ExecuteCommand1, CanExecuteCommand1);
             
 
             //If new page is initiated from the home page, it comes in the form the right
@@ -52,6 +55,27 @@ namespace CCF2
 
         }
 
+        public bool CanExecuteCommand1(object parameter)
+        {
+            return true;
+        }
+
+        public void ExecuteCommand1(object parameter)
+        {
+            MessageBox.Show("Executing command 1");
+        }
+
+        public bool CanExecuteCommand2(object parameter)
+        {
+            return true;
+        }
+
+        public void ExecuteCommand2(object parameter)
+        {
+            MessageBox.Show("Executing command 2");
+        }
+
+
         private void showNewsOrEvents(String content, StackPanel panel)
         {
             XmlDocument xml = new XmlDocument();
@@ -59,7 +83,7 @@ namespace CCF2
 
             foreach (XmlNode node in xml.SelectNodes("//" + content + "/item"))
             {
-                String id = node.SelectSingleNode("id").Value;
+                String id = node.SelectSingleNode("id/text()").Value;
                 XmlNode imageNode = node.SelectSingleNode("photos/img");
                 Uri imgUri = new Uri("Resources/images/Common/CCF-logo2_200.png", UriKind.Relative);
 
@@ -67,8 +91,20 @@ namespace CCF2
                 {
                     imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + imageNode.Attributes["src"].Value, UriKind.Absolute);
                 }
-                panel.Children.Add(new Button() {Name = content + id, Padding = new Thickness(0), Content = new Image() { Source = new BitmapImage(imgUri) } });
+                SurfaceButton s = new SurfaceButton();
+                s.Name = content + id;
+                s.Padding = new Thickness(0);
+                s.Content = new Image() { Source = new BitmapImage(imgUri) };
                 
+                if (content == "News")
+                {
+                    s.Click += News_Click;
+                }
+                else if(content == "Events")
+                {
+                    s.Click += Events_Click;
+                }
+                panel.Children.Add(s);
             }
         }
 
@@ -79,6 +115,17 @@ namespace CCF2
         {
             sw3.showPage(new HomePage(sw3));
         }
+
+        private void News_Click(object sender, RoutedEventArgs e)
+        {
+            sw3.showPage(new NewsPage(sw3, (sender as SurfaceButton).Name));
+        }
+
+        private void Events_Click(object sender, RoutedEventArgs e)
+        {
+            sw3.showPage(new EventsPage(sw3, (sender as SurfaceButton).Name));
+        }
+
 
         //Action listener for the CharityHomeForCCE button
         private void CharityHomeForCCE_Click(object sender, RoutedEventArgs e)
@@ -180,5 +227,46 @@ namespace CCF2
             MessageBox.Show(e.Source.ToString());
             MessageBox.Show(e.OriginalSource.ToString());
         }
+
+        private void NewsButton_Click(object sender, RoutedEventArgs e)
+        {
+            sw3.showPage(new HomePage(sw3));
+        }
     }
+    public class TestCommand : ICommand
+    {
+        public delegate void ICommandOnExecute(object parameter);
+        public delegate bool ICommandOnCanExecute(object parameter);
+
+        private ICommandOnExecute _execute;
+        private ICommandOnCanExecute _canExecute;
+
+        public TestCommand(ICommandOnExecute onExecuteMethod, ICommandOnCanExecute onCanExecuteMethod)
+        {
+            _execute = onExecuteMethod;
+            _canExecute = onCanExecuteMethod;
+        }
+
+        #region ICommand Members
+
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+
+        public bool CanExecute(object parameter)
+        {
+            return _canExecute.Invoke(parameter);
+        }
+
+        public void Execute(object parameter)
+        {
+            _execute.Invoke(parameter);
+        }
+
+        #endregion
+    }
+
 }
+

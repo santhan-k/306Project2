@@ -99,7 +99,7 @@ namespace CCF2
                 String blurb = n.SelectSingleNode("p").InnerText;
 
                 writer.WriteStartElement("item");
-                writer.WriteElementString("id", itemID.ToString());
+                writer.WriteElementString("id", content + itemID.ToString());
                 writer.WriteElementString("title", title);
                 writer.WriteElementString("details", details.Replace("<br>", "\n"));
                 writer.WriteElementString("blurb", blurb);
@@ -264,4 +264,6 @@ namespace CCF2
             //TODO: disable audio, animations here
         }
     }
+
+
 }
