@@ -23,20 +23,19 @@ namespace CCF2
     public partial class OurStoriesSubPage : Page
     {
         public SurfaceWindow1 sw1;
+
+        /* As the user goes through the pages, the next page slides into focus from the right.
+         * The current page slides to the left and disappears. Vice versa, as the user goes
+         * back, the previous page slides into focus from the left and the current page slides
+         * to the right and disappears.
+         */
         public OurStoriesSubPage(SurfaceWindow1 window, String name)
         {
             sw1 = window;
             InitializeComponent();
-
-            /* As the user goes through the pages, the next page slides into focus from the right.
-             * The current page slides to the left and disappears. Vice versa, as the user goes
-             * back, the previous page slides into focus from the left and the current page slides
-             * to the right and disappears.
-             */
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
 
-            //Loading content from XML file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/OurStoriesInfo.xml");
 
@@ -44,16 +43,11 @@ namespace CCF2
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
             if (imageNode != null)
             {
-                //Loading image from the image URI Found in the XML file
                 bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
                 bodyImage.Visibility = System.Windows.Visibility.Visible;
-                //bodyText.Width = 740;
+                bodyText.Width = 740;
             }
             bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
-            //Run r = new Run("test");
-            //r.FontWeight = FontWeights.Bold;
-            //bodyText.Inlines.Add(r);
-
         }
 
         // Touching the back button will take the user to the Our Stories page

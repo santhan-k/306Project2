@@ -8,11 +8,15 @@
       d:DesignHeight="1080" d:DesignWidth="1920"
       TouchDown="OurStoriesSub_Touch_TouchDown" TouchUp="OurStoriesSub_Touch_TouchUp" TouchMove="OurStoriesSub_Touch_TouchMove"
 	  mc:Ignorable="d"
+      
 	  Title="OurStoriesSubPage">
-    
+
+    <!--Background image from the CCF website-->
     <Page.Background>
         <ImageBrush ImageSource="Resources/images/Common/background.png" />
     </Page.Background>
+
+    <!--Layout for OurStoriesSubPage, pulls information given to it from the appropriate xml file-->
     <Grid>
         <Viewbox Margin="283.493,220,282.846,151.814" Stretch="Fill">
             <Grid Height="600.507" Width="1197.661">
@@ -30,12 +34,16 @@
                         </TransformGroup>
                     </GridSplitter.RenderTransform>
                 </GridSplitter>
+
+                <!--Pulled from file are the header of the page (headingLabel), the information (bodyText) and the image (bodyImage)-->
                 <Label HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="40" Name="headingLabel" Content="Heading" Height="65" VerticalContentAlignment="Center" Padding="0" Foreground="Black" />
                 <TextBlock  TextAlignment="Justify" Foreground="FloralWhite" HorizontalAlignment="Left" Margin="0,64,0,32" Name="bodyText" Text="TextBlock" VerticalAlignment="Top" Width="740" Height="500" FontSize="25" Padding="4,0,0,0" />
                 <Image HorizontalAlignment="Left" Margin="17,26,0,0" Name="bodyImage" Stretch="Uniform"  VerticalAlignment="Top" Visibility="Visible" OpacityMask="{x:Null}" Grid.Column="1" Height="574" Width="400"   />
             </Grid>
 
         </Viewbox>
+
+        <!--Scrolling news feed-->
         <TextBlock FontSize="22" x:Name="txtScrolling" Text="News Feed" Margin="440,176,152,0" Width="1328" Height="32" VerticalAlignment="Top" Visibility="Hidden">
 <TextBlock.RenderTransform>
   <TranslateTransform x:Name="translate" />
@@ -57,7 +65,7 @@
         </TextBlock>
         <!--<Image Margin="283.493,22,0,0" Source="Resources/CCF-logo2_200.png" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="200"/>-->
 
-
+        <!--Logo/Home button-->
         <Button Height="Auto" Width="200" Margin="-800.493,-700,0,0" Click="Home_Click">
             <Button.Template>
                 <ControlTemplate>
@@ -66,6 +74,7 @@
             </Button.Template>
         </Button>
 
+        <!--Back button-->
         <s:SurfaceButton
                 Margin="195.693,59,0,0" Padding="0"
                 BorderThickness="0"
@@ -78,6 +87,7 @@
                 </Image.Effect>
             </Image>
         </s:SurfaceButton>
+        
         <!-- Finger swipe image -->
         <Image Source="Resources/images/Common/finger_swipe2.png" HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Stretch="Fill" Margin="0,35,283,0"/>
 

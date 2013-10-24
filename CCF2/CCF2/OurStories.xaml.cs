@@ -17,7 +17,7 @@ using Microsoft.Surface.Presentation.Input;
 namespace CCF2
 {
     /// <summary>
-    /// Interaction logic for WhatWeDo.xaml
+    /// Interaction logic for OurStories.xaml
     /// </summary>
     public partial class OurStories : Page
     {
@@ -45,26 +45,42 @@ namespace CCF2
 
         }
 
+<<<<<<< .mine
+        // Touching the back button will take the user to the homepage
+=======
         // Touching the back button will take the user to the What We Do page
+>>>>>>> .r195
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1, "back"));
         }
 
+<<<<<<< .mine
+        // Touching the Dequarn Harrison Button will take the user to the information about Dequarn Harrison
+=======
         // Touching the DequarnHarrison Button will take the user to the Dequarn Harrison page
+>>>>>>> .r195
         private void DequarnHarrison_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "DequarnHarrison"));
         }
 
+<<<<<<< .mine
+        // Touching the Claudia Little Button will take the user to the information about Claudia Little
+=======
         // Touching the ClaudiaLittle Button will take the user to the Claudia Little page
+>>>>>>> .r195
         private void ClaudiaLittle_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "ClaudiaLittle"));
 
         }
 
+<<<<<<< .mine
+        // Touching the Joyce Singh Button will take the user to the information about Joyce Singh
+=======
         // Touching the JoyceSingh button will take the user to the Joyce Singh page
+>>>>>>> .r195
         private void JoyceSingh_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "JoyceSingh"));
