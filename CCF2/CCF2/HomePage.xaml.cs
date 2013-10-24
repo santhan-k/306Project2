@@ -24,28 +24,28 @@ namespace CCF2
     {
         public SurfaceWindow1 sw1;
 
-        /* As the user goes through the pages, the next page slides into focus from the right.
-         * The current page slides to the left and disappears. 
-         */ 
         public HomePage(SurfaceWindow1 window)
         {
             sw1 = window;
             InitializeComponent();
+
+            /* As the user goes through the pages, the next page slides into focus from the right.
+             * The current page slides to the left and disappears. 
+             */ 
             sw1.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
-
         }
 
-        /* As the user goes back, the previous page slides into focus from the left and
-         * the current page slides to the right and disappears.
-         */
         public HomePage(SurfaceWindow1 window, string name)
         {
             sw1 = window;
             InitializeComponent();
+
+            /* As the user goes back, the previous page slides into focus from the left and
+             * the current page slides to the right and disappears.
+             */
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
-
         }
 
         // Touching the WhatWeDo icon will take the user to the WhatWeDo page

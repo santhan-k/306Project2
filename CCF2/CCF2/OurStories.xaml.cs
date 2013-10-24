@@ -27,13 +27,17 @@ namespace CCF2
             sw1 = window;
             InitializeComponent();
 
-            //If new page is initiated from the home page, it comes in the form the right
+            /* As the user goes through the pages, the next page slides into focus from the right.
+             * The current page slides to the left and disappears. Vice versa, as the user goes
+             * back, the previous page slides into focus from the left and the current page slides
+             * to the right and disappears.
+             */
             if (name == "ourstories")
             {
                 sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
                 sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
             }
-            else  // else it comes in the from the left
+            else
             {
                 sw1.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
                 sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
@@ -41,49 +45,59 @@ namespace CCF2
 
         }
 
-        //Action listener for the back button
+        // Touching the back button will take the user to the homepage
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
 
-        //Action listener for the DequarnHarrison Button
+        // Touching the DequarnHarrison Button will take the user to the Dequarn Harrison page
         private void DequarnHarrison_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "DequarnHarrison"));
         }
 
-        //Action Listerner for the ClaudiaLittle Button
+        // Touching the ClaudiaLittle Button will take the user to the Claudia Little page
         private void ClaudiaLittle_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "ClaudiaLittle"));
 
         }
 
-        //Action Listener for the JoyceSingh button
+        // Touching the JoyceSingh button will take the user to the Joyce Singh page
         private void JoyceSingh_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "JoyceSingh"));
 
         }
-        
-        //Action listener for the logo
+
+        // Touching the CCF logo will take the user to the homepage
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
+
+        /* The user can go back to the previous page by swiping their finger to the right.
+         * The swipe gesture is made up of 3 phases:
+         * Initial phase: TouchDown, the moment when the user touches the screen.
+         * Middle phase: TouchMove, the speed and direction of the user as they move their finger across the screen.
+         * Final phase: TouchUp, the moment when the user's finger leaves the screen.
+         */
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
+        // TouchDown event triggers the moment when the user touches the screen and captures the (x,y) position of the touch
         private void OurStories_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
+        // TouchUp event triggers the moment when the user's finger leaves the screen
         private void OurStories_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
+        // TouchMove event triggers when the user's finger moves quickly across the screen
         private void OurStories_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)

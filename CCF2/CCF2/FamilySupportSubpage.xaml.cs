@@ -24,17 +24,19 @@ namespace CCF2
     {
         public SurfaceWindow1 sw1;
 
-        /* As the user goes through the pages, the next page slides into focus from the right.
-         * The current page slides to the left and disappears. Vice versa, as the user goes
-         * back, the previous page slides into focus from the left and the current page slides
-         * to the right and disappears.
-         */
         public FamilySupportSubPage(SurfaceWindow1 window, String name)
         {
             sw1 = window;
             InitializeComponent();
+
+            /* As the user goes through the pages, the next page slides into focus from the right.
+             * The current page slides to the left and disappears. Vice versa, as the user goes
+             * back, the previous page slides into focus from the left and the current page slides
+             * to the right and disappears.
+             */
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/FamilySupportInfo.xml");
             
