@@ -59,8 +59,8 @@ namespace CCF2
             //Retrieving News And Events content from the CCF website
             try
             {
-                //getNewsOrEvents("News");
-                //getNewsOrEvents("Events");
+                getNewsOrEvents("News");
+                getNewsOrEvents("Events");
             }
                 //Showing an error message if there is no internet connection
             catch
