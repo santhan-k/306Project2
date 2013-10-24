@@ -13,6 +13,11 @@ using System.Windows.Media.Imaging;
 using System.Windows.Media.Animation;
 //using System.Windows.Navigation;
 //using System.Windows.Shapes;
+using HtmlAgilityPack;
+using System.Xml.XPath;
+using System.Net;
+using System.IO;
+using System.Xml;
 using Microsoft.Surface;
 using Microsoft.Surface.Presentation;
 using Microsoft.Surface.Presentation.Controls;
@@ -43,11 +48,95 @@ namespace CCF2
 
 
             UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
-            
+
+            if (!Directory.Exists("Resources/images/NewsAndEvents"))
+            {
+                Directory.CreateDirectory("Resources/images/NewsAndEvents");
+            }
+
+            try
+            {
+                getNewsOrEvents("News");
+                getNewsOrEvents("Events");
+            }
+            catch
+            {
+                MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
+            }
+
+
             display.Content = new WelcomeScreen(this);
 
             // Add handlers for window availability events
             AddWindowAvailabilityHandlers();
+        }
+
+
+        private void getNewsOrEvents(String content)
+        {
+            WebClient web = new WebClient();
+            String ccfURL = "http://childcancer.org.nz";
+            String url = ccfURL + "/News-and-events/" + content + ".aspx";
+            String contentXPath = "//div[@id='contentPrimary']";
+            String itemXPath = "//div[@class='item']";
+
+            String imagesFolder = "Resources/images/NewsAndEvents/";
+            String xmlPath = "Resources/xml/" + content + ".xml";
+            int imageID = 0;
+            int itemID = 0;
+
+            HtmlDocument newsHTML = new HtmlWeb().Load(url);
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.Indent = true;
+            XmlWriter writer = XmlWriter.Create(xmlPath, settings);
+            writer.WriteStartElement(content);
+
+            foreach (HtmlNode n in newsHTML.DocumentNode.SelectNodes(contentXPath + itemXPath))
+            {
+                String title = n.SelectSingleNode("h3/a").InnerText;
+                String itemURL = ccfURL + n.SelectSingleNode("h3/a").Attributes["href"].Value;
+                String details = n.SelectSingleNode("small").InnerText;
+                String blurb = n.SelectSingleNode("p").InnerText;
+
+                writer.WriteStartElement("item");
+                writer.WriteElementString("id", itemID.ToString());
+                writer.WriteElementString("title", title);
+                writer.WriteElementString("details", details.Replace("<br>", "\n"));
+                writer.WriteElementString("blurb", blurb);
+                writer.WriteStartElement("photos");
+
+                HtmlNode itemImage = n.SelectSingleNode("img");
+                if (itemImage != null)
+                {
+                    String imgPath = imagesFolder + content + imageID.ToString() + ".jpg";
+                    web.DownloadFile(new Uri(ccfURL + itemImage.Attributes["src"].Value), imgPath);
+                    writer.WriteStartElement("img");
+                    writer.WriteAttributeString("src", imgPath);
+                    writer.WriteEndElement();
+                    imageID++;
+                }
+
+                HtmlDocument itemHTML = new HtmlWeb().Load(itemURL);
+
+                if (itemHTML.DocumentNode.SelectSingleNode(contentXPath + "//img") != null)
+                {
+                    foreach (HtmlNode img in itemHTML.DocumentNode.SelectNodes(contentXPath + "//img"))
+                    {
+                        String imgPath = imagesFolder + content + imageID.ToString() + ".jpg";
+                        web.DownloadFile(new Uri(ccfURL + img.Attributes["src"].Value), imgPath);
+                        writer.WriteStartElement("img");
+                        writer.WriteAttributeString("src", imgPath);
+                        writer.WriteEndElement();
+                        imageID++;
+                    }
+                }
+
+                writer.WriteEndElement();
+                writer.WriteEndElement();
+                itemID++;
+            }
+            writer.WriteEndElement();
+            writer.Flush();
         }
 
         //This function is called by the other pages to indicate what page needs to be displayed
