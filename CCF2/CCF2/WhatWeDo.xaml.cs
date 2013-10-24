@@ -27,13 +27,17 @@ namespace CCF2
             sw1 = window;
             InitializeComponent();
 
-            //If new page is initiated from the home page, it comes in the form the right
+            /* As the user goes through the pages, the next page slides into focus from the right.
+             * The current page slides to the left and disappears. Vice versa, as the user goes
+             * back, the previous page slides into focus from the left and the current page slides
+             * to the right and disappears.
+             */
             if (name == "whatwedo")
             {
                 sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
                 sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
             }
-            else  // else it comes in the from the left
+            else
             {
                 sw1.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
                 sw1.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
@@ -41,85 +45,87 @@ namespace CCF2
 
         }
 
-        //Action listener for the back button
+        // Touching the back button will take the user to the homepage
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
 
-        //Action listener for the Our Ambassadors page
+        // Touching the OurAmbassadors button will take the user to the Our Ambassadors page
         private void Ambassadors_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "OurAmbassadors"));
         }
 
-        //Action Listerner for the HowWeHelp Button
+        // Touching the HowWeHelp button will take the user to the How We Help page
         private void HowWeHelp_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "HowWeHelp"));
 
         }
 
-        //Action Listener for the OurHistory button
+        // Touching the OurHistory button will take the user to the Our History page
         private void OurHistory_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "OurHistory"));
 
         }
 
-        //Action Listener Health Professionals
+        // Touching the HealthProfessionals button will take the user to the Health Professionals page
         private void HealthProfessionals_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "HealthProfessionals"));
 
         }
 
-        //Action Listener for the About Us Page
+        // Touching the AboutUs button will take the user to the About Us page
         private void AboutUs_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "AboutUs"));
 
         }
 
-        //Action Listener for the Our Stories button
+        // Touching the OurStories button will take the user to the Our Stories page
         private void OurStories_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStories(sw1, "ourstories"));
 
         }
 
-        //Action listener for the Our People button
+        // Touching the OurPeople button will take the user to the Our People page
         private void OurPeople_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDoSubPage(sw1, "OurPeople"));
 
         }
 
-        //Action listener for the Vacancies button
-        private void Vacancies_Click(object sender, RoutedEventArgs e)
-        {
-            sw1.showPage(new WhatWeDoSubPage(sw1, "Vacancies"));
-
-        }
-        
-        //Action listener for the logo
+        // Touching the CCF logo will take the user to the homepage
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
 
+        /* The user can go back to the previous page by swiping their finger to the right.
+         * The swipe gesture is made up of 3 phases:
+         * Initial phase: TouchDown, the moment when the user touches the screen.
+         * Middle phase: TouchMove, the speed and direction of the user as they move their finger across the screen.
+         * Final phase: TouchUp, the moment when the user's finger leaves the screen.
+         */
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
+        // TouchDown event triggers the moment when the user touches the screen and captures the (x,y) position of the touch
         private void WhatWeDo_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
+        // TouchUp event triggers the moment when the user's finger leaves the screen
         private void WhatWeDo_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
+        // TouchMove event triggers when the user's finger moves quickly across the screen
         private void WhatWeDo_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)
