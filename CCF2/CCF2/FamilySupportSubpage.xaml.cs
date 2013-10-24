@@ -51,7 +51,7 @@ namespace CCF2
             bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
         }
 
-        // Touching the back button will take the user to the homepage
+        // Touching the back button will take the user to the Family Support page
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new FamilySupport(sw1, "back"));

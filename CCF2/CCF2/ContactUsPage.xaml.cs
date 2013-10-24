@@ -63,10 +63,7 @@ namespace CCF2
                     ScreenName = message.Attribute("ScreenName").Value,
                     UserName = "@" + message.Attribute("UserName").Value,
                     PublicationDate = message.Attribute("PublicationDate").Value,
-                    Image = message.Attribute("Image").Value
-                    
-
-
+                    Image = message.Attribute("Image").Value     
                 };
                 
                 result.Add(tweet);
@@ -79,7 +76,6 @@ namespace CCF2
             
             //UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
             //this.DataContext = this; 
-
         }
 
         // Touching the back button will take the user to the homepage

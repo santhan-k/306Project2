@@ -48,10 +48,7 @@ namespace CCF2
                 //bodyText.Width = 740;
             }
             TitleText.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
-
-
-            MainBodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
-            
+            MainBodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();            
         }
 
         // Touching the back button will take the user to the News And Events page

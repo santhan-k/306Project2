@@ -30,7 +30,6 @@ namespace CCF2
         public SurfaceWindow1 sw3;
         public ICommand NewsCommand { get; set; }
 
-
         public NewsAndEvents(SurfaceWindow1 window, String name)
         {
             sw3 = window;
@@ -39,20 +38,22 @@ namespace CCF2
             showNewsOrEvents("News", newsPanel);
             showNewsOrEvents("Events", eventsPanel);
             this.NewsCommand = new TestCommand(ExecuteCommand1, CanExecuteCommand1);
-            
 
-            //If new page is initiated from the home page, it comes in the form the right
+            /* As the user goes through the pages, the next page slides into focus from the right.
+             * The current page slides to the left and disappears. Vice versa, as the user goes
+             * back, the previous page slides into focus from the left and the current page slides
+             * to the right and disappears.
+             */
             if (name == "newsandevents")
             {
                 sw3.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
                 sw3.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
             }
-            else  // else it comes in the from the left
+            else 
             {
                 sw3.hideP = (window.Resources["SlidePageRightExit"] as Storyboard).Clone();
                 sw3.showP = (window.Resources["SlidePageRightEntry"] as Storyboard).Clone();
             }
-
         }
 
         public bool CanExecuteCommand1(object parameter)
@@ -74,7 +75,6 @@ namespace CCF2
         {
             MessageBox.Show("Executing command 2");
         }
-
 
         private void showNewsOrEvents(String content, StackPanel panel)
         {
@@ -108,9 +108,7 @@ namespace CCF2
             }
         }
 
-        
-
-        //Action listener for the back button
+        // Touching the back button will take the user to the homepage
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new HomePage(sw3));
@@ -126,56 +124,55 @@ namespace CCF2
             sw3.showPage(new EventsPage(sw3, (sender as SurfaceButton).Name));
         }
 
-
-        //Action listener for the CharityHomeForCCE button
+        // Touching the CharityHomeForCCE button will take the user to the Charity Home For CCE page
         private void CharityHomeForCCE_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new EventsPage(sw3, "CharityHomeForCCE"));
         }
 
-        //Action Listerner for the CraftyKnitwitsKnitathonGrandAuction Button
+        // Touching the CraftyKnitwitsKnitathonGrandAuction Button will take the user to the Crafty Knitwits Knitathon Grand Auction page
         private void CraftyKnitwitsKnitathonGrandAuction_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new EventsPage(sw3, "CraftyKnitwitsKnitathonGrandAuction"));
 
         }
 
-        //Action Listener for the Child Cancer Legends Luncheon button
+        // Touching the Child Cancer Legends Luncheon button will take the user to the Child Cancer Legends Luncheon page
         private void ChildCancerLegendsLuncheon_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new EventsPage(sw3, "ChildCancerLegendsLuncheon"));
 
         }
 
-        //Action Listener Assurity Consulting support One Day button
+        // Touching the Assurity Consulting support One Day button will take the user to the Assurity Consulting support One Day page
         private void AssurityConsultingsupportOneDays_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new NewsPage(sw3, "AssurityConsultingsupportOneDay"));
 
         }
 
-        //Action Listener for the Charitybeginsattheoffice Page
+        // Touching the Charitybeginsattheoffice Page will take the user to the Charity begins at the office page
         private void Charitybeginsattheoffice_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new NewsPage(sw3, "Charitybeginsattheoffice"));
 
         }
 
-        //Action Listener for the Governor-GeneralDinnerinHamiltongreatnightforall button
+        // Touching the Governor-GeneralDinnerinHamiltongreatnightforall button will take the user to the Governor-General Dinner in Hamilton great night for all page
         private void GovernorGeneralDinnerinHamiltongreatnightforall_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new NewsPage(sw3, "Governor-GeneralDinnerinHamiltongreatnightforall"));
 
         }
 
-        //Action listener for the CRCSpeedshowauctionpaintingsforcharity button
+        // Touching the CRCSpeedshowauctionpaintingsforcharity button will take the user to the CRC Speed show auction paintings for charity page
         private void CRCSpeedshowauctionpaintingsforcharity_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new NewsPage(sw3, "CRCSpeedshowauctionpaintingsforcharity"));
 
         }
 
-        //Action listener for the logo
+        // Touching the CCF logo will take the user to the homepage
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new HomePage(sw3));
@@ -186,18 +183,27 @@ namespace CCF2
 
         }
 
+        /* The user can go back to the previous page by swiping their finger to the right.
+         * The swipe gesture is made up of 3 phases:
+         * Initial phase: TouchDown, the moment when the user touches the screen.
+         * Middle phase: TouchMove, the speed and direction of the user as they move their finger across the screen.
+         * Final phase: TouchUp, the moment when the user's finger leaves the screen.
+         */
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
+        // TouchDown event triggers the moment when the user touches the screen and captures the (x,y) position of the touch
         private void NewsAndEvents_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
+        // TouchUp event triggers the moment when the user's finger leaves the screen
         private void NewsAndEvents_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
+        // TouchMove event triggers when the user's finger moves quickly across the screen
         private void NewsAndEvents_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)

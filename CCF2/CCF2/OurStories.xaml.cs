@@ -45,10 +45,10 @@ namespace CCF2
 
         }
 
-        // Touching the back button will take the user to the homepage
+        // Touching the back button will take the user to the What We Do page
         private void Back_Click(object sender, RoutedEventArgs e)
         {
-            sw1.showPage(new HomePage(sw1));
+            sw1.showPage(new WhatWeDo(sw1, "back"));
         }
 
         // Touching the DequarnHarrison Button will take the user to the Dequarn Harrison page
@@ -114,7 +114,7 @@ namespace CCF2
 
                 if (isRight == 1)
                 {
-                    sw1.showPage(new HomePage(sw1));
+                    sw1.showPage(new WhatWeDo(sw1, "back"));
                     currentTouchDevices.Clear();
                     return;
                 }

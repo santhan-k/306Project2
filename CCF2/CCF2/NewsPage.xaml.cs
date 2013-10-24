@@ -27,12 +27,20 @@ namespace CCF2
         {
             sw1 = window;
             InitializeComponent();
+
+            /* As the user goes through the pages, the next page slides into focus from the right.
+             * The current page slides to the left and disappears. Vice versa, as the user goes
+             * back, the previous page slides into focus from the left and the current page slides
+             * to the right and disappears.
+             */
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
+            
             //Loading content from XML file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/News.xml");
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
+
             if (imageNode != null)
             {
                 //Loading image from the image URI Found in the XML file
@@ -42,10 +50,7 @@ namespace CCF2
             }
 
             titleText1.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
-
-
             MainBodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
-            
         }
 
         private void SurfaceTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -53,30 +58,39 @@ namespace CCF2
 
         }
 
-        //Action listener for The back click button
+        // Touching the back button will take the user to the News And Events page
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new NewsAndEvents(sw1, "back"));
         }
 
-        //Action listener for the event that is caused when the logo is clicked
+        // Touching the CCF logo will take the user to the homepage
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
 
+        /* The user can go back to the previous page by swiping their finger to the right.
+         * The swipe gesture is made up of 3 phases:
+         * Initial phase: TouchDown, the moment when the user touches the screen.
+         * Middle phase: TouchMove, the speed and direction of the user as they move their finger across the screen.
+         * Final phase: TouchUp, the moment when the user's finger leaves the screen.
+         */
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
+        // TouchDown event triggers the moment when the user touches the screen and captures the (x,y) position of the touch
         private void News_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
+        // TouchUp event triggers the moment when the user's finger leaves the screen
         private void News_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
+        // TouchMove event triggers when the user's finger moves quickly across the screen
         private void News_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)

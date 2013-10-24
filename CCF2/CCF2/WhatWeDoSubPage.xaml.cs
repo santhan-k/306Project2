@@ -56,7 +56,7 @@ namespace CCF2
 
         }
 
-        // Touching the back button will take the user to the homepage
+        // Touching the back button will take the user to the What We Do page
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1,"back"));
