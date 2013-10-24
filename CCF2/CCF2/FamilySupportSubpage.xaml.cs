@@ -23,6 +23,12 @@ namespace CCF2
     public partial class FamilySupportSubPage : Page
     {
         public SurfaceWindow1 sw1;
+
+        /* As the user goes through the pages, the next page slides into focus from the right.
+         * The current page slides to the left and disappears. Vice versa, as the user goes
+         * back, the previous page slides into focus from the left and the current page slides
+         * to the right and disappears.
+         */
         public FamilySupportSubPage(SurfaceWindow1 window, String name)
         {
             sw1 = window;
@@ -42,6 +48,8 @@ namespace CCF2
             }
             bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
         }
+
+        // Touching the back button will take the user to the homepage
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new FamilySupport(sw1, "back"));
@@ -52,24 +60,34 @@ namespace CCF2
             // insert code here
         }
 
+        // Touching the CCF logo will take the user to the homepage
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new HomePage(sw1));
         }
 
+        /* The user can go back to the previous page by swiping their finger to the right.
+         * The swipe gesture is made up of 3 phases:
+         * Initial phase: TouchDown, the moment when the user touches the screen.
+         * Middle phase: TouchMove, the speed and direction of the user as they move their finger across the screen.
+         * Final phase: TouchUp, the moment when the user's finger leaves the screen.
+         */
         private Dictionary<TouchDevice, Point> currentTouchDevices = new Dictionary<TouchDevice, Point>();
 
-        private void FamilySupportSubPage_Touch_TouchDown(object sender, TouchEventArgs e)
+        // TouchDown event triggers the moment when the user touches the screen and captures the (x,y) position of the touch
+        private void FamilySupportSub_Touch_TouchDown(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Add(e.TouchDevice, e.TouchDevice.GetPosition(this));
         }
 
-        private void FamilySupportSubPage_Touch_TouchUp(object sender, TouchEventArgs e)
+        // TouchUp event triggers the moment when the user's finger leaves the screen
+        private void FamilySupportSub_Touch_TouchUp(object sender, TouchEventArgs e)
         {
             currentTouchDevices.Remove(e.TouchDevice);
         }
 
-        private void FamilySupportSubPage_Touch_TouchMove(object sender, TouchEventArgs e)
+        // TouchMove event triggers when the user's finger moves quickly across the screen
+        private void FamilySupportSub_Touch_TouchMove(object sender, TouchEventArgs e)
         {
             if (currentTouchDevices.Count == 1)
             {
