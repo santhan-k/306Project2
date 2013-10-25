@@ -64,32 +64,45 @@ namespace CCF2
             foreach (XmlNode node in xml.SelectNodes("//" + content + "/item"))
             {
                 String id = node.SelectSingleNode("id/text()").Value;
+                String title = node.SelectSingleNode("title/text()").Value;
                 XmlNode imageNode = node.SelectSingleNode("photos/img");
-                Uri imgUri = new Uri("Resources/images/Common/CCF-logo2_200.png", UriKind.Relative);
+                Uri imgUri = new Uri("pack://application:,,,/Resources/images/Common/CCF-logo2_200.png", UriKind.Absolute);
 
                 if (imageNode != null)
                 {
                     imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + imageNode.Attributes["src"].Value, UriKind.Absolute);
                 }
+
+                BitmapImage bi = new BitmapImage(imgUri);
                 SurfaceButton s = new SurfaceButton();
+                Canvas c = new Canvas();
+
+                c.Height = panel.Height - 10;
+                c.Width = c.Height / bi.PixelHeight * bi.PixelWidth;
+                c.Children.Add(new Image() { Source = new BitmapImage(imgUri), Height=c.Height });
+
+                Label l = new Label() { Content = title, Width = c.Width };
+                l.Foreground = new SolidColorBrush(Colors.White);
+                l.Background = new SolidColorBrush(Colors.Black) { Opacity=0.5 };
+                Canvas.SetBottom(l, 0);
+                c.Children.Add(l);
+
                 s.Name = id;
                 s.Padding = new Thickness(0);
                 s.Margin = new Thickness(4);
-                s.Content = new Image() { Source = new BitmapImage(imgUri) };
-                
+                s.Content = c;
+
                 if (content == "News")
                 {
                     s.Click += News_Click;
                 }
-                else if(content == "Events")
+                else if (content == "Events")
                 {
                     s.Click += Events_Click;
                 }
                 panel.Children.Add(s);
             }
         }
-
-        
 
         //Action listener for the back button
         // Touching the back button will take the user to the homepage
