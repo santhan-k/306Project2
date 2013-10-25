@@ -37,10 +37,12 @@ namespace CCF2
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
 
-            //Loading content from XML file
+            //read the xml file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/Events.xml");
 
+            //find the event item in the xml file
+            //display the title, date and location (details), blurb and photos
             foreach (XmlNode node in xml.SelectNodes("//Events/item"))
             {
                 String id = node.SelectSingleNode("id/text()").Value;
@@ -53,14 +55,14 @@ namespace CCF2
 
                     if (imageNode != null)
                     {
+                        //ignore the first image because it is from the events page, and often an identical one exists in the item page
+                        //thus this prevents double-ups
                         foreach (XmlNode n in imageNode.SelectNodes("following-sibling::img"))
                         {
                             Uri imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + n.Attributes["src"].Value, UriKind.Absolute);
                             imagesPanel.Children.Add(new Image() { Source = new BitmapImage(imgUri), Margin = new Thickness(4), Height = 250, Stretch = Stretch.UniformToFill });
                         }
                     }
-
-
                 }
             }        
         }

@@ -36,24 +36,21 @@ namespace CCF2
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
 
-            //Loading content from XML file
+            //read the xml file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/WhatWeDoInfo.xml");
 
             headingLabel.Content = xml.SelectSingleNode("//pages/" + name + "/heading/text()").Value;
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
+
+            //show the image if there is one
             if (imageNode != null)
-            {
-                //Loading image from the image URI Found in the XML file
+            {  
                 bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));
                 bodyImage.Visibility = System.Windows.Visibility.Visible;
                 //bodyText.Width = 740;
             }
             bodyText.Text = xml.SelectSingleNode("//pages/" + name + "/content").InnerText.Trim();
-            //Run r = new Run("test");
-            //r.FontWeight = FontWeights.Bold;
-            //bodyText.Inlines.Add(r);
-
         }
 
         // Touching the back button will take the user to the What We Do page

@@ -37,11 +37,14 @@ namespace CCF2
             sw1.hideP = (window.Resources["SlidePageLeftExit"] as Storyboard).Clone();
             sw1.showP = (window.Resources["SlidePageLeftEntry"] as Storyboard).Clone();
 
+            //read the xml file
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/FamilySupportInfo.xml");
             
             headingLabel.Content = xml.SelectSingleNode("//pages/"+name+"/heading/text()").Value;
             XmlNode imageNode = xml.SelectSingleNode("//pages/" + name + "/img");
+
+            //show the image if there is one, and reduce the width of the TextBlock to accomodate it
             if (imageNode != null)
             {
                 bodyImage.Source = new BitmapImage(new Uri("/CCF2;component/" + imageNode.Attributes["src"].Value, UriKind.Relative));

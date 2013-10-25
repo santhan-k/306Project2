@@ -37,7 +37,6 @@ namespace CCF2
             showNewsOrEvents("News", newsPanel);
             showNewsOrEvents("Events", eventsPanel);           
 
-            //If new page is initiated from the home page, it comes in the form the right
             /* As the user goes through the pages, the next page slides into focus from the right.
              * The current page slides to the left and disappears. Vice versa, as the user goes
              * back, the previous page slides into focus from the left and the current page slides
@@ -56,8 +55,11 @@ namespace CCF2
 
         }
 
+        //Reads the relevant xml file and loads panel with an image and caption for each item
+        //The CCF logo is used as a placeholder if necessary.
         private void showNewsOrEvents(String content, StackPanel panel)
         {
+            //read in news or events information
             XmlDocument xml = new XmlDocument();
             xml.Load("Resources/xml/" + content + ".xml");
 
@@ -68,19 +70,23 @@ namespace CCF2
                 XmlNode imageNode = node.SelectSingleNode("photos/img");
                 Uri imgUri = new Uri("pack://application:,,,/Resources/images/Common/CCF-logo2_200.png", UriKind.Absolute);
 
+                //use the image if there is one. Otherwise use the CCF logo.
                 if (imageNode != null)
                 {
                     imgUri = new Uri(Directory.GetCurrentDirectory() + "/" + imageNode.Attributes["src"].Value, UriKind.Absolute);
                 }
 
+                //put the image and caption in a button (using a canvas)
                 BitmapImage bi = new BitmapImage(imgUri);
                 SurfaceButton s = new SurfaceButton();
                 Canvas c = new Canvas();
 
+                //canvas height and width must be set :(
                 c.Height = panel.Height - 10;
                 c.Width = c.Height / bi.PixelHeight * bi.PixelWidth;
-                c.Children.Add(new Image() { Source = new BitmapImage(imgUri), Height=c.Height });
+                c.Children.Add(new Image() { Source = bi, Height=c.Height });
 
+                //label has white text on a semi-transparent dark background
                 Label l = new Label() { Content = title, Width = c.Width };
                 l.Foreground = new SolidColorBrush(Colors.White);
                 l.Background = new SolidColorBrush(Colors.Black) { Opacity=0.5 };
@@ -119,62 +125,6 @@ namespace CCF2
         private void Events_Click(object sender, RoutedEventArgs e)
         {
             sw3.showPage(new EventsPage(sw3, (sender as SurfaceButton).Name));
-        }
-
-
-        //Action listener for the CharityHomeForCCE button
-        // Touching the CharityHomeForCCE button will take the user to the Charity Home For CCE page
-        private void CharityHomeForCCE_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new EventsPage(sw3, "CharityHomeForCCE"));
-        }
-
-        //Action Listerner for the CraftyKnitwitsKnitathonGrandAuction Button
-        // Touching the CraftyKnitwitsKnitathonGrandAuction Button will take the user to the Crafty Knitwits Knitathon Grand Auction page
-        private void CraftyKnitwitsKnitathonGrandAuction_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new EventsPage(sw3, "CraftyKnitwitsKnitathonGrandAuction"));
-
-        }
-
-        //Action Listener for the Child Cancer Legends Luncheon button
-        // Touching the Child Cancer Legends Luncheon button will take the user to the Child Cancer Legends Luncheon page
-        private void ChildCancerLegendsLuncheon_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new EventsPage(sw3, "ChildCancerLegendsLuncheon"));
-
-        }
-
-        //Action Listener Assurity Consulting support One Day button
-        // Touching the Assurity Consulting support One Day button will take the user to the Assurity Consulting support One Day page
-        private void AssurityConsultingsupportOneDays_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new NewsPage(sw3, "AssurityConsultingsupportOneDay"));
-
-        }
-
-        //Action Listener for the Charitybeginsattheoffice Page
-        // Touching the Charitybeginsattheoffice Page will take the user to the Charity begins at the office page
-        private void Charitybeginsattheoffice_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new NewsPage(sw3, "Charitybeginsattheoffice"));
-
-        }
-
-        //Action Listener for the Governor-GeneralDinnerinHamiltongreatnightforall button
-        // Touching the Governor-GeneralDinnerinHamiltongreatnightforall button will take the user to the Governor-General Dinner in Hamilton great night for all page
-        private void GovernorGeneralDinnerinHamiltongreatnightforall_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new NewsPage(sw3, "Governor-GeneralDinnerinHamiltongreatnightforall"));
-
-        }
-
-        //Action listener for the CRCSpeedshowauctionpaintingsforcharity button
-        // Touching the CRCSpeedshowauctionpaintingsforcharity button will take the user to the CRC Speed show auction paintings for charity page
-        private void CRCSpeedshowauctionpaintingsforcharity_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new NewsPage(sw3, "CRCSpeedshowauctionpaintingsforcharity"));
-
         }
 
         //Action listener for the logo
@@ -232,53 +182,6 @@ namespace CCF2
                 }
             }
         }
-
-        private void NewsPanel_PreviewTouchDown(object sender, TouchEventArgs e)
-        {
-            MessageBox.Show(sender.ToString());
-            MessageBox.Show(e.Source.ToString());
-            MessageBox.Show(e.OriginalSource.ToString());
-        }
-
-        private void NewsButton_Click(object sender, RoutedEventArgs e)
-        {
-            sw3.showPage(new HomePage(sw3));
-        }
     }
-    public class TestCommand : ICommand
-    {
-        public delegate void ICommandOnExecute(object parameter);
-        public delegate bool ICommandOnCanExecute(object parameter);
-
-        private ICommandOnExecute _execute;
-        private ICommandOnCanExecute _canExecute;
-
-        public TestCommand(ICommandOnExecute onExecuteMethod, ICommandOnCanExecute onCanExecuteMethod)
-        {
-            _execute = onExecuteMethod;
-            _canExecute = onCanExecuteMethod;
-        }
-
-        #region ICommand Members
-
-        public event EventHandler CanExecuteChanged
-        {
-            add { CommandManager.RequerySuggested += value; }
-            remove { CommandManager.RequerySuggested -= value; }
-        }
-
-        public bool CanExecute(object parameter)
-        {
-            return _canExecute.Invoke(parameter);
-        }
-
-        public void Execute(object parameter)
-        {
-            _execute.Invoke(parameter);
-        }
-
-        #endregion
-    }
-
 }
 

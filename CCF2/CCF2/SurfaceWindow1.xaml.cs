@@ -51,18 +51,20 @@ namespace CCF2
             //Retrieving tweets 
             UserTweetsWidget = new UserTweetsViewModel("ChildCancerNZ", 20);
 
-            //Creating a drirectory for the News And events images if it does not exist
+            //Creating a folder for the news and events images if necessary
             if (!Directory.Exists("Resources/images/NewsAndEvents"))
             {
                 Directory.CreateDirectory("Resources/images/NewsAndEvents");
             }
-            //Retrieving News And Events content from the CCF website
+
+            //Try retrieve news and events from the CCF website
             try
             {
                 getNewsOrEvents("News");
                 getNewsOrEvents("Events");
             }
-                //Showing an error message if there is no internet connection
+            
+            //Showing an error message if there is no internet connection
             catch
             {
                 MessageBox.Show("Could not connect to the Child Cancer Foundation website.\n\nPreviously downloaded news and events will be shown.");
@@ -75,7 +77,8 @@ namespace CCF2
             AddWindowAvailabilityHandlers();
         }
 
-
+        //Downloads news or events from the Child Cancer Foundation website.
+        //Stores the details in an xml file (xmlPath) and the photos in imagesFolder.
         private void getNewsOrEvents(String content)
         {
             WebClient web = new WebClient();
@@ -89,7 +92,10 @@ namespace CCF2
             int imageID = 0;
             int itemID = 0;
 
+            //download and read the html from the page
             HtmlDocument newsHTML = new HtmlWeb().Load(url);
+
+            //create an xml file with indentation
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
             XmlWriter writer = XmlWriter.Create(xmlPath, settings);
@@ -102,6 +108,7 @@ namespace CCF2
                 String details = n.SelectSingleNode("small").InnerText;
                 String blurb = n.SelectSingleNode("p").InnerText;
 
+                //store the details about each news/event item in the xml file
                 writer.WriteStartElement("item");
                 writer.WriteElementString("id", content + itemID.ToString());
                 writer.WriteElementString("title", title);
@@ -109,6 +116,8 @@ namespace CCF2
                 writer.WriteElementString("blurb", blurb);
                 writer.WriteStartElement("photos");
 
+                //download the main image (if there is one)
+                //and store a reference to it in the xml file
                 HtmlNode itemImage = n.SelectSingleNode("img");
                 if (itemImage != null)
                 {
@@ -120,8 +129,11 @@ namespace CCF2
                     imageID++;
                 }
 
+                //download and read the html from the news/event item page
                 HtmlDocument itemHTML = new HtmlWeb().Load(itemURL);
 
+                //if the page has relevant images, download them
+                //and store references to them in the xml file
                 if (itemHTML.DocumentNode.SelectSingleNode(contentXPath + "//img") != null)
                 {
                     foreach (HtmlNode img in itemHTML.DocumentNode.SelectNodes(contentXPath + "//img"))

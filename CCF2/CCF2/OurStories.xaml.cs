@@ -47,7 +47,6 @@ namespace CCF2
 
 
         // Touching the back button will take the user to the What We Do page
-
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new WhatWeDo(sw1, "back"));
@@ -70,7 +69,6 @@ namespace CCF2
 
 
         // Touching the Joyce Singh Button will take the user to the information about Joyce Singh
-
         private void JoyceSingh_Click(object sender, RoutedEventArgs e)
         {
             sw1.showPage(new OurStoriesSubPage(sw1, "JoyceSingh"));
